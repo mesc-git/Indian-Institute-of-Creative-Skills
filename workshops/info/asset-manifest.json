@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/workshops/info/static/css/main.b4d03215.css",
+    "main.js": "/workshops/info/static/js/main.3d0ec078.js",
+    "static/media/slick.svg": "/workshops/info/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/workshops/info/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/workshops/info/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/workshops/info/index.html",
+    "static/media/slick.woff": "/workshops/info/static/media/slick.295183786cd8a1389865.woff",
+    "main.b4d03215.css.map": "/workshops/info/static/css/main.b4d03215.css.map",
+    "main.3d0ec078.js.map": "/workshops/info/static/js/main.3d0ec078.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4d03215.css",
+    "static/js/main.3d0ec078.js"
+  ]
+}

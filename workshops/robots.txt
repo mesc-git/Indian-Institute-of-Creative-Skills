@@ -1,0 +1,7 @@
+Disallow: /workshops/student-life.html
+Disallow: /workshops/contact.html
+Disallow: /workshops/privacy-policy.html
+Disallow: /workshops/admission-process.html
+Disallow: /info
+Disallow: /Career-Guidance-Bhopal
+Disallow: /Career-Guidance-Delhi

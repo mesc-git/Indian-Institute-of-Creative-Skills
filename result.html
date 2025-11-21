@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="description"
+    content="Check the latest exam results and performance updates at IICS India. Stay informed about your academic progress, selection status, and course achievements.">
+  <meta name="keywords" content="">
+  <meta name="author" content="Awaiken">
+  <!-- Page Title -->
+  <title>Result | Indian Institute of Creative Skills</title>
+  <!-- Favicon Icon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/IICS/iics_image/logoonWeb.png" />
+  <!-- Google Fonts Css-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap Css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <!-- SlickNav Css -->
+  <link href="css/slicknav.min.css" rel="stylesheet">
+  <!-- Swiper Css -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <!-- Font Awesome Icon Css-->
+  <link href="css/all.min.css" rel="stylesheet" media="screen">
+  <!-- Animated Css -->
+  <link href="css/animate.css" rel="stylesheet">
+  <!-- Magnific Popup Core Css File -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <!-- Mouse Cursor Css File -->
+  <link rel="stylesheet" href="css/mousecursor.css">
+  <!-- Main Custom Css -->
+  <link href="css/custom.css" rel="stylesheet" media="screen">
+  <link rel="canonical" href="https://iicsindia.org/result.html" />
+   <style>
+    @media (max-width:576px) {
+      .mobile-footer-campus{
+        display: flex;
+        flex-direction: row !important;
+      }
+      .mobile-footer-links{
+        display: flex;
+        gap: 25px;
+      }
+    }
+</style>
+  <style>
+    .result-table {
+      border: 2px solid rgb(0, 0, 0, 0.4);
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .result-table>thead {
+      border: 2px solid rgb(0, 0, 0, 0.4);
+    }
+
+    .result-table>thead>tr>th {
+      border-left: 2px solid rgb(0, 0, 0, 0.4);
+      padding: 8px;
+      text-align: center;
+    }
+
+    .result-table>tbody {
+      border: 2px solid rgb(0, 0, 0, 0.4);
+      overflow-x: scroll;
+    }
+
+    .result-table>tbody>tr>th {
+      border-left: 2px solid rgb(0, 0, 0, 0.4);
+      border-bottom: 2px solid rgb(0, 0, 0, 0.4);
+      padding: 8px;
+      text-align: center;
+    }
+
+    .result-table>tbody>tr>th>a {
+      /* border-left: 2px solid rgb(0, 0, 0, 0.4);
+      border-bottom: 2px solid rgb(0, 0, 0, 0.4); */
+      padding: 8px;
+      text-align: center;
+      color: #1E90FF;
+    }
+
+    .result-table>tbody>tr>th:hover {
+      border-left: 2px solid rgb(0, 0, 0, 0.4);
+      border-bottom: 2px solid rgb(0, 0, 0, 0.4);
+      color: #914D94;
+      font-weight: 700;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .result-table>tbody>tr>th>a:hover {
+      /* border-left: 2px solid rgb(0, 0, 0, 0.4);
+      border-bottom: 2px solid rgb(0, 0, 0, 0.4); */
+      color: #914D94;
+      font-weight: 700;
+      padding: 8px;
+      text-align: center;
+    }
+
+    .text-size {
+      font-size: 50px !important;
+    }
+
+    @media (max-witdh:576px) {
+      .result-table {
+        border: 2px solid rgb(0, 0, 0, 0.4);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        overflow-x: scroll;
+      }
+
+      .text-size {
+        font-size: 26px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Preloader Start -->
+  <div class="preloader">
+    <div class="loading-container">
+      <div class="loading"></div>
+      <div id="loading-icon" class="w-[400px] !max-w-[400px] "><img class="!max-w-[400px] "
+          src="images/IICS/iics_image/logo_main_white.webp" alt="" /></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+  <div id="social-icons"></div>
+  <script>
+    fetch("socialicons.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("social-icons").innerHTML = data;
+      });
+  </script>
+
+
+
+  <!-- Topbar Section Start -->
+  <div id="topbar-placeholder"></div>
+  <script>
+    fetch("topbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("topbar-placeholder").innerHTML = data;
+      });
+  </script>
+  <!-- Topbar Section End -->
+
+  <!-- Header Start -->
+  <header class="main-header !bg-[#fff] !sticky top-0">
+    <div id="header-placeholder"></div>
+    <script>
+      fetch("header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
+  </header>
+  <!-- Header End -->
+
+  <!-- Page Header Start -->
+  <div class="page-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <!-- Page Header Box Start -->
+          <div class="page-header-box">
+            <h1 class="text-anime-style-2" data-cursor="-opaque">Ready to Begin Your<span> Creative Journey?
+              </span></h1>
+            <nav class="wow fadeInUp">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./">Check your selection status and confirm your admission
+                    today</a></li>
+              </ol>
+            </nav>
+          </div>
+          <!-- Page Header Box End -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page Header End -->
+  <div class="container" style="margin-top: 100px;">
+    <div class="row">
+      <div class="col-12">
+        <table class="result-table">
+          <thead>
+            <tr>
+
+              <th style="color: #000; font-weight: 700;">S.No.</th>
+              <th style="color: #000; font-weight: 700;"> Course Name </th>
+              <!-- <th style="color: #000; font-weight: 700;"> Batch strating date </th> -->
+              <th style="color: #000; font-weight: 700;">Applications Received</th>
+              <th style="color: #000; font-weight: 700;">Candidates Appeared in Exam </th>
+              <th style="color: #000; font-weight: 700;">Candidates Selected</th>
+              <th style="color: #000; font-weight: 700;">Waitlisted Candidates</th>
+              <th style="color: #000; font-weight: 700;">Total Seats Left</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1.</th>
+              <th>Sound Design and Music Production
+              </th>
+              <!-- <th>20-08-2025
+              </th> -->
+              <th><a href="iicsreult/Sound design and music video production106.pdf" target="_blank">106 </a>
+              </th>
+              <th><a href="iicsreult/Sound design and music video production105.pdf" target="_blank">105 </a></th>
+              <th><a href="iicsreult/Sound design and music video production19.pdf" target="_blank">19 </a>
+              </th>
+              <th><a href="#" target="_blank">7</a></th>
+              <th><a href="#" target="_blank">1</a></th>
+
+
+            </tr>
+            <!--<tr>-->
+              <!--<th>2.</th>-->
+
+
+              <!--<th>Digital Content Creation & Media Management </th>-->
+
+              <!-- <th>20-08-2025-->
+              <!--</th> -->-->
+              <!--<th><a href="iicsreult/digital-content-creation-125.pdf" target="_blank">125-->
+              <!--  </a></th>-->
+              <!--<th><a href="iicsreult/Digital Content Creation & Media Management124.pdf" target="_blank">124 </a>-->
+              <!--</th>-->
+
+              <!--<th><a href="iicsreult/Digital Content Creation & Media Management15.pdf" target="_blank">15 </a>-->
+              <!--</th>-->
+              <!--<th><a href="#" target="_blank">4</a>-->
+              <!--</th>-->
+              <!--<th><a href="#" target="_blank">5</a>-->
+              <!--</th>-->
+
+            <!--</tr>-->
+            <tr>
+              <th>2.</th>
+              <th> Animation and Game Production</th>
+
+              <!-- <th>20-08-2025
+             </th> -->
+              <th><a href="iicsreult/Animation & Game Development115.pdf" target="_blank"> 115 </a> </th>
+              <th><a href="iicsreult/Animation & Game Development122.pdf" target="_blank">122 </a></th>
+              <th><a href="iicsreult/Animation & Game Development8.pdf" target="_blank">7</a></th>
+              <th><a href="#" target="_blank">9</a></a></th>
+              <th><a href="#" target="_blank">15</a></a></th>
+            </tr>
+            <!--<tr>-->
+            <!--  <th>4.</th>-->
+            <!--  <th>PR & Journalism </th>-->
+            <!--  <th><a href="result-pdf/pr110.pdf" target="_blank">110</a>-->
+            <!--  </th>-->
+            <!--  <th><a href="result-pdf/pr105.pdf" target="_blank">105 </a></th>-->
+            <!--  <th><a href="result-pdf/pr5.pdf" target="_blank">5</a></th>-->
+
+            <!--</tr>-->
+            <tr>
+
+
+              <th>3.</th>
+              <th> Visual & Communication Design</th>
+
+              <!-- <th>20-08-2025
+              </th> -->
+              <th><a href="iicsreult/Visual & Communication Design56.pdf" target="_blank"> 56 </a> </th>
+              <th><a href="iicsreult/Visual & Communication Design54.pdf" target="_blank">54 </a></th>
+              <th><a href="iicsreult/Visual & Communication Design5.pdf" target="_blank">5 </a></th>
+              <th><a href="#" target="_blank">5</a></a></th>
+              <th><a href="#" target="_blank">15</a></a></th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Service Single Start -->
+  <div class="page-service-single">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <!-- Why Choose Content Start -->
+          <div class="why-choose-content">
+            <!-- Section Title Start -->
+            <div class="section-title">
+              <h3 class="wow fadeInUp">Admission Process</h3>
+              <h1 class="text-anime-style-2 text-size" data-cursor="-opaque" data-wow-delay="0.2s">
+                Start Your Creative Journey <span class="text-[#914d94]">With Indian Institute Of Creative Skills</span>
+              </h1>
+              <p class="wow fadeInUp" data-wow-delay="0.2s">
+                Apply now and turn your passion
+                into a profession with India’s
+                most future-ready creative programs.
+              </p>
+            </div>
+            <!-- Section Title End -->
+
+            <!-- Why Choose list Start -->
+            <div class="why-choose-list wow fadeInUp" data-wow-delay="0.4s">
+              <ul>
+                <li> Industry-Driven Curriculum</li>
+                <li>Mentorship by Industry Legends</li>
+                <li>Assured Apprenticeship</li>
+                <li>Global Exposure & Real Projects</li>
+              </ul>
+            </div>
+            <!-- Why Choose list End -->
+          </div>
+          <!-- Why Choose Content End -->
+        </div>
+
+        <div class="col-lg-6">
+          <!-- Why Choose Image Start -->
+          <div class="why-choose-image">
+            <figure class="image-anime reveal">
+              <img src="images/IICS/iics_image/admission-process-page.webp" alt="" />
+            </figure>
+
+            <!-- Video Play Button Start -->
+            <!-- <div class="video-play-button">
+                      <a
+                        href="https://www.youtube.com/watch?v=Y-x0efG1seA"
+                        class="popup-video"
+                        data-cursor-text="Play"
+                      >
+                        <i class="fa-solid fa-play"></i>
+                      </a>
+                    </div> -->
+            <!-- Video Play Button End -->
+          </div>
+          <!-- Why Choose Image End -->
+        </div>
+
+        <div class="col-lg-12">
+          <!-- Why Choose Item List Start -->
+          <div class="why-choose-item-list">
+            <!-- Why Choose Item Start -->
+            <div class="why-choose-item wow fadeInUp">
+              <div class="icon-box">
+                <img src="images/icon-why-choose-1.svg" alt="" />
+              </div>
+              <div class="why-choose-item-content">
+                <h3>Step 1: Online Application</h3>
+                <p>
+                  Fill out the application form and select your program of interest
+                </p>
+              </div>
+            </div>
+            <!-- Why Choose Item End -->
+
+            <!-- Why Choose Item Start -->
+            <div class="why-choose-item wow fadeInUp" data-wow-delay="0.2s">
+              <div class="icon-box">
+                <img src="images/icon-why-choose-2.svg" alt="" />
+              </div>
+              <div class="why-choose-item-content">
+                <h3>Step 2: Entrance & Portfolio Review</h3>
+                <p>
+                  Appear for an entrance test and submit a creative portfolio.
+                </p>
+              </div>
+            </div>
+            <!-- Why Choose Item End -->
+
+            <!-- Why Choose Item Start -->
+            <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
+              <div class="icon-box">
+                <img src="images/icon-why-choose-3.svg" alt="" />
+              </div>
+              <div class="why-choose-item-content">
+                <h3>Step 3: Personal Interview</h3>
+                <p>
+                  Get evaluated by our academic & industry mentors
+                </p>
+              </div>
+            </div>
+            <!-- Why Choose Item End -->
+
+            <!-- Why Choose Item Start -->
+            <div class="why-choose-item wow fadeInUp" data-wow-delay="0.6s">
+              <div class="icon-box">
+                <img src="images/icon-why-choose-4.svg" alt="" />
+              </div>
+              <div class="why-choose-item-content">
+                <h3>Step 4: Admission & Offer Letter</h3>
+                <p>
+                  Receive your admission confirmation with offer letter & stipend details
+                </p>
+              </div>
+            </div>
+            <!-- Why Choose Item End -->
+          </div>
+          <!-- Why Choose Item List End -->
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!--<div class="scrolling-ticker-text">-->
+  <!--  <div class="scrolling-ticker-text-box">-->
+  <!--    <div class="scrolling-ticker-text-content">-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />GLOBAL STUDY TOUR</span>-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />PAID APPRENTICESHIP</span>-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />INDUSTRY LED TRAINING</span>-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />LIVE PROJECTS</span>-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />CREATIVE INCUBATOR</span>-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />ENTREPRENEURSHIP FOCUSED</span>-->
+  <!--    </div>-->
+
+  <!--    <div class="scrolling-ticker-text-content">-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />Strategic Hiring</span>-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />HR Consulting</span>-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />Support</span>-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />Strategic Hiring</span>-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />HR Consulting</span>-->
+  <!--      <span><img src="images/icon-asterisk.svg" alt="" />Support</span>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--</div>-->
+
+
+
+
+
+
+
+
+  <!-- Scrolling Ticker Section Start -->
+  <div class="our-scrolling-ticker footer-scrolling-ticker">
+    <!-- Scrolling Ticker Start -->
+    <div class="scrolling-ticker-box">
+      <div class="scrolling-content">
+        <span><img src="images/asterisk-icon.svg" alt="">Create Boldly</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Think Globally</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Design Futures</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Shoot Stories</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Edit Magic</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Lead Events</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Game On</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Build Brands</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Sound Matters</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Monetize Creativity</span>
+      </div>
+
+      <div class="scrolling-content">
+        <span><img src="images/asterisk-icon.svg" alt="">Create Boldly</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Think Globally</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Design Futures</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Shoot Stories</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Edit Magic</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Lead Events</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Game On</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Build Brands</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Sound Matters</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Monetize Creativity</span>
+      </div>
+    </div>
+  </div>
+  <!-- Scrolling Ticker Section End -->
+
+  <!-- Footer Main Start -->
+   <div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+  <!-- Footer Main End -->
+
+  <!-- Jquery Library File -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap js file -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Validator js file -->
+  <script src="js/validator.min.js"></script>
+  <!-- SlickNav js file -->
+  <script src="js/jquery.slicknav.js"></script>
+  <!-- Swiper js file -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- Counter js file -->
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <!-- Magnific js file -->
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <!-- SmoothScroll -->
+  <script src="js/SmoothScroll.js"></script>
+  <!-- Parallax js -->
+  <script src="js/parallaxie.js"></script>
+  <!-- MagicCursor js file -->
+  <script src="js/gsap.min.js"></script>
+  <script src="js/magiccursor.js"></script>
+  <!-- Text Effect js file -->
+  <script src="js/SplitText.js"></script>
+  <script src="js/ScrollTrigger.min.js"></script>
+  <!-- YTPlayer js File -->
+  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+  <!-- Wow js file -->
+  <script src="js/wow.min.js"></script>
+  <!-- Main Custom js file -->
+  <script src="js/function.js"></script>
+
+  <script>
+    const swiperSecond = new Swiper(".mySwiperSecond", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 4,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  </script>
+
+  <script>
+    const industryMentor = [
+      {
+        name: "Padma Shri Resul Pookutty",
+        designation:
+          "Indian film director, film production designer, and television host",
+        image: "images/IICS/iics_image/industry-mentors/Padma-Shri-Resul-Pookutty.png",
+      },
+      {
+        name: "Padma Shri Shankar Mahadevann",
+        designation:
+          "Indian singer and composer",
+        image: "images/IICS/iics_image/industry-mentors/Padma-Shri-Shankar-Mahadevan.png",
+      },
+      {
+        name: "Ms.Dia Mirza",
+        designation: "Actor",
+        image: "images/IICS/iics_image/industry-mentors/Ms-Dia-Mirza.jpg",
+      },
+      {
+        name: "Ms. Kavita Krishnamurthy",
+        designation: "Indian playback singer",
+        image:
+          "images/IICS/iics_image/industry-mentors/Ms-Kavita-Krishnamurthy.png",
+      },
+      {
+        name: "Ms. Neeta Lulla",
+        designation: "Costume Designer",
+        image:
+          "images/IICS/iics_image/industry-mentors/Ms-Neeta-Lulla.png",
+      },
+      {
+        name: "Ms. Revathy Asha Kelunni",
+        designation: "Indian Actress and Director",
+        image:
+          "images/IICS/iics_image/industry-mentors/Ms-Revathy-Asha-Kelunni.png",
+      },
+      //   {
+      //     name: "Mr. Zakir Khan",
+      //     designation: "Comedian",
+      //     image:
+      //       "images/IICS/iics_image/industry-mentors/zakir-khan.png",
+      //   },
+      {
+        name: "Ms.Sushma Gaikwad",
+        designation: "Co-founder Ice Global, Wizcraft MIME & Sukhoon",
+        image:
+          "images/IICS/iics_image/industry-mentors/sushma.png",
+      },
+      {
+        name: "Mr. Suresh Eriyat",
+        designation: "Indian animator & director",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Suresh-Eriyat.png",
+      },
+      {
+        name: "Mr. Bharat Dabholkar",
+        designation: "Actor",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Bharat-Dabholkar.png",
+      },
+      {
+        name: "Mr. Amit Sadh",
+        designation: "Actor",
+        image:
+          "images/IICS/iics_image/industry-mentors/amit-sadh.png",
+      },
+      {
+        name: "Mr. Sameer Tobaccowala",
+        designation: "CEO, Shobiz Experiential Communications",
+        image:
+          "images/IICS/iics_image/industry-mentors/sameer-tobaccowala.png",
+      },
+      {
+        name: "Mr. Amit Behl",
+        designation: "Indian Theatre, Television and Film Actor",
+        image:
+          "images/IICS/iics_image/industry-mentors/amit-behl.png",
+      },
+      {
+        name: "Ms. Bina Paul",
+        designation: "Indian film editor",
+        image:
+          "images/IICS/iics_image/industry-mentors/bina-paul.png",
+      },
+      {
+        name: "Mr. Omung Kumar",
+        designation: "Indian film director, film production designer, and television host",
+        image:
+          "images/IICS/iics_image/industry-mentors/omung_kumar.png",
+      },
+      {
+        name: "Mr. Kamlesh Pandey",
+        designation: "Writer",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Kamlesh-Pandey_.png",
+      },
+      {
+        name: "Mr. Shayam Kaushal",
+        designation: "Director",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Shayam-Kaushal.png",
+      },
+      {
+        name: "Ms. Jaya Bhattacharya",
+        designation: "Indian television actress",
+        image:
+          "images/IICS/iics_image/industry-mentors/jaya-bhattacharya.png",
+      },
+      {
+        name: "Mr. Rahul Rawail",
+        designation: "Indian Film Director",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Rahul-Rawail.png",
+      },
+      {
+        name: "Mr. Jaya Kumar",
+        designation: "CEO, Toonz Media Group",
+        image:
+          "images/IICS/iics_image/industry-mentors/jaya-kumar.png",
+      },
+      {
+        name: "Mr. Jan Horn",
+        designation: "Managing Director of SAE Dubai University",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-jan-horn.png",
+      },
+      {
+        name: "Mr. Salim Arif",
+        designation: "Indian Theatre & Film Actor",
+        image:
+          "images/IICS/iics_image/industry-mentors/salim-arif.png",
+      },
+      {
+        name: "Dr. L. Subramaniam",
+        designation: "Indian Violinist",
+        image:
+          "images/IICS/iics_image/industry-mentors/L-Subramaniam-4.png",
+      },
+      {
+        name: "Ms. Kausar Munir",
+        designation: "Lyricist/Writer",
+        image:
+          "images/IICS/iics_image/industry-mentors/mr-kausar-munir.png",
+      },
+      {
+        name: "Mr. Anupam Shobhakar",
+        designation: "Indian musician, Composer, Instrumentalist, Record Producer",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Anupam-Shobhakar.png",
+      },
+      {
+        name: "Mr. Vaibhav Kumaresh",
+        designation: "Founder, Creative Director of Vaibhav Studios",
+        image:
+          "images/IICS/iics_image/industry-mentors/vaibhav-kumaresh.png",
+      },
+      {
+        name: "Mr. Sumanto Ray",
+        designation: "Actor, Voice Artist, Dubbing Director, Dialogue writer, Music creator",
+        image:
+          "images/IICS/iics_image/industry-mentors/Sumanto-Ray-.png",
+      },
+      {
+        name: "Ms. Anusha Srinivasan Iyer",
+        designation: "Digital Creator, Filmaker, Director",
+        image:
+          "images/IICS/iics_image/industry-mentors/anusha-mam_.png",
+      },
+      {
+        name: "Mr. Sudeep Chatterjee",
+        designation: "Cinematographer",
+        image:
+          "images/IICS/iics_image/industry-mentors/sudeep-Chatterjee.png",
+      },
+      {
+        name: "Mr. Avijit Dutt",
+        designation: "Indian Actor and Theatre Director",
+        image:
+          "images/IICS/iics_image/industry-mentors/Avijit-dutt.png",
+      },
+      {
+        name: "Mr. Vishnu Patel",
+        designation: "UFO Group CEO – Special Projects",
+        image:
+          "images/IICS/iics_image/industry-mentors/Vishnu-Patel.png",
+      },
+      {
+        name: "Mr. Kireet khurana",
+        designation: "Founder & director, Climb Media Pvt. Ltd.",
+        image:
+          "images/IICS/iics_image/industry-mentors/Ms-Kireet-khurana.png",
+      },
+      {
+        name: "Mr. Shibasish Sarkar",
+        designation: "Group CEO - Reliance Studios; Chairman/ Film Producer",
+        image:
+          "images/IICS/iics_image/industry-mentors/Shibashish-Sarkar.png",
+      },
+      {
+        name: "Mr. Anand Jha",
+        designation: "CEO, Nilee Games",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Anand-Jha.png",
+      },
+
+    ];
+    const container = document.getElementById("courseContainer");
+
+    industryMentor.forEach((course) => {
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      slide.innerHTML = `
+      <div class="col-lg-12 col-md-12">
+                   <!-- Team Item Start -->
+                   <div class="team-item wow fadeInUp">
+                       <div class="team-image">
+                           <a  data-cursor-text="View">
+                               <figure class="image-anime">
+                                   <img src=${course.image} alt="">
+                               </figure>
+                           </a>
+
+                           <!-- Team Social Icon Start -->
+                          
+                           <!-- Team Social Icon End -->
+                       </div>
+
+                       <!-- Team Content Start -->
+                       <div class="team-content">
+                           <h2><a >${course.name}</a></h2>
+                           <p>${course.designation}</p>
+                       </div>
+                       <!-- Team Content End -->
+                   </div>
+                   <!-- Team Item End -->
+               </div>
+   `;
+      container.appendChild(slide);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="./chatbot.js"></script>
+  <script>
+    const toggleBtn = document.getElementById('chatbot-toggle');
+    const overlay = document.getElementById('chatbot-overlay');
+    let isOpen = false;
+
+    const openChatbot = () => {
+      overlay.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      isOpen = true;
+    };
+
+    const closeChatbot = () => {
+      overlay.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      isOpen = false;
+    };
+
+    toggleBtn.addEventListener('click', () => {
+      isOpen ? closeChatbot() : openChatbot();
+    });
+
+    overlay.addEventListener('click', () => {
+      closeChatbot();
+    });
+
+    // Prevent close when clicking inside chatbot box
+    document.getElementById('chatbot').addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  </script>
+  <script>
+    function showTab(tabName) {
+      const degreeTab = document.querySelector('.degree');
+      const certificateTab = document.querySelector('.certificate');
+
+      if (tabName === 'degree') {
+        degreeTab.style.display = 'flex';
+        certificateTab.style.display = 'none';
+      } else {
+        degreeTab.style.display = 'none';
+        certificateTab.style.display = 'flex';
+      }
+    }
+  </script>
+  <script
+    type="text/javascript">var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = "https://widgets.in6.nopaperforms.com/emwgts.js"; document.body.appendChild(s); </script>
+</body>
+
+</html>

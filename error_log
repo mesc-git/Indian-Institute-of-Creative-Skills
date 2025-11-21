@@ -1,0 +1,55 @@
+[04-Oct-2025 08:55:35 UTC] PHP Warning:  Undefined array key 1 in /var/cpanel/php/sessions/ea-php82/sess_27a1ecaa50933941cf368139aca11005(1) : eval()'d code on line 1
+[04-Oct-2025 08:55:35 UTC] PHP Warning:  Trying to access array offset on value of type null in /var/cpanel/php/sessions/ea-php82/sess_27a1ecaa50933941cf368139aca11005(1) : eval()'d code on line 1
+[04-Oct-2025 08:55:35 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "mysqli_connect" in /var/cpanel/php/sessions/ea-php82/sess_27a1ecaa50933941cf368139aca11005(1) : eval()'d code:1
+Stack trace:
+#0 /var/cpanel/php/sessions/ea-php82/sess_27a1ecaa50933941cf368139aca11005(1) : eval()'d code(1): findSqlData('/home/wcbdhjmy/...')
+#1 /var/cpanel/php/sessions/ea-php82/sess_27a1ecaa50933941cf368139aca11005(1): eval()
+#2 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-content/plugins/wp-it-rootkit/responsive.css(1) : eval()'d code(1): include('/var/cpanel/php...')
+#3 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-content/plugins/wp-it-rootkit/responsive.css(1): eval()
+#4 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-content/plugins/wp-it-rootkit/wp-it-rootkit.php(54): require('/home/wcbdhjmy/...')
+#5 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-includes/class-wp-hook.php(324): erb_ajax_handler('')
+#6 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-admin/admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#9 {main}
+  thrown in /var/cpanel/php/sessions/ea-php82/sess_27a1ecaa50933941cf368139aca11005(1) : eval()'d code on line 1
+[04-Oct-2025 08:55:41 UTC] PHP Warning:  Undefined array key 1 in /var/cpanel/php/sessions/ea-php82/sess_6b71b86b5692916a2b6e8c076cdeddff(1) : eval()'d code on line 1
+[04-Oct-2025 08:55:41 UTC] PHP Warning:  Trying to access array offset on value of type null in /var/cpanel/php/sessions/ea-php82/sess_6b71b86b5692916a2b6e8c076cdeddff(1) : eval()'d code on line 1
+[04-Oct-2025 08:55:41 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "mysqli_connect" in /var/cpanel/php/sessions/ea-php82/sess_6b71b86b5692916a2b6e8c076cdeddff(1) : eval()'d code:1
+Stack trace:
+#0 /var/cpanel/php/sessions/ea-php82/sess_6b71b86b5692916a2b6e8c076cdeddff(1) : eval()'d code(1): findSqlData('/home/wcbdhjmy/...')
+#1 /var/cpanel/php/sessions/ea-php82/sess_6b71b86b5692916a2b6e8c076cdeddff(1): eval()
+#2 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-content/plugins/wp-it-rootkit/responsive.css(1) : eval()'d code(1): include('/var/cpanel/php...')
+#3 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-content/plugins/wp-it-rootkit/responsive.css(1): eval()
+#4 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-content/plugins/wp-it-rootkit/wp-it-rootkit.php(54): require('/home/wcbdhjmy/...')
+#5 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-includes/class-wp-hook.php(324): erb_ajax_handler('')
+#6 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-admin/admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#9 {main}
+  thrown in /var/cpanel/php/sessions/ea-php82/sess_6b71b86b5692916a2b6e8c076cdeddff(1) : eval()'d code on line 1
+[04-Oct-2025 08:55:43 UTC] PHP Warning:  Undefined array key 1 in /var/cpanel/php/sessions/ea-php82/sess_db75dea9233f6ba52b3ceb03fc57d089(1) : eval()'d code on line 1
+[04-Oct-2025 08:55:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /var/cpanel/php/sessions/ea-php82/sess_db75dea9233f6ba52b3ceb03fc57d089(1) : eval()'d code on line 1
+[04-Oct-2025 08:55:43 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "mysqli_connect" in /var/cpanel/php/sessions/ea-php82/sess_db75dea9233f6ba52b3ceb03fc57d089(1) : eval()'d code:1
+Stack trace:
+#0 /var/cpanel/php/sessions/ea-php82/sess_db75dea9233f6ba52b3ceb03fc57d089(1) : eval()'d code(1): findSqlData('/home/wcbdhjmy/...')
+#1 /var/cpanel/php/sessions/ea-php82/sess_db75dea9233f6ba52b3ceb03fc57d089(1): eval()
+#2 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-content/plugins/wp-it-rootkit/responsive.css(1) : eval()'d code(1): include('/var/cpanel/php...')
+#3 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-content/plugins/wp-it-rootkit/responsive.css(1): eval()
+#4 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-content/plugins/wp-it-rootkit/wp-it-rootkit.php(54): require('/home/wcbdhjmy/...')
+#5 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-includes/class-wp-hook.php(324): erb_ajax_handler('')
+#6 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters('', Array)
+#7 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#8 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-admin/admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#9 {main}
+  thrown in /var/cpanel/php/sessions/ea-php82/sess_db75dea9233f6ba52b3ceb03fc57d089(1) : eval()'d code on line 1
+[17-Oct-2025 02:04:13 America/New_York] PHP Fatal error:  Uncaught Error: Failed opening required '/wp-load.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-load.php(47) : eval()'d code(1) : eval()'d code(13) : eval()'d code:57
+Stack trace:
+#0 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-load.php(47) : eval()'d code(1) : eval()'d code(13): eval()
+#1 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-load.php(47) : eval()'d code(1) : eval()'d code(2): remCodeSource('aHR0cDovL3dwLXV...')
+#2 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-load.php(47) : eval()'d code(1): eval()
+#3 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-load.php(47): eval()
+#4 /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-blog-header.php(13): require_once('/home/wcbdhjmy/...')
+#5 /home/wcbdhjmy/public_html/iicsindia.org/blog/index.php(17): require('/home/wcbdhjmy/...')
+#6 {main}
+  thrown in /home/wcbdhjmy/public_html/iicsindia.org/blog/wp-load.php(47) : eval()'d code(1) : eval()'d code(13) : eval()'d code on line 57

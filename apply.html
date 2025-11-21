@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starzbet - Starzbet Resmi - Starzbet Güncel Giriş</title>
+  <meta name="description" content="Starzbet, güncel adresinden yaptığınız her girişte, yüksek oranlı spor bahisleri, canlı casino ve slot oyunlarıyla kazançlı bir deneyim vaat ediyor.">
+  
+  <style>
+    :root {
+      --primary-color: #666666;
+      --secondary-color: #888888;
+      --accent-color: #aaaaaa;
+      --dark-color: #333333;
+      --light-color: #ffffff;
+      --text-color: #444444;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --border-radius: 8px;
+      --bg-color: #f5f5f5;
+      --card-color: #ffffff;
+      --border-color: #e0e0e0;
+    }
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+    body {background-color:var(--bg-color); color:var(--text-color); line-height:1.6;}
+    a {text-decoration:none; color:inherit;}
+    .container {width:90%; max-width:1200px; margin:0 auto; padding:0 15px;}
+    header {background-color:var(--light-color); color:var(--dark-color); padding:1rem 0; box-shadow:var(--shadow); position:sticky; top:0; z-index:1000;}
+    .header-top {display:flex; justify-content:space-between; align-items:center; padding-bottom:1rem; border-bottom:1px solid var(--border-color);}
+    .logo {font-size:2rem; font-weight:700; display:flex; align-items:center; color:var(--dark-color);}
+    .logo span {color:var(--primary-color);}
+    .auth-buttons {display:flex; gap:1rem;}
+    .auth-btn {padding:0.5rem 1.5rem; border-radius:var(--border-radius); font-weight:600; transition:all 0.3s; border:2px solid var(--primary-color);}
+    .login-btn {background-color:transparent; color:var(--primary-color);}
+    .login-btn:hover {background-color:#f8f8f8;}
+    .register-btn {background-color:var(--primary-color); color:white;}
+    .register-btn:hover {background-color:#555555; transform:translateY(-2px);}
+    .header-bottom {padding-top:1rem;}
+    nav ul {display:flex; list-style:none; justify-content:center;}
+    nav ul li {margin:0 1rem;}
+    nav ul li a {font-weight:600; transition:color 0.3s; padding:0.5rem 0; position:relative; color:var(--dark-color);}
+    nav ul li a:hover {color:var(--primary-color);}
+    nav ul li a::after {content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background-color:var(--primary-color); transition:width 0.3s;}
+    nav ul li a:hover::after {width:100%;}
+    .hero {background:linear-gradient(rgba(255,255,255,0.95),rgba(255,255,255,0.95)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23666666" opacity="0.05"/></svg>'); color:var(--dark-color); padding:5rem 0; text-align:center; background-size:cover;}
+    .hero h1 {font-size:2.5rem; margin-bottom:1rem; color:var(--dark-color);}
+    .hero p {font-size:1.2rem; max-width:700px; margin:0 auto 2rem; color:var(--text-color);}
+    .btn {display:inline-block; background-color:var(--accent-color); color:white; padding:0.8rem 1.5rem; border-radius:30px; font-weight:600; transition:all 0.3s; border:none; cursor:pointer; font-size:1rem;}
+    .btn:hover {background-color:#999999; transform:translateY(-3px); box-shadow:0 6px 12px rgba(0,0,0,0.15);}
+    .features {padding:4rem 0; background-color:var(--card-color);}
+    .section-title {text-align:center; margin-bottom:3rem; color:var(--dark-color);}
+    .section-title h2 {font-size:2rem; position:relative; display:inline-block; padding-bottom:10px;}
+    .section-title h2::after {content:''; position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:80px; height:3px; background-color:var(--secondary-color);}
+    .features-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2rem;}
+    .feature-card {background-color:var(--card-color); border-radius:10px; padding:2rem; text-align:center; box-shadow:var(--shadow); transition:transform 0.3s; border:1px solid var(--border-color);}
+    .feature-card:hover {transform:translateY(-10px);}
+    .feature-icon {margin-bottom:1rem; color:var(--primary-color); font-size: 3rem;}
+    .feature-card h3 {margin-bottom:1rem; color:var(--dark-color);}
+    .content {padding:4rem 0; background-color:var(--bg-color);}
+    .content-grid {display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;}
+    .content-text h2 {font-size:2rem; margin-bottom:1.5rem; color:var(--dark-color);}
+    .content-text p {margin-bottom:1.5rem;}
+    .content-image {border-radius:10px; overflow:hidden; box-shadow:var(--shadow); background: #eee; height: 300px; display: flex; align-items: center; justify-content: center; color: #666;}
+    .info-section {padding:3rem 0; background-color:var(--card-color);}
+    .info-section:nth-child(even) {background-color:var(--bg-color);}
+    .info-content {max-width:800px; margin:0 auto;}
+    .info-content h2 {font-size:1.8rem; margin-bottom:1.5rem; color:var(--dark-color); text-align:center;}
+    .info-content p {margin-bottom:1.5rem; text-align:justify;}
+    .cta {background:linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color:white; padding:4rem 0; text-align:center;}
+    .cta h2 {font-size:2rem; margin-bottom:1rem;}
+    .cta p {max-width:700px; margin:0 auto 2rem; font-size:1.1rem;}
+    .btn-light {background-color:white; color:var(--dark-color);}
+    .btn-light:hover {background-color:#f8f8f8;}
+    footer {background-color:var(--dark-color); color:white; padding:3rem 0 1rem;}
+    .footer-content {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; margin-bottom:2rem;}
+    .footer-section h3 {margin-bottom:1.5rem; position:relative; padding-bottom:10px;}
+    .footer-section h3::after {content:''; position:absolute; bottom:0; left:0; width:50px; height:2px; background-color:var(--secondary-color);}
+    .footer-links {list-style:none;}
+    .footer-links li {margin-bottom:0.8rem;}
+    .footer-links a {transition:color 0.3s;}
+    .footer-links a:hover {color:var(--accent-color); padding-left:5px;}
+    .copyright {text-align:center; padding-top:1rem; border-top:1px solid rgba(255,255,255,0.1); font-size:0.9rem;}
+    @media (max-width:768px){
+      .header-top {flex-direction:column; text-align:center;}
+      .auth-buttons {margin-top:1rem; justify-content:center;}
+      nav ul {margin-top:1rem; flex-direction:column; align-items:center;}
+      nav ul li {margin:0.5rem 0;}
+      .content-grid {grid-template-columns:1fr;}
+      .hero h1 {font-size:2rem;}
+      .hero p {font-size:1rem;}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container header-top">
+    <div class="logo">Starz<span>Bet</span></div>
+    <div class="auth-buttons">
+      <a href="https://cutt.ly/Se0po7X8" class="auth-btn login-btn">Hesabıma Giriş</a>
+      <a href="https://cutt.ly/Se0po7X8" class="auth-btn register-btn">Yeni Üyelik</a>
+    </div>
+  </div>
+  <div class="container header-bottom">
+    <nav>
+      <ul>
+        <li><a href="#">Ana Sayfa</a></li>
+        <li><a href="#">Spor Bahisleri</a></li>
+        <li><a href="#">Canlı Casino</a></li>
+        <li><a href="#">Özel Teklifler</a></li>
+        <li><a href="#">Müşteri Desteği</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Starzbet - Starzbet Resmi - Starzbet Güncel Giriş</h1>
+  <p>Starzbet, güncel adresinden yaptığınız her girişte, yüksek oranlı spor bahisleri, canlı casino ve slot oyunlarıyla kazançlı bir deneyim vaat ediyor.</p>
+  <a href="https://cutt.ly/Se0po7X8" class="btn">Hemen Giriş Yap</a>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="section-title"><h2>Neden Starzbet?</h2></div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">.</div>
+        <h3>Özel Teklifler</h3>
+        <p>Starzbet üyelerine özel sürekli güncellenen bonuslar ve promosyonlarla kazancınızı artırın.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">.</div>
+        <h3>Çeşitli Oyunlar</h3>
+        <p>Spor bahislerinden canlı casinoya, slot oyunlarından poker masalarına kadar geniş seçenekler.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">.</div>
+        <h3>Güvenli Altyapı</h3>
+        <p>SSL sertifikalı güvenlik sistemi ile tüm işlemleriniz ve bilgileriniz güvence altında.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container content-grid">
+    <div class="content-text">
+      <h2>Starzbet Güncel Adres</h2>
+      <p>Starzbet güncel giriş adresi sayesinde hiçbir engelle karşılaşmadan hızlı ve sorunsuz şekilde platforma erişebilirsiniz.</p>
+      <p>Mobil ve masaüstü versiyonlarıyla her an bahis ve casino deneyiminizi sürdürebilirsiniz.</p>
+    </div>
+    <div class="content-image">
+      Starzbet Platform Görseli
+    </div>
+  </div>
+</section>
+
+<section class="info-section">
+  <div class="container info-content">
+    <h2>Hızlı ve Kesintisiz Erişim</h2>
+    <p>Starzbet, güncel giriş adresi ile erişim sorunlarını tamamen ortadan kaldırır. Kesintisiz bağlantı sayesinde oyun sırasında herhangi bir aksaklık yaşamazsınız.</p>
+    <p>Bahis ve casino oyunlarındaki yenilikleri sürekli takip eden Starzbet, kullanıcılarına sorunsuz bir deneyim sunmayı garanti eder.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Hemen Starzbet'e Katılın</h2>
+  <p>Starzbet'in ayrıcalıklı dünyasına adım atın ve yüksek bonuslar, güvenli oyun deneyimi ve geniş oyun seçenekleri ile kazancınızı artırın.</p>
+  <a href="https://cutt.ly/Se0po7X8" class="btn btn-light">Üye Ol ve Oyna</a>
+</section>
+
+<footer>
+  <div class="container footer-content">
+    <div class="footer-section">
+      <h3>Hızlı Linkler</h3>
+      <ul class="footer-links">
+        <li><a href="#">Ana Sayfa</a></li>
+        <li><a href="#">Spor Bahisleri</a></li>
+        <li><a href="#">Canlı Casino</a></li>
+        <li><a href="#">Promosyonlar</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>İletişim</h3>
+      <ul class="footer-links">
+        <li><a href="#">Canlı Destek</a></li>
+        <li><a href="#">Email: destek@Starzbet.com</a></li>
+        <li><a href="#">Telefon: 123 456 7890</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Starzbet</h3>
+      <p>Starzbet, Türkiye odaklı lisanslı ve güvenilir bahis ve casino platformudur.</p>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2025 Starzbet. Tüm hakları saklıdır.
+  </div>
+</footer>
+</body>
+</html>

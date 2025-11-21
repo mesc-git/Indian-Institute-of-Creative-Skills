@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/workshops/Career-Guidance-Delhi/static/css/main.c070e7b8.css",
+    "main.js": "/workshops/Career-Guidance-Delhi/static/js/main.43bc25c7.js",
+    "static/media/slick.svg": "/workshops/Career-Guidance-Delhi/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/workshops/Career-Guidance-Delhi/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/workshops/Career-Guidance-Delhi/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/workshops/Career-Guidance-Delhi/index.html",
+    "static/media/slick.woff": "/workshops/Career-Guidance-Delhi/static/media/slick.295183786cd8a1389865.woff",
+    "main.c070e7b8.css.map": "/workshops/Career-Guidance-Delhi/static/css/main.c070e7b8.css.map",
+    "main.43bc25c7.js.map": "/workshops/Career-Guidance-Delhi/static/js/main.43bc25c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c070e7b8.css",
+    "static/js/main.43bc25c7.js"
+  ]
+}
