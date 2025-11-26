@@ -1,929 +1,254 @@
 const chatWindow = document.getElementById("chat-window");
 const userInput = document.getElementById("user-input");
 const sendBtn = document.getElementById("send-btn");
-
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwkyXniEU2zkw8BJdtBWTtb-a4jZsShDeLY8_wYtXNpAbJn4a7DUNCI9KxOTPy6bCzX/exec";
+const subjectButtonsDiv = document.getElementById("subject-buttons");
 
 const subjects = [
   "Admission Process",
-  "Apply Now",
-  "Why IICS",
-  "Courses Offered",
-  "Talk to counsellor",
+  "Courses",
+  "Mentors",
+  "Careers",
+  "Live Projects",
+  "Industry Associations",
+  "Apprenticeship"
 ];
 
 const responses = [
-  {
-    key: "Hi",
-    keywords: ["hi", "hello", "hey", "good morning", "good evening", "good afternoon"],
-    response: `<p>Hi there! How can I help you today?</p>`
-  },
+    {
+        key: "Ceo",
+        keywords: ["Ceo", "ceo"],
+        response: `
+          <p>The CEO of Indian Institute Of Creative Skills is Dr. Mohit Soni</p>
+         `
+      },
+      {
+        key: "Hi",
+        keywords: ["hi", "hello", "hey", "good morning", "good evening", "good afternoon"],
+        response: `
+          <p>Hi, How can i help you?</p>
+         `
+      },
   {
     key: "Admission Process",
     keywords: ["admission", "apply", "entrance", "fees", "support", "process"],
     response: `
       <p>Here is info about the admission process:</p>
+      <ul class="text-[#fff]">
+        <li ><a href="admission-process.html" class="!text-[#000]">How to Apply</a></li>
+      </ul>`
+  },
+  {
+    key: "Design in Animation & Gaming",
+    keywords: ["animation", "gaming", "game design", "3d modeling"],
+    response: `
+      <p><strong>Design in Animation & Gaming</strong></p>
       <ul>
-  <li>1. Fill out the MECAT-IICS application <span><a href="https://iicsindia.org/admission.html">form</a></span> and submit it.</li>
-  <li>2. After submission, you’ll receive your login credentials at the email address you provided.</li>
-  <li>3. Click the Login button and sign in using your username and password.</li>
-  <li>4. Once logged in, you’ll be redirected to your dashboard — complete your application form there.</li>
-  <li>5. Pay the MECAT-IICS application fee and submit your final application.</li>
-</ul>
-    <p>Click <span><a href="/admission-process.html">here</a></span> to know more.
-`
+        <li class="!text-[#000]">✔ 12th grade pass from a recognized board</li>
+        <li class="!text-[#000]">✔ Interest in 3D modeling, animation, game design</li>
+        <li class="!text-[#000]">✔ No technical experience required</li>
+      </ul>
+    `
   },
   {
-    key: "Apply Now",
-    keywords: [],
-    response: `<p>You can apply from <span><a href="https://iicsindia.org/admission.html">here</a></span></p>`
+    key: "Digital Content Creation & Media Management",
+    keywords: ["digital media", "content creation", "social media", "branding"],
+    response: `
+      <p><strong>Digital Content Creation & Media Management</strong></p>
+      <ul>
+        <li class="!text-[#000]">✔ 12th grade pass from a recognized board</li>
+        <li class="!text-[#000]">✔ Interest in content, social media, storytelling</li>
+        <li class="!text-[#000]">✔ Creative mindset, no prior experience needed</li>
+      </ul>
+    `
   },
   {
-    key: "Courses Offered",
+    key: "Sound Design & Music Video Production",
+    keywords: ["sound design", "music production", "music video", "audio"],
+    response: `
+      <p><strong>Sound Design & Music Video Production</strong></p>
+      <ul>
+        <li class="!text-[#000]">✔ 12th grade pass from a recognized board</li>
+        <li class="!text-[#000]">✔ Interest in music, audio, sound design</li>
+        <li class="!text-[#000]">✔ No prior training required</li>
+      </ul>
+    `
+  },
+  {
+    key: "Event Planning & Management",
+    keywords: ["event planning", "event management", "live events", "hospitality"],
+    response: `
+      <p><strong>Event Planning & Management</strong></p>
+      <ul>
+        <li class="!text-[#000]">✔ 12th grade pass from a recognized board</li>
+        <li class="!text-[#000]">✔ Interest in events, hospitality, entertainment</li>
+        <li class="!text-[#000]">✔ No experience needed, just creativity & drive</li>
+      </ul>
+    `
+  },
+  {
+    key: "Hair, Makeup & Prosthetics",
+    keywords: ["makeup", "hair", "prosthetics", "beauty", "special effects"],
+    response: `
+      <p><strong>Hair, Makeup & Prosthetics</strong></p>
+      <ul>
+        <li class="!text-[#000]">✔ 12th grade pass from a recognized board</li>
+        <li class="!text-[#000]">✔ Interest in beauty, special effects, transformation</li>
+        <li class="!text-[#000]">✔ Creativity and steady hands, no training needed</li>
+      </ul>
+    `
+  },
+  {
+    key: "Costume Designing",
+    keywords: ["costume", "fashion", "design", "character", "textiles"],
+    response: `
+      <p><strong>Costume Designing</strong></p>
+      <ul>
+        <li class="!text-[#000]">✔ 12th grade pass from a recognized board</li>
+        <li class="!text-[#000]">✔ Interest in fashion, character-driven design</li>
+        <li class="!text-[#000]">✔ Passion for storytelling through fabric</li>
+      </ul>
+    `
+  },
+  {
+    key: "PR & Journalism",
+    keywords: [ "public relations", "journalism", "media", "communication"],
+    response: `
+      <p><strong>PR & Journalism</strong></p>
+      <ul>
+        <li class="!text-[#000]">✔ 12th grade pass from a recognized board</li>
+        <li class="!text-[#000]">✔ Interest in media, communication, storytelling</li>
+        <li class="!text-[#000]">✔ No experience needed, just curiosity & passion</li>
+      </ul>
+    `
+  },
+
+  {
+    key: "Courses",
     keywords: ["course", "program", "degree", "study", "field"],
     response: `
       <p>Here's a list of all courses at IICS:</p>
-      <ul class="course-list">
-      <li class="course-btn">Animation & Game Production</li>
-      <li class="course-btn">Sound Design & Music Production</li>
-      <li class="course-btn">Event And Experiential Management</li>
-      <li class="course-btn">Costume Designing</li>
-    </ul>`
+      <ul>
+       <li><a href="animation-&-gaming.html" class="!text-[#000]">Animation & Game Development</a></li>
+<li><a href="bsc-in-digital-content-creation-&-media-production.html" class="!text-[#000]">Digital Content Creation and Media Management</a></li>
+<li><a href="sound-design-&-music-video-production.html" class="!text-[#000]">Sound Design & Music Video Production</a></li>
+<li><a href="event-&-experimental-management.html" class="!text-[#000]">Event And Experimental Management</a></li>
+<li><a href="hair-make-up-&-prosthetics.html" class="!text-[#000]">Hair, Makeup & Prosthetics</a></li>
+<li><a href="costume-design.html" class="!text-[#000]">Costume Designing</a></li>
+<li><a href="pr-&-journalism.html" class="!text-[#000]">Journalism, PR, Image Strategization and Brand Custodianship</a></li>
+      </ul>`
   },
-  {
-    key: "Why IICS",
-    keywords: ["benefits", "mentors", "advantages"],
-    response: `
-      <p>Established under the aegis of the Ministry of Skill Development and Entreprenuership:
-IICS is setting a benchmark in creative education, selected students are an integral part of the National Vision to be global Creative Leaders
-
-<strong>Global Exposure:</strong>
-International study tours to Cannes, MIPCOM & SIGGRAPH for real-world creative insights.<br>
-<strong>Industry Experts as Mentors:</strong>
-Learn from Oscar-winners, celebrities and top industry professionals.<br>
-<strong>Paid Apprenticeship model:</strong>
-Guaranteed, stipend-based apprenticeships embedded into every program.</p>
-<p>For more info, Click <span><a href="https://iicsindia.org/industry-mentor.html">here</a></span></p>
-`
-  },
-
-  {
-  key: "Animation & Game Production",
-  keywords: ["animation", "game production"],
-  response: `<ul>
-  <li><strong>Degree:</strong> B.Sc in Animation & Game Production</li>
-  <li><strong>Campuses:</strong> Available in Delhi & Bhopal Campus</li>
-  <li><strong>Duration:</strong> 3 Years</li>
-  <li><strong>Eligibility:</strong> 12th pass from any stream, UG students, or candidates with relevant experience</li>
-  <li><strong>Training Hours:</strong> 500 hours per year</li>
-  <li><strong>Industry Mentor:</strong> Mr. Vaibhav Kumaresh</li>
-  <li><strong>Application Fee:</strong> Rs. 5000</li>
-  <li><strong>Course Fee:</strong> Rs. 4.5 LPA</li>
-  </ul>
-  <p>For more info, Click <span><a href="https://iicsindia.org/animation-&-gaming.html">here</a></span></p>
-`
-},
-{
-  key: "Sound Design & Music Production",
-  keywords: ["sound", "music", "production"],
-  response: `<ul>
-  <li><strong>Degree:</strong> B.Sc in Sound Design & Music Production</li>
-  <li><strong>Campuses:</strong> Available in Delhi & Bhopal Campus</li>
-  <li><strong>Duration:</strong> 3 Years</li>
-  <li><strong>Eligibility:</strong> 12th pass from any stream, UG students, or candidates with relevant experience</li>
-  <li><strong>Training Hours:</strong> 500 hours per year</li>
-  <li><strong>Industry Mentor:</strong> Padma Shri Resul Pookutty</li>
-  <li><strong>Application Fee:</strong> Rs. 5000</li>
-  <li><strong>Course Fee:</strong> Rs. 6 LPA</li>
-  </ul>
-  <p>For more info, Click <span><a href="https://iicsindia.org/sound-design-&-music-video-production.html">here</a></span></p>
-`
-},
-{
-  key: "Event And Experiential Management",
-  keywords: ["event", "management"],
-  response: `<ul>
-  <li><strong>Degree:</strong> B.Sc in Events & Experiential Management</li>
-  <li><strong>Campuses:</strong> Available in Delhi & Bhopal Campus</li>
-  <li><strong>Duration:</strong> 3 Years</li>
-  <li><strong>Eligibility:</strong> 12th pass from any stream, UG students, or candidates with relevant experience</li>
-  <li><strong>Training Hours:</strong> 500 hours per year</li>
-  <li><strong>Industry Mentor:</strong> Ms. Sushma Gaikwad</li>
-  <li><strong>Application Fee:</strong> Rs. 5000</li>
-  <li><strong>Course Fee:</strong> Rs. 5.1 LPA</li>
-</ul>
-<p>For more info, Click <span><a href="/event-&-experimental-management.html">here</a></span></p>
-`
-},
-{
-  key: "Costume Designing",
-  keywords: ["costume", "fashion"],
-  response: `<ul>
-  <li><strong>Degree:</strong> B.Sc in Costume Designing</li>
-  <li><strong>Campuses:</strong> Available in Delhi & Bhopal Campus</li>
-  <li><strong>Duration:</strong> 3 Years</li>
-  <li><strong>Eligibility:</strong> 12th pass with interest in fashion, textiles, theatre arts, or visual storytelling</li>
-  <li><strong>Industry Mentor:</strong> Ms. Neeta Lulla</li>
-  <li><strong>Application Fee:</strong> Rs. 5000</li>
-  <li><strong>Course Fee:</strong> Rs. 5.4 LPA</li>
-</ul>
-<p>For more info, Click <span><a href="https://iicsindia.org/costume-design.html">here</a></span></p>
-`
-},
-
   {
     key: "Mentors",
     keywords: ["mentor", "faculty", "teacher", "guide"],
     response: `
       <p>Meet our top mentors:</p>
       <ul>
-        <li><a href="#" class="!text-[#000]">Dr. (Hon) Amit Behl</a></li>
-        <li><a href="#" class="!text-[#000]">Padma Shri Resul Pookutty</a></li>
-        <li><a href="#" class="!text-[#000]">Padma Shri Shankar Mahadevan</a></li>
-        <li><a href="#" class="!text-[#000]">Ms. Dia Mirza</a></li>
-        <li><a href="#" class="!text-[#000]">Ms. Kavita Krishnamurthy</a></li>
-        <li><a href="#" class="!text-[#000]">Ms. Neeta Lulla</a></li>
-        <li><a href="#" class="!text-[#000]">Ms. Sushma Gaikwad</a></li>
-        <li><a href="industry-mentor.html" class="!text-[#000]">and Many More...</a></li>
+        <li><a href="" class="!text-[#000]">Dr. (Hon) Amit Behl</a></li>
+        
+        <li><a href="" class="!text-[#000]">Padma Shri Dr. Resul Pookutty</a></li>
+        <li><a href="" class="!text-[#000]">Mr. Manvendra Shukul</a></li>
+        <li><a href="" class="!text-[#000]">Mr. Anand Jha</a></li>
+        <li><a href="" class="!text-[#000]">Dr. (Hon) Anusha Srinivasan Iyer</a></li>
+        <li><a href="" class="!text-[#000]">Dr. (Hon) S Ramachandran</a></li>
+        <li><a href="" class="!text-[#000]">Ms. Sushma Gaikwad</a></li>
+        <li><a href="industry-mentor.html" >and Many More....</a></li>
+
+
+       
+
       </ul>`
   },
   {
-    key: "Sample Papers",
-    keywords: ["sample papers", "exam", "syllabus", "entrance exam"],
-    response: `<p>You can check all sample papers <a href="https://iicsindia.org/sample-paper.html" target="_blank">here</a>.</p>`
-  }
+    key: "Careers",
+    keywords: ["career", "job", "future", "employment", "outcome"],
+    response: `
+      <p>We offer 7 career pathways:</p>
+      <ul>
+        <li><a href="/#programs" class="!text-[#000]">Explore Career Outcomes</a></li>
+      </ul>`
+  },
+//   {
+//     key: "Live Projects",
+//     keywords: ["project", "live", "real world"],
+//     response: `
+//       <p>Learn through Live Projects:</p>
+//       <a href="live-project.html" class="!text-[#000]">Watch Projects</a>`
+//   },
+//   {
+//     key: "Industry Associations",
+//     keywords: ["industry", "partner", "association", "network"],
+//     response: `
+//       <p>We have strong industry associations.</p>
+//       <a href="industry-assosiates.html" class="!text-[#000]">See Partners</a>`
+//   },
+//   {
+//     key: "Apprenticeship",
+//     keywords: ["apprentice", "intern", "training"],
+//     response: `
+//       <p>Join our Apprenticeship Programs:</p>
+//       <a href="apprenticeship.html"class="!text-[#000]">Learn More</a>`
+//   },
 ];
 
-const toggleBtn = document.getElementById('chatbot-toggle');
-  const overlay = document.getElementById('chatbot-overlay');
-  const chatbot = document.getElementById('chatbot');
-  let isOpen = false;
-
-  const openChatbot = () => {
-    overlay.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
-
-    // Fade in overlay
-    requestAnimationFrame(() => overlay.classList.add('visible'));
-
-    // Entry animation
-    chatbot.classList.remove('chatbot-exit');
-    chatbot.classList.add('chatbot-enter');
-
-    isOpen = true;
-  };
-
-  const closeChatbot = () => {
-    chatbot.classList.remove('chatbot-enter');
-    chatbot.classList.add('chatbot-exit');
-    overlay.classList.remove('visible');
-
-    setTimeout(() => {
-      overlay.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }, 300);
-
-    isOpen = false;
-  };
-
-  toggleBtn.addEventListener('click', () => {
-    isOpen ? closeChatbot() : openChatbot();
-  });
-
-  overlay.addEventListener('click', () => closeChatbot());
-  chatbot.addEventListener('click', (e) => e.stopPropagation());
-
-   function disableScroll() {
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
-  }
-
-  function enableScroll() {
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
-  }
-
-  window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-      const popup = document.getElementById('popup');
-      popup.classList.remove('hidden');
-      popup.classList.add('fade-in');
-      disableScroll();
-    }, 3000);
-  });
-
-  function closePopup(event) {
-    const popup = document.getElementById('popup');
-    console.log("Clicked:", event.target);
-
-    if (
-      event.target.id === 'popup' ||
-      event.target.closest('.close-btn')
-    ) {
-      popup.classList.add('fade-out');
-      setTimeout(() => {
-        popup.classList.add('hidden');
-        popup.classList.remove('fade-out');
-        enableScroll();
-      }, 300);
-    }
-  }
-
-// ---------------------- SAVE & LOAD CHAT ----------------------
-function saveChat() {
-  localStorage.setItem("chatHistory", chatWindow.innerHTML);
-}
-function loadChat() {
-  const saved = localStorage.getItem("chatHistory");
-  if (saved) {
-    chatWindow.innerHTML = saved;
-
-    attachButtonListeners();         
-    attachCourseButtonListeners();    
-    attachQuickActionListeners();     
-
-    const form = document.getElementById("lead-form");
-    if (form) {
-      form.addEventListener("submit", handleFormSubmit);
-    }
-
-    const lastBotMessage = [...chatWindow.querySelectorAll(".message.bot")].pop();
-    if (lastBotMessage) {
-      const html = lastBotMessage.innerHTML.toLowerCase();
-      if (
-        html.includes("animation-&-gaming") ||
-        html.includes("event") ||
-        html.includes("sound design") ||
-        html.includes("event and experiential management") ||
-        html.includes("costume designing") ||
-        html.includes("industry-mentor") ||
-        html.includes("admission") ||
-        html.includes("apply now") ||
-        html.includes("counsellor") ||
-        html.includes("thank you")
-      ) {
-        showQuickActions();
-      }
-    }
-  }
-}
-
-
-function clearChat() {
-  localStorage.removeItem("chatHistory");
-  chatWindow.innerHTML = "";
-}
-
-// ---------------------- BOT MESSAGE ----------------------
-function addBotMessage(html, delay = 1000, save = true) {
-  const typing = document.createElement("div");
-  typing.className = "message bot typing";
-  typing.innerHTML = `<span class="dot"></span><span class="dot"></span><span class="dot"></span>`;
-  chatWindow.appendChild(typing);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-
-  setTimeout(() => {
-    typing.remove();
-    const msg = document.createElement("div");
-    msg.className = "message bot fade-in";
-    msg.innerHTML = html;
-    chatWindow.appendChild(msg);
-    chatWindow.scrollTop = chatWindow.scrollHeight;
-
-    attachButtonListeners();
-    attachCourseButtonListeners();
-    attachQuickActionListeners();
-
-    if (
-      // html.includes("admission-process") ||
-      html.includes("animation-&-gaming") ||
-      html.includes("industry-mentor") ||
-      html.includes("Sound Design") ||
-      html.includes("Event And Experiential Management") ||
-      html.includes("Costume Designing")
-    ) {
-      showQuickActions();
-    }
-
-    if (save) saveChat();
-  }, delay);
-}
-
-// ---------------------- USER MESSAGE ----------------------
-function addUserMessage(text, save = true) {
+const addMessage = (text, sender = "bot") => {
   const msg = document.createElement("div");
-  msg.className = "message user";
-  msg.textContent = text;
+  msg.className = `message ${sender}`;
+  msg.innerHTML = text;
   chatWindow.appendChild(msg);
   chatWindow.scrollTop = chatWindow.scrollHeight;
-  if (save) saveChat();
-}
+};
 
-// ---------------------- SUBJECT BUTTONS ----------------------
-function showSubjectButtons() {
-  let buttonsHTML = `<p class="mt-2">What do you want to know?</p><div class="subject-buttons fade-in">`;
-  subjects.forEach(sub => {
-    buttonsHTML += `<button class="subject-btn">${sub}</button>`;
-  });
-  buttonsHTML += `</div>`;
-  addBotMessage(buttonsHTML, 1000);
-  setTimeout(attachButtonListeners, 1500);
-}
-
-// ---------------------- QUICK ACTION BUTTONS ----------------------
-function showQuickActions() {
-  document.querySelectorAll(".quick-actions").forEach(el => el.remove());
-
-  const quickBtns = `
-    <div class="quick-actions fade-in">
-      <button class="quick-btn">Go to Main Menu</button>
-      <button class="quick-btn">Talk to Counsellor</button>
-      <button class="quick-btn">Apply Now</button>
-    </div>
-  `;
-  chatWindow.insertAdjacentHTML("beforeend", quickBtns);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-  setTimeout(attachQuickActionListeners, 500);
-}
-
-
-function attachQuickActionListeners() {
-  document.querySelectorAll(".quick-btn").forEach(btn => {
-    btn.onclick = () => {
-      const action = btn.textContent.trim().toLowerCase();
-
-      if (action.includes("main menu")) {
-        showSubjectButtons();
-      } 
-      else if (action.includes("talk to counsellor")) {
-        handleUserInput("Talk to Counsellor");
-      } 
-      else if (action.includes("apply now")) {
-        handleUserInput("Apply Now");
-      }
-    };
-  });
-}
-
-
-function attachCourseButtonListeners() {
-  document.querySelectorAll(".course-btn").forEach(btn => {
-    btn.onclick = () => handleUserInput(btn.textContent);
-  });
-}
-
-// ---------------------- START NEW CHAT BUTTON ----------------------
-document.getElementById("new-chat-btn").addEventListener("click", () => {
-  if (confirm("Are you sure you want to start a new chat? This will clear your previous messages.")) {
-    chatWindow.innerHTML = "";
-    localStorage.removeItem("chatHistory");
-    localStorage.removeItem("leadData");
-    localStorage.removeItem("counsellorContacted");
-
-    addBotMessage("👋 Hello! Welcome to Indian Institute Of Creative Skills.", 500);
-    setTimeout(() => addBotMessage("I'm here to help you with admissions, courses, mentors, and more.", 1000), 1200);
-    setTimeout(() => showLeadForm(true), 2500);
-  }
-});
-
-function attachButtonListeners() {
-  document.querySelectorAll(".subject-btn").forEach(btn => {
-    btn.onclick = () => handleUserInput(btn.textContent);
-  });
-}
-
-// ---------------------- FORM ----------------------
-// function showLeadForm() {
-//   const formHTML = `
-//     <form id="lead-form" class="lead-form fade-in" novalidate>
-//   <p>Please share your details so we can assist you better:</p>
-
-//   <div class="form-group">
-//     <input type="text" id="user-name" placeholder="Your Name" required />
-//     <small class="error-message" id="error-name"></small>
-//   </div>
-
-//   <div class="form-group">
-//     <input type="email" id="user-email" placeholder="Your Email" required />
-//     <small class="error-message" id="error-email"></small>
-//   </div>
-
-//   <div class="form-group">
-//     <input type="tel" id="user-phone" placeholder="Your Phone (10 digits)" required />
-//     <small class="error-message" id="error-phone"></small>
-//   </div>
-
-//   <button type="submit" id="submit-lead">Submit</button>
-// </form>
-//   `;
-//   addBotMessage(formHTML, 1500);
-//   setTimeout(() => {
-//     const form = document.getElementById("lead-form");
-//     if (!form) return;
-//     form.addEventListener("submit", handleFormSubmit);
-//   }, 1800);
-// }
-
-// async function handleFormSubmit(e) {
-//   e.preventDefault();
-//   const form = e.target;
-//   const name = document.getElementById("user-name").value.trim();
-//   const email = document.getElementById("user-email").value.trim();
-//   const phone = document.getElementById("user-phone").value.trim();
-//   if (!name || !email || !phone) return alert("Please fill all fields!");
-
-//   form.querySelectorAll("input, button").forEach(el => el.disabled = true);
-
-//   const loader = document.createElement("div");
-//   loader.className = "message bot typing";
-//   loader.innerHTML = `<span class="dot"></span><span class="dot"></span><span class="dot"></span>`;
-//   chatWindow.appendChild(loader);
-//   chatWindow.scrollTop = chatWindow.scrollHeight;
-
-//   try {
-//     await fetch(GOOGLE_SCRIPT_URL, {
-//       method: "POST",
-//       mode: "no-cors",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify({ name, email, phone })
-//     });
-
-//     loader.remove();
-//     addBotMessage(`<p>🎉 Thank you, ${name}! Your details have been submitted successfully.</p>`);
-//     setTimeout(showSubjectButtons, 2000);
-//   } catch (err) {
-//     loader.remove();
-//     addBotMessage("<p>Sorry, something went wrong. Please try again later.</p>");
-//     form.querySelectorAll("input, button").forEach(el => el.disabled = false);
-//   }
-//   saveChat();
-// }
-
-function showLeadForm() {
-  const formHTML = `
-    <form id="lead-form" class="lead-form fade-in" novalidate>
-      <p>Please share your details so we can assist you better:</p>
-
-      <div class="form-group">
-        <input type="text" id="user-name" placeholder="Your Name" required />
-        <small class="error-message" id="error-name"></small>
-      </div>
-
-      <div class="form-group">
-        <input type="email" id="user-email" placeholder="Your Email" required />
-        <small class="error-message" id="error-email"></small>
-      </div>
-
-      <div class="form-group">
-        <input type="tel" id="user-phone" placeholder="Your Phone (10 digits)" required />
-        <small class="error-message" id="error-phone"></small>
-      </div>
-
-      <button type="submit" id="submit-lead">Let's Chat</button>
-    </form>
-  `;
-  addBotMessage(formHTML, 1500);
+const handleSubject = (subjectName) => {
+  const matched = responses.find(r => r.key === subjectName);
+  addMessage(subjectName, "user");
   setTimeout(() => {
-    const form = document.getElementById("lead-form");
-    if (form) form.addEventListener("submit", handleFormSubmit);
-  }, 1800);
-}
+    if (matched) {
+      addMessage(matched.response);
+    } else {
+      addMessage(`Sorry, I couldn't find anything related to that.`);
+    }
+  }, 300);
+};
 
-async function handleFormSubmit(e) {
-  e.preventDefault();
-  const name = document.getElementById("user-name").value.trim();
-  const email = document.getElementById("user-email").value.trim();
-  const phone = document.getElementById("user-phone").value.trim();
+const handleUserInput = () => {
+  const message = userInput.value.trim();
+  if (!message) return;
 
-  // Error message elements
-  const nameError = document.getElementById("error-name");
-  const emailError = document.getElementById("error-email");
-  const phoneError = document.getElementById("error-phone");
-
-  // Reset errors
-  nameError.textContent = "";
-  emailError.textContent = "";
-  phoneError.textContent = "";
-
-  let valid = true;
-
-  // ✅ Name Validation
-  if (name.length < 2) {
-    nameError.textContent = "Please enter your full name.";
-    valid = false;
-  }
-
-  // ✅ Email Validation
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!emailPattern.test(email)) {
-  emailError.textContent = "Please enter a valid email address.";
-  valid = false;
-}
-
-  // ✅ Phone Validation
-  const phonePattern = /^[0-9]{10}$/;
-  if (!phonePattern.test(phone)) {
-    phoneError.textContent = "Please enter a valid 10-digit phone number.";
-    valid = false;
-  }
-
-  if (!valid) return; // ❌ Stop if invalid
-
-  // ✅ Disable fields while submitting
-  const form = e.target;
-  form.querySelectorAll("input, button").forEach(el => el.disabled = true);
-
-  const loader = document.createElement("div");
-  loader.className = "message bot typing";
-  loader.innerHTML = `<span class="dot"></span><span class="dot"></span><span class="dot"></span>`;
-  chatWindow.appendChild(loader);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-
-  // ✅ Store lead in localStorage
-  const leadData = { name, email, phone };
-  localStorage.setItem("leadData", JSON.stringify(leadData));
-
-  try {
-    await fetch(GOOGLE_SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(leadData)
-    });
-
-    loader.remove();
-    addBotMessage(`<p>🎉 Thank you, ${name}! Your details have been submitted successfully.</p>`);
-    setTimeout(showSubjectButtons, 2000);
-  } catch (err) {
-    loader.remove();
-    console.error("Error submitting lead:", err);
-    addBotMessage("<p>⚠️ Something went wrong while saving your details. Please try again later.</p>");
-    form.querySelectorAll("input, button").forEach(el => el.disabled = false);
-  }
-
-  saveChat();
-}
-
-
-// ---------------------- UPDATE COUNSELLOR STATUS ----------------------
-async function updateCounsellorStatus({ name, email, phone }) {
-  const hasContacted = localStorage.getItem("counsellorContacted");
-
-  // 🟣 Prevent duplicate counsellor requests
-  if (hasContacted === "YES") {
-    addBotMessage("<p>✅ You’ve already requested to talk to a counsellor. Our team will contact you soon.</p>");
-    addBotMessage("<p>OR You can also reach out to us at <span><a href='tel:9594949959'>+91 9594949959</a></span></p>");
-    setTimeout(showQuickActions, 1200);
-    return;
-  }
-
-  addBotMessage("<p>⏳ Connecting you to our counsellor...</p>");
-  const loader = document.createElement("div");
-  loader.className = "message bot typing";
-  loader.innerHTML = `<span class="dot"></span><span class="dot"></span><span class="dot"></span>`;
-  chatWindow.appendChild(loader);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-
-  try {
-    await fetch(GOOGLE_SCRIPT_URL, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, phone, talkToCounsellor: "YES" })
-    });
-
-    loader.remove();
-    addBotMessage("<p>✅ Thank you! Our counsellor will contact you soon.</p>");
-    addBotMessage("<p>OR You can also reach out to us at <span><a href='tel:9594949959'>+91 9594949959</a></span></p>");
-    localStorage.setItem("counsellorContacted", "YES");
-    setTimeout(showQuickActions, 1200);
-  } catch (err) {
-    loader.remove();
-    console.error("Error updating counsellor status:", err);
-    addBotMessage("<p>⚠️ Something went wrong while saving your response. Please try again later.</p>");
-  }
-
-  saveChat();
-}
-
-// ---------------------- HANDLE USER INPUT ----------------------
-function handleUserInput(customText = null) {
-  const text = customText || userInput.value.trim();
-  if (!text) return;
-  addUserMessage(text);
+  addMessage(message, "user");
   userInput.value = "";
 
-  const lower = text.toLowerCase();
-  const leadData = JSON.parse(localStorage.getItem("leadData") || "{}");
+  const lower = message.toLowerCase();
 
-  // ✅ Handle "Talk to Counsellor"
-  if (lower.includes("talk to counsellor")) {
-    const name = leadData.name || document.getElementById("user-name")?.value || "";
-    const email = leadData.email || document.getElementById("user-email")?.value || "";
-    const phone = leadData.phone || document.getElementById("user-phone")?.value || "";
+  const matched = responses.find(r =>
+    r.keywords.some(keyword => lower.includes(keyword))
+  );
 
-    if (name && email && phone) {
-      localStorage.setItem("leadData", JSON.stringify({ name, email, phone }));
-      updateCounsellorStatus({ name, email, phone });
-    } else {
-      addBotMessage("<p>Please share your details first before connecting to a counsellor.</p>");
-      setTimeout(showLeadForm, 1500);
-    }
-    return;
-  }
-
-  // ✅ Handle "Go to Main Menu"
-  if (lower.includes("go to main menu")) {
-    showSubjectButtons();
-    return;
-  }
-
-  // ✅ Handle "Apply Now"
-  if (lower.includes("apply now")) {
-    addBotMessage(`<p>You can apply from <span><a href="https://iicsindia.org/admission.html" target="_blank">here</a></span>.</p>`);
-    setTimeout(showQuickActions, 1000);
-    return;
-  }
-
-  // Handle Why IICS
-  if (lower.includes("why iics")) {
-    addBotMessage(`<p>Established under the aegis of the Ministry of Skill Development and Entreprenuership:
-IICS is setting a benchmark in creative education, selected students are an integral part of the National Vision to be global Creative Leaders
-<br>
-<strong>Global Exposure:</strong>
-International study tours to Cannes, MIPCOM & SIGGRAPH for real-world creative insights.<br>
-<strong>Industry Experts as Mentors:</strong>
-Learn from Oscar-winners, celebrities and top industry professionals.<br>
-<strong>Paid Apprenticeship model:</strong>
-Guaranteed, stipend-based apprenticeships embedded into every program.</p>
-<p>For more info, Click <span><a href="https://iicsindia.org/industry-mentor.html">here</a></span></p>`);
-    setTimeout(showQuickActions, 1000);
-    return;
-  }
-
-  // ✅ Handle Courses
-  if (lower.includes("animation") || lower.includes("sound") || lower.includes("event") || lower.includes("costume")) {
-    const matched = responses.find(r => lower.includes(r.key.toLowerCase()));
+  setTimeout(() => {
     if (matched) {
-      addBotMessage(matched.response);
-      setTimeout(showQuickActions, 1000);
-      return;
+      addMessage(matched.response);
+    } else {
+      addMessage(`Sorry, I couldn't find anything related to that. Try asking about admission, courses, mentors, etc.`);
     }
-  }
+  }, 500);
+};
 
-  // ✅ Handle all other subjects
-  const matched = responses.find(r => r.keywords.some(k => lower.includes(k)));
-  if (matched) {
-    addBotMessage(matched.response);
-    setTimeout(showQuickActions, 1000);
-  } else {
-    addBotMessage("Sorry, I couldn't find anything related to that. Try asking about admission, courses, mentors, etc.");
-  }
+// Subject buttons creation
+const renderSubjectButtons = () => {
+  const wrapper = document.createElement("div");
+  wrapper.className = "button-container";
+  subjects.forEach(subject => {
+    const btn = document.createElement("button");
+    btn.className = "subject-btn";
+    btn.innerText = subject;
+    btn.onclick = () => handleSubject(subject);
+    wrapper.appendChild(btn);
+  });
+  subjectButtonsDiv.appendChild(wrapper);
+};
 
-  saveChat();
-}
+renderSubjectButtons();
 
-
-// ---------------------- UPDATE COUNSELLOR STATUS ----------------------
-// async function updateCounsellorStatus({ name, email, phone }) {
-//   addBotMessage("<p>⏳ Connecting you to our counsellor...</p>");
-//   const loader = document.createElement("div");
-//   loader.className = "message bot typing";
-//   loader.innerHTML = `<span class="dot"></span><span class="dot"></span><span class="dot"></span>`;
-//   chatWindow.appendChild(loader);
-//   chatWindow.scrollTop = chatWindow.scrollHeight;
-
-//   try {
-//     await fetch(GOOGLE_SCRIPT_URL, {
-//       method: "POST",
-//       mode: "no-cors",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify({ name, email, phone, talkToCounsellor: "YES" })
-//     });
-
-//     loader.remove();
-//     addBotMessage("<p>✅ Thank you! Our counsellor will contact you soon.</p>");
-//   } catch (err) {
-//     loader.remove();
-//     console.error("Error updating counsellor status:", err);
-//     addBotMessage("<p>⚠️ Something went wrong while saving your response. Please try again later.</p>");
-//   }
-//   saveChat();
-// }
-
-// ---------------------- HANDLE USER INPUT ----------------------
-// function handleUserInput(customText = null) {
-//   const text = customText || userInput.value.trim();
-//   if (!text) return;
-//   addUserMessage(text);
-//   userInput.value = "";
-
-//   const lower = text.toLowerCase();
-
-//   if (lower.includes("talk to counsellor")) {
-//     const name = document.getElementById("user-name")?.value || "";
-//     const email = document.getElementById("user-email")?.value || "";
-//     const phone = document.getElementById("user-phone")?.value || "";
-
-//     if (name && email && phone) {
-//       localStorage.setItem("leadData", JSON.stringify({ name, email, phone }));
-//       updateCounsellorStatus({ name, email, phone });
-//     } else {
-//       addBotMessage("<p>Please share your details first before connecting to a counsellor.</p>");
-//       setTimeout(showLeadForm, 1500);
-//     }
-//     return;
-//   }
-
-//   if (lower.includes("go to main menu")) {
-//     showSubjectButtons();
-//     return;
-//   }
-
-//   // if (lower.includes("apply now")) {
-//   //   addBotMessage(`<p>You can apply from <span><a href="https://iicsindia.org/admission.html">here</a></span></p>`);
-//   //   return;
-//   // }
-
-//   const matched = responses.find(r => r.keywords.some(k => lower.includes(k)));
-//   if (matched) addBotMessage(matched.response);
-//   else addBotMessage("Sorry, I couldn't find anything related to that. Try asking about admission, courses, mentors, etc.");
-
-//   saveChat();
-// }
-
-// function handleUserInput(customText = null) {
-//   const text = customText || userInput.value.trim();
-//   if (!text) return;
-//   addUserMessage(text);
-//   userInput.value = "";
-
-//   const lower = text.toLowerCase();
-
-//   // ✅ Handle "Talk to Counsellor"
-//   if (lower.includes("talk to counsellor")) {
-//     const name = document.getElementById("user-name")?.value || "";
-//     const email = document.getElementById("user-email")?.value || "";
-//     const phone = document.getElementById("user-phone")?.value || "";
-
-//     if (name && email && phone) {
-//       localStorage.setItem("leadData", JSON.stringify({ name, email, phone }));
-//       updateCounsellorStatus({ name, email, phone });
-//     } else {
-//       addBotMessage("<p>Please share your details first before connecting to a counsellor.</p>");
-//       setTimeout(showLeadForm, 1500);
-//     }
-//     return;
-//   }
-
-//   // ✅ Handle "Go to Main Menu"
-//   if (lower.includes("go to main menu")) {
-//     showSubjectButtons();
-//     return;
-//   }
-
-//   // ✅ Handle "Apply Now" separately (so it doesn’t get caught by “admission process”)
-//   if (lower.includes("apply now")) {
-//     addBotMessage(`<p>You can apply from <span><a href="https://iicsindia.org/admission.html" target="_blank">here</a></span>.</p>`);
-//     setTimeout(showQuickActions, 1000);
-//     return;
-//   }
-
-//   function attachCourseButtonListeners() {
-//   document.querySelectorAll(".course-btn").forEach(btn => {
-//     btn.onclick = () => handleUserInput(btn.textContent);
-//   });
-// }
-
-
-//   // ✅ Show responses for other subjects
-//   if (subjects.some(sub => lower.includes(sub.toLowerCase()))) {
-//     const matched = responses.find(r => r.keywords.some(k => lower.includes(k)));
-//     if (matched) {
-//       addBotMessage(matched.response);
-//     } else {
-//       addBotMessage("<p>Got it! Please wait...</p>");
-//     }
-//     setTimeout(showQuickActions, 1000);
-//     saveChat();
-//     return;
-//   }
-
-
-
-//   // Default fallback response
-//   const matched = responses.find(r => r.keywords.some(k => lower.includes(k)));
-//   if (matched) addBotMessage(matched.response);
-//   else addBotMessage("Sorry, I couldn't find anything related to that. Try asking about admission, courses, mentors, etc.");
-
-//   saveChat();
-// }
-
-// ---------------------- UPDATE COUNSELLOR STATUS ----------------------
-// async function updateCounsellorStatus({ name, email, phone }) {
-//   addBotMessage("<p>⏳ Connecting you to our counsellor...</p>");
-//   const loader = document.createElement("div");
-//   loader.className = "message bot typing";
-//   loader.innerHTML = `<span class="dot"></span><span class="dot"></span><span class="dot"></span>`;
-//   chatWindow.appendChild(loader);
-//   chatWindow.scrollTop = chatWindow.scrollHeight;
-
-//   try {
-//     await fetch(GOOGLE_SCRIPT_URL, {
-//       method: "POST",
-//       mode: "no-cors",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify({ name, email, phone, talkToCounsellor: "YES" })
-//     });
-
-//     loader.remove();
-//     addBotMessage("<p>✅ Thank you! Our counsellor will contact you soon.</p>");
-//     setTimeout(showQuickActions, 1200);
-//   } catch (err) {
-//     loader.remove();
-//     console.error("Error updating counsellor status:", err);
-//     addBotMessage("<p>⚠️ Something went wrong while saving your response. Please try again later.</p>");
-//   }
-//   saveChat();
-// }
-
-// ---------------------- HANDLE USER INPUT ----------------------
-// function handleUserInput(customText = null) {
-//   const text = customText || userInput.value.trim();
-//   if (!text) return;
-//   addUserMessage(text);
-//   userInput.value = "";
-
-//   const lower = text.toLowerCase();
-//   const leadData = JSON.parse(localStorage.getItem("leadData") || "{}");
-
-//   // ✅ Handle "Talk to Counsellor"
-//   if (lower.includes("talk to counsellor")) {
-//     const name = leadData.name || document.getElementById("user-name")?.value || "";
-//     const email = leadData.email || document.getElementById("user-email")?.value || "";
-//     const phone = leadData.phone || document.getElementById("user-phone")?.value || "";
-
-//     if (name && email && phone) {
-//       localStorage.setItem("leadData", JSON.stringify({ name, email, phone }));
-//       updateCounsellorStatus({ name, email, phone });
-//     } else {
-//       addBotMessage("<p>Please share your details first before connecting to a counsellor.</p>");
-//       setTimeout(showLeadForm, 1500);
-//     }
-//     return;
-//   }
-
-//   // ✅ Handle "Go to Main Menu"
-//   if (lower.includes("go to main menu")) {
-//     showSubjectButtons();
-//     return;
-//   }
-
-//   // ✅ Handle "Apply Now"
-//   if (lower.includes("apply now")) {
-//     addBotMessage(`<p>You can apply from <span><a href="https://iicsindia.org/admission.html" target="_blank">here</a></span>.</p>`);
-//     setTimeout(showQuickActions, 1000);
-//     return;
-//   }
-
-//   // ✅ Handle Courses
-//   if (lower.includes("animation") || lower.includes("sound") || lower.includes("event") || lower.includes("costume")) {
-//     const matched = responses.find(r => lower.includes(r.key.toLowerCase()));
-//     if (matched) {
-//       addBotMessage(matched.response);
-//       setTimeout(showQuickActions, 1000);
-//       return;
-//     }
-//   }
-
-//   // ✅ Handle all other subjects
-//   const matched = responses.find(r => r.keywords.some(k => lower.includes(k)));
-//   if (matched) {
-//     addBotMessage(matched.response);
-//     setTimeout(showQuickActions, 1000);
-//   } else {
-//     addBotMessage("Sorry, I couldn't find anything related to that. Try asking about admission, courses, mentors, etc.");
-//   }
-
-//   saveChat();
-// }
-
-
-
-
-
-// ---------------------- INITIAL GREETING ----------------------
-window.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("chatHistory")) {
-    loadChat();
-  } else {
-    addBotMessage("👋 Hello! Welcome to Indian Institute Of Creative Skills.", 800);
-    setTimeout(() => addBotMessage("I'm here to help you with admissions, courses, mentors, and more.", 1000), 1500);
-    setTimeout(() => showLeadForm(), 3000);
-  }
-});
-
-sendBtn.addEventListener("click", () => handleUserInput());
-userInput.addEventListener("keydown", e => {
+sendBtn.addEventListener("click", handleUserInput);
+userInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") handleUserInput();
 });
