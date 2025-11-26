@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Awaiken">
+    <!-- Page Title -->
+    <title>INDIAN INSTITUTE OF CREATIVE SKILLS</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/IICS/iics_image/logoonWeb.png" />
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+
+    <style>
+       #npfWdgclose-f1b98d990e50ebc6d5abb714dc863965 {
+    display: none !important;
+    visibility: hidden !important;
+  }
+    </style>
+
+</head>
+                <button type="button"  onclick="openFormWithPdf('images/sample-paper/Animation & Game Development.pdf')" class="sample-paper"></button>
+                <button type="button"  onclick="openFormWithPdf('images/sample-paper/Animation & Game Development.pdf')" class="npfWidgetButton npfWidget-f1b98d990e50ebc6d5abb714dc863965 sample-paper hidden"></button>
+              </div>
+            </div>
+          </div>
+          <!-- Service Item End -->
+        </div>
+
+<script>
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      const btn = document.querySelector(".npfWidgetButton.npfWidget-f1b98d990e50ebc6d5abb714dc863965.sample-paper");
+      if (btn) {
+        btn.click();
+      } else {
+        console.error("NPF widget button not found.");
+      }
+
+      const closeBtn = document.getElementById("npfWdgclose-f1b98d990e50ebc6d5abb714dc863965");
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+          window.location.href = "/"; 
+        });
+      } else {
+        console.error("NPF widget close button not found.");
+      }
+    }, 800);
+  });
+</script>
+
+
+<script src="https://in6cdn.npfs.co/js/widget/npfwpopup.js"></script>
+<script>
+let npfWf1b98d990e50ebc6d5abb714dc863965 = new NpfWidgetsInit({
+  'widgetId':'f1b98d990e50ebc6d5abb714dc863965',
+  'baseurl':'widgets.in6.nopaperforms.com',
+  'formTitle':'Enquiry Form',
+  'titleColor':'#FF0033',
+  'backgroundColor':'#ddd',
+  'iframeHeight':'500px',
+  'buttonbgColor':'#4c79dc',
+  'buttonTextColor':'#FFF',
+});
+</script>
+
+<script>
+setInterval(() => {
+  const popup = document.querySelector(".npfPopup");
+  if (popup && popup.style.display === "block") {
+    const msg = popup.querySelector(".npfPopup-message");
+    if (msg && msg.innerText.includes("Enquiry Submitted Successfully")) {
+      setTimeout(() => {
+        popup.style.display = "none"; // popup hide after 2 sec
+      }, 2000);
+    }
+  }
+}, 1000);
+</script>
+
+
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        const swiperSecond = new Swiper(".mySwiperSecond", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,
+                },
+                992: {
+                    slidesPerView: 4,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
+            },
+        });
+    </script>
+
+    <script>
+        const industryMentor = [
+            {
+                name: "Padma Shri Resul Pookutty",
+                designation:
+                    "Indian film director, film production designer, and television host",
+                image: "images/IICS/iics_image/industry-mentors/Padma-Shri-Resul-Pookutty.png",
+            },
+            {
+                name: "Padma Shri Shankar Mahadevann",
+                designation:
+                    "Indian singer and composer",
+                image: "images/IICS/iics_image/industry-mentors/Padma-Shri-Shankar-Mahadevan.png",
+            },
+            {
+                name: "Ms.Dia Mirza",
+                designation: "Actor",
+                image: "images/IICS/iics_image/industry-mentors/Ms-Dia-Mirza.jpg",
+            },
+            {
+                name: "Ms. Kavita Krishnamurthy",
+                designation: "Indian playback singer",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Ms-Kavita-Krishnamurthy.png",
+            },
+            {
+                name: "Ms. Neeta Lulla",
+                designation: "Costume Designer",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Ms-Neeta-Lulla.png",
+            },
+            {
+                name: "Ms. Revathy Asha Kelunni",
+                designation: "Indian Actress and Director",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Ms-Revathy-Asha-Kelunni.png",
+            },
+            {
+                name: "Mr. Zakir Khan",
+                designation: "Comedian",
+                image:
+                    "images/IICS/iics_image/industry-mentors/zakir-khan.png",
+            },
+            {
+                name: "Ms.Sushma Gaikwad",
+                designation: "Co-founder Ice Global, Wizcraft MIME & Sukhoon",
+                image:
+                    "images/IICS/iics_image/industry-mentors/sushma.png",
+            },
+            {
+                name: "Mr. Suresh Eriyat",
+                designation: "Indian animator & director",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Mr-Suresh-Eriyat.png",
+            },
+            {
+                name: "Mr. Bharat Dabholkar",
+                designation: "Actor",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Mr-Bharat-Dabholkar.png",
+            },
+            {
+                name: "Mr. Amit Sadh",
+                designation: "Actor",
+                image:
+                    "images/IICS/iics_image/industry-mentors/amit-sadh.png",
+            },
+            {
+                name: "Mr. Sameer Tobaccowala",
+                designation: "CEO, Shobiz Experiential Communications",
+                image:
+                    "images/IICS/iics_image/industry-mentors/sameer-tobaccowala.png",
+            },
+            {
+                name: "Mr. Amit Behl",
+                designation: "Indian Theater Actor",
+                image:
+                    "images/IICS/iics_image/industry-mentors/amit-behl.png",
+            },
+            {
+                name: "Ms. Bina Paul",
+                designation: "Indian film editor",
+                image:
+                    "images/IICS/iics_image/industry-mentors/bina-paul.png",
+            },
+            {
+                name: "Mr. Omung Kumar",
+                designation: "Indian film director, film production designer, and television host",
+                image:
+                    "images/IICS/iics_image/industry-mentors/omung_kumar.png",
+            },
+            {
+                name: "Mr. Kamlesh Pandey",
+                designation: "Writer",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Mr-Kamlesh-Pandey_.png",
+            },
+            {
+                name: "Mr. Shayam Kaushal",
+                designation: "Director",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Mr-Shayam-Kaushal.png",
+            },
+            {
+                name: "Ms. Jaya Bhattacharya",
+                designation: "Indian television actress",
+                image:
+                    "images/IICS/iics_image/industry-mentors/jaya-bhattacharya.png",
+            },
+            {
+                name: "Mr. Rahul Rawail",
+                designation: "Indian Film Director",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Mr-Rahul-Rawail.png",
+            },
+            {
+                name: "Mr. Jaya Kumar",
+                designation: "CEO, Toonz Media Group",
+                image:
+                    "images/IICS/iics_image/industry-mentors/jaya-kumar.png",
+            },
+            {
+                name: "Mr. Jan Horn",
+                designation: "Managing Director of SAE Dubai University",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Mr-jan-horn.png",
+            },
+            {
+                name: "Mr. Salim Arif",
+                designation: "Indian Theatre & Film Actor",
+                image:
+                    "images/IICS/iics_image/industry-mentors/salim-arif.png",
+            },
+            {
+                name: "Dr. L. Subramaniam",
+                designation: "Indian Violinist",
+                image:
+                    "images/IICS/iics_image/industry-mentors/L-Subramaniam-4.png",
+            },
+            {
+                name: "Ms. Kausar Munir",
+                designation: "Lyricist/Writer",
+                image:
+                    "images/IICS/iics_image/industry-mentors/mr-kausar-munir.png",
+            },
+            {
+                name: "Mr. Anupam Shobhakar",
+                designation: "Indian musician, Composer, Instrumentalist, Record Producer",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Mr-Anupam-Shobhakar.png",
+            },
+            {
+                name: "Mr. Vaibhav Kumaresh",
+                designation: "Founder, Creative Director of Vaibhav Studios",
+                image:
+                    "images/IICS/iics_image/industry-mentors/vaibhav-kumaresh.png",
+            },
+            {
+                name: "Mr. Sumanto Ray",
+                designation: "Actor, Voice Artist, Dubbing Director, Dialogue writer, Music creator",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Sumanto-Ray-.png",
+            },
+            {
+                name: "Ms. Anusha Srinivasan Iyer",
+                designation: "Digital Creator, Filmaker, Director",
+                image:
+                    "images/IICS/iics_image/industry-mentors/anusha-mam_.png",
+            },
+            {
+                name: "Mr. Sudeep Chatterjee",
+                designation: "Cinematographer",
+                image:
+                    "images/IICS/iics_image/industry-mentors/sudeep-Chatterjee.png",
+            },
+            {
+                name: "Mr. Avijit Dutt",
+                designation: "Indian Actor and Theatre Director",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Avijit-dutt.png",
+            },
+            {
+                name: "Mr. Vishnu Patel",
+                designation: "UFO Group CEO – Special Projects",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Vishnu-Patel.png",
+            },
+            {
+                name: "Mr. Kireet khurana",
+                designation: "Founder & director, Climb Media Pvt. Ltd.",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Ms-Kireet-khurana.png",
+            },
+            {
+                name: "Mr. Shibasish Sarkar",
+                designation: "Group CEO - Reliance Studios; Chairman/ Film Producer",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Shibashish-Sarkar.png",
+            },
+            {
+                name: "Mr. Anand Jha",
+                designation: "CEO, Nilee Games",
+                image:
+                    "images/IICS/iics_image/industry-mentors/Mr-Anand-Jha.png",
+            },
+
+        ];
+        const container = document.getElementById("courseContainer");
+
+        industryMentor.forEach((course) => {
+            const slide = document.createElement("div");
+            slide.className = "swiper-slide";
+            slide.innerHTML = `
+    <div class="col-lg-12 col-md-12">
+                <!-- Team Item Start -->
+                <div class="team-item wow fadeInUp">
+                    <div class="team-image">
+                        <a  data-cursor-text="">
+                            <figure class="image-anime">
+                                <img src=${course.image} alt="">
+                            </figure>
+                        </a>
+
+                        <!-- Team Social Icon Start -->
+                       
+                        <!-- Team Social Icon End -->
+                    </div>
+
+                    <!-- Team Content Start -->
+                    <div class="team-content">
+                        <h2><a href="">${course.name}</a></h2>
+                        <p>${course.designation}</p>
+                    </div>
+                    <!-- Team Content End -->
+                </div>
+                <!-- Team Item End -->
+            </div>
+`;
+            container.appendChild(slide);
+        });
+    </script>
+    <script src="./chatbot.js"></script>
+    <script>
+        const toggleBtn = document.getElementById('chatbot-toggle');
+        const overlay = document.getElementById('chatbot-overlay');
+        let isOpen = false;
+
+        const openChatbot = () => {
+            overlay.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+            isOpen = true;
+        };
+
+        const closeChatbot = () => {
+            overlay.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+            isOpen = false;
+        };
+
+        toggleBtn.addEventListener('click', () => {
+            isOpen ? closeChatbot() : openChatbot();
+        });
+
+        overlay.addEventListener('click', () => {
+            closeChatbot();
+        });
+
+        // Prevent close when clicking inside chatbot box
+        document.getElementById('chatbot').addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    </script>
+    <script
+        type="text/javascript">var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = "https://widgets.in6.nopaperforms.com/emwgts.js"; document.body.appendChild(s); </script>
+    
+        <!-- <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script> -->
+
+</body>
+
+</html>
