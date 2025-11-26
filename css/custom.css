@@ -273,6 +273,16 @@ body{
     width: 100%;
 }
 
+@media screen and (max-width:767px) {
+	.serviceTb{
+		display: none;
+	}
+	.campusTb{
+		margin-bottom: 10px !important;
+	}
+	
+}
+
 .btn-default.btn-highlighted{
 	background: var(--accent-secondary-color);
 	color: var(--primary-color);
@@ -546,15 +556,6 @@ body{
 	border-right: 1px solid var(--primary-color);
     margin-right: 15px;
 	padding-right: 15px;
-}
-@media screen and (max-width:767px) {
-	.serviceTb{
-		display: none;
-	}
-	.campusTb{
-		margin-bottom: 10px !important;
-	}
-	
 }
 
 .topbar-social-links ul li:last-child{
