@@ -654,9 +654,6 @@ if (!slug || slug === "blog-detail.html") {
 }
 
 console.log("DETECTED SLUG:", slug);
-console.log("API URL:", api);
-
-
 
     // ----------------------------------------------------
     // FETCH FROM STRAPI API
@@ -668,6 +665,7 @@ console.log("API URL:", api);
     });
 
     const api = `${STRAPI}/api/posts?${qs.toString()}`;
+    console.log("API URL:", api);
 
     try {
       const res = await fetch(api);
