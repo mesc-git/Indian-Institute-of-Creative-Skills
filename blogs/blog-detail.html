@@ -621,115 +621,135 @@
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 <script>
-  (async function(){
-    // ========== CONFIG ==========
-    const STRAPI = "https://iics-blogs.onrender.com";
-    // ========== /CONFIG ==========
+(async function () {
+  // =========================
+  // CONFIG
+  // =========================
+  const STRAPI = "https://iics-blogs.onrender.com";
 
-    function q(sel){ return document.querySelector(sel); }
+  const q = (sel) => document.querySelector(sel);
 
-    function fixStrapiUrls(html) {
-      return html.replace(/src="\/uploads/g, `src="${STRAPI}/uploads`);
-    }
-
-   let slug;
-
-const params = new URLSearchParams(window.location.search);
-slug = params.get("slug");
-
-if (!slug) {
-  let path = window.location.pathname;
-
-  if (path.endsWith("/")) {
-    path = path.slice(0, -1);
+  // Fix image URLs from Strapi
+  function fixStrapiUrls(html) {
+    return html.replace(/src="\/uploads/g, `src="${STRAPI}/uploads`);
   }
 
-  const segments = path.split("/");
-  slug = segments[segments.length - 1];
-}
+  // =========================
+  // GET SLUG
+  // =========================
+  let slug;
 
-slug = slug.trim();
+  const params = new URLSearchParams(window.location.search);
+  slug = params.get("slug");
 
-if (!slug || slug === "blog-detail.html") {
-  q("#loading").innerText = "No article specified.";
-  throw new Error("Slug missing");
-}
+  if (!slug) {
+    let path = window.location.pathname;
+    if (path.endsWith("/")) path = path.slice(0, -1);
+    slug = path.split("/").pop();
+  }
 
-console.log("DETECTED SLUG:", `"${slug}"`);
+  if (!slug || slug === "blog-detail.html") {
+    q("#loading").innerText = "No article specified.";
+    return;
+  }
 
+  slug = slug.trim();
+  console.log("Detected slug:", slug);
 
-    // ----------------------------------------------------
-    // FETCH FROM STRAPI API
-    // ----------------------------------------------------
+  // =========================
+  // FETCH FROM STRAPI
+  // =========================
+  const qs = new URLSearchParams({
+    "filters[slug][$eq]": slug,
+    populate: "featureImage"
+  });
 
-    const qs = new URLSearchParams({
-      "filters[slug][$eq]": slug,
-      populate: "featureImage"
-    });
+  const apiUrl = `${STRAPI}/api/posts?${qs.toString()}`;
+  console.log("API URL:", apiUrl);
 
-    const api = `${STRAPI}/api/posts?${qs.toString()}`;
-    console.log("API URL:", api);
+  try {
+    const res = await fetch(apiUrl);
+    if (!res.ok) throw new Error("Network error: " + res.status);
 
-    try {
-      const res = await fetch(api);
-      if (!res.ok) throw new Error("Network error " + res.status);
+    const json = await res.json();
+    const post = json.data && json.data[0];
 
-      const json = await res.json();
-      const data = json.data && json.data[0];
-
-      if (!data) {
-        q("#loading").innerText = "Article not found.";
-        return;
-      }
-
-      const post = data.attributes;
-
-      // Title
-      q('#post-title').innerText = post.title || "Untitled";
-
-      // Meta info
-      const category = post.category?.title || "";
-      const author = post.author?.name || "";
-      const date = post.postDate || post.publishedAt || "";
-      q('#post-meta').innerText =
-        `${category ? category + " • " : ""}${date ? "Posted on " + date : ""}${author ? " • " + author : ""}`;
-
-      // Feature image
-      let imageUrl = null;
-      const imgData = post.featureImage?.data?.attributes;
-
-      if (imgData) {
-        imageUrl = imgData.formats?.medium?.url || imgData.url;
-        if (imageUrl?.startsWith("/")) imageUrl = STRAPI + imageUrl;
-      }
-
-      const imgEl = q('#post-image');
-      if (imageUrl) {
-        imgEl.src = imageUrl;
-        imgEl.alt = post.featureImage?.data?.attributes?.alternativeText || post.title;
-        imgEl.style.display = "block";
-      } else {
-        imgEl.style.display = "none";
-      }
-
-      // Content
-      const contentContainer = q('#post-content');
-      contentContainer.innerHTML = fixStrapiUrls(marked.parse(post.contents || ""));
-
-      q("#meta-desc")?.setAttribute("content", post.excerpt || "");
-
-      // Show content
-      q("#post-header").style.display = "block";
-      q("#loading").style.display = "none";
-
-      document.title = post.title || "Post";
-
-    } catch (err) {
-      console.error(err);
-      q("#loading").innerText = "Error loading article.";
+    if (!post) {
+      q("#loading").innerText = "Article not found.";
+      return;
     }
 
-  })();
+    // Strapi response is FLAT → data = post, NOT post.attributes
+    const p = post;
+
+    // =========================
+    // TITLE
+    // =========================
+    q("#post-title").innerText = p.title || "Untitled";
+
+    // =========================
+    // META INFO
+    // =========================
+    const category = p.category?.title || "";
+    const author = p.author?.name || "";
+    const date = p.postDate || p.publishedAt || "";
+
+    q("#post-meta").innerText =
+      `${category ? category + " • " : ""}` +
+      `${date ? "Posted on " + date : ""}` +
+      `${author ? " • " + author : ""}`;
+
+    // =========================
+    // FEATURE IMAGE
+    // =========================
+    let imageUrl = null;
+    const imgData = p.featureImage;
+
+    if (imgData) {
+      imageUrl = imgData.formats?.medium?.url || imgData.url;
+
+      if (imageUrl && imageUrl.startsWith("/")) {
+        imageUrl = STRAPI + imageUrl;
+      }
+    }
+
+    const imgEl = q("#post-image");
+
+    if (imageUrl) {
+      imgEl.src = imageUrl;
+      imgEl.alt = imgData?.alternativeText || p.title;
+      imgEl.style.display = "block";
+    } else {
+      imgEl.style.display = "none";
+    }
+
+    // =========================
+    // CONTENT
+    // =========================
+    const contentContainer = q("#post-content");
+    contentContainer.innerHTML = fixStrapiUrls(marked.parse(p.contents || ""));
+
+    // =========================
+    // META DESCRIPTION TAG
+    // =========================
+    q("#meta-desc")?.setAttribute("content", p.excerpt || "");
+
+    // =========================
+    // SHOW PAGE CONTENT
+    // =========================
+    q("#post-header").style.display = "block";
+    q("#loading").style.display = "none";
+
+    // Update document title
+    document.title = p.title || "Post";
+
+  } catch (err) {
+    console.error(err);
+    q("#loading").innerText = "Error loading article.";
+  }
+
+})();
 </script>
+
 </body>
 </html>
