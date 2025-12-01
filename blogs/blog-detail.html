@@ -648,12 +648,15 @@ if (!slug) {
   slug = segments[segments.length - 1];
 }
 
+slug = slug.trim();
+
 if (!slug || slug === "blog-detail.html") {
   q("#loading").innerText = "No article specified.";
   throw new Error("Slug missing");
 }
 
-console.log("DETECTED SLUG:", slug);
+console.log("DETECTED SLUG:", `"${slug}"`);
+
 
     // ----------------------------------------------------
     // FETCH FROM STRAPI API
