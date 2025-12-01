@@ -632,25 +632,31 @@
       return html.replace(/src="\/uploads/g, `src="${STRAPI}/uploads`);
     }
 
-    // ----------------------------------------------------
-    // GET SLUG FROM CLEAN URL OR LONG URL
-    // ----------------------------------------------------
+   let slug;
 
-    let slug;
+const params = new URLSearchParams(window.location.search);
+slug = params.get("slug");
 
-    const params = new URLSearchParams(window.location.search);
-    slug = params.get("slug");
+if (!slug) {
+  let path = window.location.pathname;
 
-    if (!slug) {
-      const parts = window.location.pathname.split("/");
+  if (path.endsWith("/")) {
+    path = path.slice(0, -1);
+  }
 
-      slug = parts.pop() || parts.pop(); 
-    }
+  const segments = path.split("/");
+  slug = segments[segments.length - 1];
+}
 
-    if (!slug) {
-      q("#loading").innerText = "No article specified.";
-      return;
-    }
+if (!slug || slug === "blog-detail.html") {
+  q("#loading").innerText = "No article specified.";
+  throw new Error("Slug missing");
+}
+
+console.log("DETECTED SLUG:", slug);
+console.log("API URL:", api);
+
+
 
     // ----------------------------------------------------
     // FETCH FROM STRAPI API
@@ -724,7 +730,5 @@
 
   })();
 </script>
-
-
 </body>
 </html>
