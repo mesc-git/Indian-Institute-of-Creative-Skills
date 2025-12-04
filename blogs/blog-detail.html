@@ -72,6 +72,20 @@
   text-decoration: none;         
 }
 
+/* PARAGRAPH SPACING — THIS FIXES YOUR ISSUE */
+#post-content p {
+  margin: 0 0 1rem;
+  line-height: 1.8;
+}
+
+/* HEADING SPACING FIX */
+#post-content h1,
+#post-content h2,
+#post-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
     </style>
 
     <!-- Topbar Section Start -->
@@ -679,7 +693,6 @@
       return;
     }
 
-    // Strapi response is FLAT → data = post, NOT post.attributes
     const p = post;
 
     // =========================
