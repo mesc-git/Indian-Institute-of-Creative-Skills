@@ -140,13 +140,9 @@ const responses = [
 
 
        <li><a href="animation-&-gaming.html" class="!text-[#000]">• Animation & Game Development</a></li>
-<li><a href="bsc-in-digital-content-creation-&-media-production.html" class="!text-[#000]">• Digital Content Creation & Media Management</a></li>
-<li><a href="sound-design-&-music-video-production.html" class="!text-[#000]">•	Sound Design & Music Video Production</a></li>
 <li><a href="event-&-experimental-management.html" class="!text-[#000]">•	Event And Experimental Management</a></li>
 <li><a href="hair-make-up-&-prosthetics.html" class="!text-[#000]">•	Hair, Makeup & Prosthetics</a></li>
 <li><a href="costume-design.html" class="!text-[#000]">•	Costume Designing</a></li>
-<li><a href="pr-&-journalism.html" class="!text-[#000]">•	 PR & Journalism</a></li>
-<li><a href="VisualandCommunicationDesign.html" class="!text-[#000]">•	 Visual & Communication Design</a></li>
       </ul>`
   },
   {
