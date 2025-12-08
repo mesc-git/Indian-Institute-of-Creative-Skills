@@ -45,6 +45,7 @@ const responses = [
     response: `
       <p>Here's a list of all courses at IICS:</p>
       <ul class="course-list">
+      <li class="course-btn">Sound Design & Music Production</li>
       <li class="course-btn">Animation & Game Production</li>
       <li class="course-btn">Event And Experiential Management</li>
       <li class="course-btn">Costume Designing</li>
