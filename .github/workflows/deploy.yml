@@ -13,10 +13,22 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
 
+    steps:
+      # 1. Checkout repo with Git LFS files
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          lfs: true        # ✅ Pull real LFS files (e.g., PDFs) instead of pointer files
+          fetch-depth: 0   # Optional but safer for some workflows
+
+      # (Extra safety – ensures LFS is fully set up)
+      - name: Ensure Git LFS files are downloaded
+        run: |
+          git lfs install
+          git lfs pull
+
+      # 2. Configure AWS credentials
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -24,50 +36,55 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
+      # 3. Detect target bucket + CloudFront distribution based on branch
       - name: Determine Target Environment
         id: env-detect
         run: |
-          # Default to empty
           BUCKET=""
           DIST_ID=""
 
           if [ "${{ github.ref_name }}" == "main" ]; then
             BUCKET="iicsindia.org"
             DIST_ID="E1U33ZLDJEPRAP"
-            
+
           elif [ "${{ github.ref_name }}" == "sound" ]; then
             BUCKET="sound.iicsindia.org"
             DIST_ID="E3TU4BLHKMLCNM"
-            
+
           elif [ "${{ github.ref_name }}" == "animation" ]; then
             BUCKET="animationgaming.iicsindia.org"
             DIST_ID="E2CLP7HU09R2O6"
-            
+
           elif [ "${{ github.ref_name }}" == "event" ]; then
             BUCKET="event.iicsindia.org"
             DIST_ID="ES0AF0HHH12F4"
-            
+
           elif [ "${{ github.ref_name }}" == "costume" ]; then
             BUCKET="costumedesigning.iicsindia.org"
             DIST_ID="EVI51ASUI82Y3"
-            
+
           elif [ "${{ github.ref_name }}" == "makeup" ]; then
             BUCKET="makeupandprosthetics.iicsindia.org"
-            DIST_ID="E2AOBYAOIL70CA" 
-            
+            DIST_ID="E2AOBYAOIL70CA"
           fi
 
-          # Output variables to the next steps
           echo "BUCKET_NAME=$BUCKET" >> $GITHUB_ENV
           echo "CLOUDFRONT_ID=$DIST_ID" >> $GITHUB_ENV
-          
+
           echo "Deploying branch '${{ github.ref_name }}' to bucket '$BUCKET'"
 
+      # 4. Sync repo files to S3 (now includes real PDFs, not 163B pointers)
       - name: Sync Files to S3
         run: |
-          # --delete removes files from S3 that were deleted in Git
-          aws s3 sync . s3://${{ env.BUCKET_NAME }} --delete --exclude ".git/" --exclude ".github/"
+          aws s3 sync . s3://${{ env.BUCKET_NAME }} \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude ".gitignore"
 
+      # 5. Invalidate CloudFront cache
       - name: Invalidate CloudFront Cache
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_ID }} --paths "/*"
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ env.CLOUDFRONT_ID }} \
+            --paths "/*"
