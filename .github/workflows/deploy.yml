@@ -45,7 +45,7 @@ jobs:
 
           if [ "${{ github.ref_name }}" == "main" ]; then
             BUCKET="iicsindia.org"
-            DIST_ID="E1U33ZLDJEPRAP"
+            DIST_ID="E3P3H75XT1CDNS"
 
           elif [ "${{ github.ref_name }}" == "sound" ]; then
             BUCKET="sound.iicsindia.org"
