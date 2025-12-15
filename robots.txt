@@ -122,8 +122,6 @@ Disallow: /workshops/privacy-policy.html
 Disallow: /workshops/admission-process.html
 Disallow: /workshops/info/
 Disallow: /visualandcommunicationdesign.html
-Disallow: /min-bg.jpg
-Disallow: /visual-bg.jpg
 Disallow: /blog/
 Disallow: /visual-bg.jpg
 Disallow: /min-bg.jpg
@@ -147,7 +145,5 @@ Disallow: /img1.jpg
 Disallow: /img2.jpg
 Disallow: /img5.jpg
 Disallow: /admission_banner_image_.webp
-Disallow: /visual-bg.jpg
-Disallow: /min-bg.jpg
 
 Sitemap: https://iicsindia.org/sitemap.xml
