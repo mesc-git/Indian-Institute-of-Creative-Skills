@@ -202,9 +202,9 @@ const closeChatbot = () => {
   isOpen = false;
 };
 
-toggleBtn.addEventListener('click', () => {
-  isOpen ? closeChatbot() : openChatbot();
-});
+// toggleBtn.addEventListener('click', () => {
+//   isOpen ? closeChatbot() : openChatbot();
+// });
 
 overlay.addEventListener('click', () => closeChatbot());
 chatbot.addEventListener('click', (e) => e.stopPropagation());
