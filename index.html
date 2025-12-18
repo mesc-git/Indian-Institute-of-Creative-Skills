@@ -26,8 +26,7 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-562RWD3H');</script>
   <!-- End Google Tag Manager -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
   <!-- SlickNav Css -->
@@ -49,7 +48,7 @@
   <link rel="preload" href="css/mousecursor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="css/mousecursor.css"></noscript>
   <!-- Main Custom Css -->
-  <link href="css/custom.css" rel="stylesheet" media="screen" />
+  <link href="css/custom2.css" rel="stylesheet" media="screen" />
   <link rel="canonical" href="https://iicsindia.org/" />
   <script>
     !function (f, b, e, v, n, t, s) {
@@ -66,6 +65,120 @@
     fbq('init', '3138839279611928');
     fbq('track', 'PageView');
   </script>
+  <style>
+/* Force utilities to override any other rules */
+.show-tab { display: block !important; }   /* use block because your sections contain .row/columns */
+.hide-tab { display: none  !important; }
+
+/* If degree/certificate use bootstrap .row and you want flex behavior for inner cols,
+   you can also use .show-tab-flex (optional) */
+.show-tab-flex { display: flex !important; }
+
+/* Optional simple fade animation when showing */
+.fade-in {
+  animation: fadeIn 360ms ease forwards;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Visual active state for your clickable .section-btns (optional) */
+.section-btn.active .btn-default {
+  background: #de4141;
+  color: #fff;
+  border-radius: 6px;
+}
+.viewall-btn {
+	display: flex;
+	justify-content: center;
+}
+
+.viewall-btn>a {
+	color: #fff;
+	padding: 15px 20px;
+	background-color: #de1414;
+	font-weight: 600;
+	border-radius: 5px;
+}
+.left-heading>h3 {
+	position: relative;
+	display: inline-block;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1.4em;
+	letter-spacing: 0.04em;
+	color: #de1414;
+	padding-left: 5px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/* .left-heading>h3::before {
+	display: none;
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	background: var(--accent-secondary-color);
+	border-radius: 50%;
+	transform: translateY(-50%);
+} */
+</style>
+
+
+  <style>
+    .sample-paper {
+      padding: 8px;
+      border-radius: 8px;
+      background-color: #ffd700;
+      color: #000;
+    }
+
+    .mem-img {
+      height: 400px;
+      margin-top: 50px;
+    }
+
+    .text-size {
+      font-size: 50px !important;
+    }
+
+    .link-size {
+      font-size: 12px !important;
+    }
+
+    @media (max-width:576px) {
+      .mem-img {
+        height: 160px;
+        margin-top: 30px;
+      }
+
+      .text-size {
+        font-size: 26px !important;
+      }
+
+      .mobile-footer-campus {
+        display: flex;
+        flex-direction: row !important;
+      }
+
+      .mobile-footer-links {
+        display: flex;
+        gap: 25px;
+      }
+    }
+
+    .hide-tab {
+  display: none !important;
+}
+.show-tab {
+  display: block !important;
+}
+
+  </style>
   <style>
     .sample-paper {
       padding: 8px;
@@ -110,6 +223,269 @@
 </head>
 
 <body>
+    <style>
+     .header-container {
+        background-color: #de4141 !important;
+        padding: 40px 20px;
+      }
+      .header-heading {
+        font-size: 24px !important;
+      }
+      .courseHeading{
+        color: #de4141 !important;
+      }
+   .course-section {
+  text-align: center;
+}
+
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.course-card h3 {
+  font-size: 1.3rem;
+  color: #0c0c0c;
+  margin-bottom: 8px;
+  padding: 10px 10px 0 10px;
+}
+
+.course-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+.course-info {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #777;
+  padding: 0 10px;
+  flex-grow: 1;
+}
+
+.btn-group {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  /* gap: 10px; */
+  justify-content: flex-start;
+}
+
+.btn {
+  padding: 10px 18px;
+  font-weight: 400;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-apply {
+  color: #ffffff;
+  background: #de4141;
+}
+.btn-apply:hover {
+  color: #ffffff;
+  background: rgba(222, 65, 65, 0.8);
+}
+
+.btn-sample {
+  background: #ffffff;
+  color: #de4141;
+  border: 1px solid #DE4141;
+  border-radius: 0 0 16px 0;
+}
+
+.btn-sample:hover {
+  background: rgba(222, 65, 65, 0.8);
+  color: #ffffff;
+}
+
+.banner-title{
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+.banner-cta{
+  color: #DE4141;
+}
+.banner-cta2:hover{
+  color: #DE4141 !important;
+}
+
+@media (max-width:576px) {
+      .banner-title{
+        font-size: 2rem;
+        padding-top: 10px;
+        padding-bottom: 5px;
+      }
+      .banner-cta{
+        padding: 1px 20px;
+        white-space: nowrap;
+      }
+      .banner-cta2{
+        padding: 1px 20px;
+        white-space: nowrap;
+      }
+    }
+
+    /* Base button style */
+.btn-default {
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: 2px solid #de4141;
+  color: #de4141;
+  background: transparent;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* Hover effect */
+.btn-default:hover {
+  background: #de4141;
+  color: #fff;
+}
+.tab-active .btn-default {
+  background: #de4141 !important;
+  color: #fff !important;
+  border: 2px solid #de4141 !important;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.tab-inactive .btn-default {
+  background: transparent !important;
+  color: #de4141 !important;
+  border: 2px solid #de4141 !important;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.contact_pointers{
+  margin-top: 30px;
+}
+
+.testimonial-item.two-column {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.testimonial-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.testimonial-left img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.testimonial-right {
+  width: 60%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+#carouselExampleDark .carousel-item {
+  height: 400px; 
+}
+
+/* #carouselExampleDark .carousel-item > div {
+  height: 100%;
+} */
+
+#carouselExampleDark img {
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.swiper-slide-style{
+  background-color: #FFF4F1;
+  padding: 15px;
+  /* height: 350px; */
+}
+.testimonial-item {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.testimonial-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px; 
+  padding: 10px 0;
+}
+
+.testimonial-right p {
+  flex-grow: 1;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.testimonial-designation {
+  margin-top: auto;
+}
+
+.testimonial-right p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width:576px) {
+  .testimonial-item.two-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial-right {
+    height: auto;
+  }
+  .testimonial-right{
+    width: 100%;
+  }
+}
+
+  </style>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-562RWD3H" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -126,7 +502,20 @@
     </div>
   </div>
   <!-- Preloader End -->
-   
+   <div id="popup" onclick="closePopup(event)"
+  class="hidden fixed w-full h-screen z-[9999] flex justify-center items-center bg-black/80">
+  <div class="h-[100px] w-[33%] top-[-240px] relative image-popup">
+    <a href="admission.html">
+      <img class="w-full" src="images/admission_popup.jpeg" alt="Popup Image">
+    </a>
+
+    <div onclick="closePopup(event)"
+      class="close-btn absolute w-[40px] h-[40px] flex justify-center items-center bg-white rounded-full top-[-15px] right-[-15px] cursor-pointer">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+
+  </div>
+</div>
   <!--<div id="popup" onclick="closePopup(event)"-->
   <!--  class="hidden fixed w-full h-screen z-[9999] flex justify-center items-center bg-black/80">-->
   <!--  <div class="w-[45%] relative image-popup">-->
@@ -173,8 +562,9 @@
     <button onclick="rejectCookies()"
       style="padding: 8px 16px; background-color: red; color: white; border: none; border-radius: 5px;">Reject</button>
   </div>
-  <div class="fixed z-[1001] top-[40%] right-0  py-2 px-2">
+  <div class="fixed z-[1001] top-[30%] right-0  py-2 px-2">
     <div class="flex flex-col items-center gap-3">
+        
       <a href="https://www.facebook.com/IICSIndiaorg?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"> <img
           src="images/IICS/iics_image/creative-incubator/facbook.png" class="w-[40px] box-shadow-img" alt="facebook"></a>
       <a href="https://www.instagram.com/iicsindiaorg/" target="_blank" rel="noopener noreferrer">
@@ -184,14 +574,12 @@
       <a href="https://www.youtube.com/@IICSIndiaorg" target="_blank" rel="noopener noreferrer">
         <img src="images/IICS/iics_image/creative-incubator/youtube.png" class="w-[40px] box-shadow-img" alt="youtube">
       </a>
-        <a href="https://wa.me/9594949959" target="_blank" rel="noopener noreferrer"> <img
-          src="images/IICS/iics_image/creative-incubator/WhatsApp.svg.webp" class="w-[40px] box-shadow-img" alt="whatsapp">
+      <a href="https://wa.me/9594949959" target="_blank" rel="noopener noreferrer">  <img src="images/IICS/iics_image/robot-img.png" class="w-[50px] !mt-[60px]" alt="chatbot-icon">
          <div id="chatbot-popup"
-      class="absolute top-[90%] right-[55px] -translate-y-1/2 bg-white text-gray-800 text-md px-3 py-3 rounded-xl shadow-lg whitespace-nowrap transition-opacity duration-500 opacity-100 font-bold">
-      Hi, How may I help you?
-      <div class="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-white border-y-[6px] border-y-transparent"></div>
-    </div>
-  </a>
+        class="absolute top-[90%] right-[55px] -translate-y-1/2 bg-white text-gray-800 text-md px-3 py-3 rounded-xl shadow-lg whitespace-nowrap transition-opacity duration-500 opacity-100 font-bold">
+        Hi, How may I help you?
+        <div class="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-white border-y-[6px] border-y-transparent"></div>
+      </div></a>
 
 
       <!-- Chatbot Toggle Button -->
@@ -201,6 +589,12 @@
       Hi, How may I help you?
       <div class="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-white border-y-[6px] border-y-transparent"></div>
     </div> -->
+        <!-- <img id="chatbot-toggle" src="images/IICS/iics_image/robot-img.png" class="w-[50px] !mt-[60px]" alt="chatbot-icon">
+         <div id="chatbot-popup"
+        class="absolute top-[90%] right-[55px] -translate-y-1/2 bg-white text-gray-800 text-md px-3 py-3 rounded-xl shadow-lg whitespace-nowrap transition-opacity duration-500 opacity-100 font-bold">
+        Hi, How may I help you?
+        <div class="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-white border-y-[6px] border-y-transparent"></div>
+      </div> -->
     </div>
   </div>
 
@@ -418,6 +812,12 @@
                             Makeup & Prosthetics
                           </a>
                         </li>
+                        <li class="nav-item">
+                          <a href="3d-animation"
+                            class="nav-link !text-[14px] !flex items-center gap-[5px]">
+                            3D Animation for Media & Entertainment
+                          </a>
+                        </li>
                         <!--<li class="nav-item">-->
                         <!--  <a href="costume-design.html" class="nav-link !text-[14px] !flex items-start gap-[5px]">-->
 
@@ -441,14 +841,14 @@
 
                         <!--  </a>-->
                         <!--</li>-->
-                        <li class="nav-item">
-                          <a href="3d-animation"
+                        <!-- <li class="nav-item">
+                          <a href=""
                             class="nav-link !text-[14px] !flex items-start gap-[5px]">
 
-                            3D Animation for Media & Entertainment
+                            Dance
 
                           </a>
-                        </li>
+                        </li> -->
                       </ul>
                     </li>
                   </ul>
@@ -524,9 +924,9 @@
                     <li class="nav-item">
                       <a class="nav-link" href="student-life.html">Student Life</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                       <a class="nav-link" href="image-gallery.html">Gallery</a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item">
                       <a class="nav-link" href="made-for-media.html">Made For Media</a>
@@ -550,93 +950,65 @@
             <!--  <a href="images/brochure/IICS_Prospectus.zip" download target="_blank" class="btn-default btn-highlighted link-size">Download Brochure</a>-->
             <!--</div>-->
             <div class="header-btn">
-              <a href="/admission.html" class="btn-default btn-highlighted link-size" style="margin-left: 5px; ">Apply Now</a>
+              <a href="/admission.html" class="bg-[#de4141] p-3 text-white" style="margin-left: 5px; ">Apply Now</a>
             </div>
             <div class="header-btn">
-              <a href="https://admissions.iicsindia.org/" class="btn-default btn-highlighted link-size"
+              <a href="https://admissions.iicsindia.org/" class="bg-[#de4141] p-3 text-white"
                 style="margin-left: 5px;">Log In</a>
             </div>
             <!-- Header Btn End -->
           </div>
           <!-- Main Menu End -->
-          <div class="navbar-toggle"></div>
+           <div>
+        </div>
+        <div class="flex items-center gap-2">
+            <a href="/admission.html" class="bg-[#de4141] p-2 text-white block md:hidden">Apply Now</a>
+              <div class="navbar-toggle"></div>
+        </div>
         </div>
       </nav>
       <div class="responsive-menu"></div>
     </div>
   </header>
   <!-- Header End -->
-  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <!-- <div class="carousel-item active" data-bs-interval="5000">
-        <video autoplay loop muted style="width: 100%; height: 700px; object-fit: cover;">
-          <source src="images/iics-web.mp4" class="object-fit-cover" type=video/mp4 autoplay mute loop>
-        </video>
-      </div> -->
-      <!--<div class="carousel-item active" data-bs-interval="2000">-->
-      <!--  <a href="https://iicsindia.org/admission.html"> <img src="https://testinggg.iicsindia.org/wp-content/uploads/2025/08/24th-25thadmission-2-scaled.webp" class="w-100"-->
-      <!--      alt="registration-banner"></a>-->
-      <!--</div>-->
-      
-      <!--<div class="carousel-item">-->
-      <!--  <a href="https://forms.gle/KsStpQ1Gpq9rvzym8"><img src="https://testinggg.iicsindia.org/wp-content/uploads/2025/08/maitreni_workshop-scaled.webp" class="d-block w-100" alt="howToInfluence-workshop"></a>-->
-      <!--</div>-->
-      <!--<div class="carousel-item">-->
-      <!--  <a href="https://forms.gle/V923DpaUMsEcgXXP8"><img src="https://testinggg.iicsindia.org/wp-content/uploads/2025/08/vishal_workshop.webp" class="d-block w-100" alt="dreamingOutOfTheBox-workshop"></a>-->
-      <!--</div>-->
-      <!--<div class="carousel-item">-->
-      <!--  <img src="images/banner-2.jpg" class="d-block w-100" alt="workshopimage" >-->
-      <!--</div>-->
-      <!--<div class="carousel-item">-->
-      <!--  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdu2TDLrA9j7TVXreYojDFs7pJrDl6D9xNaCUI47JWqbRALGA/viewform" target="_blank"><img src="images/Amit-Bhel-banner.jpg" class="d-block w-100" alt="Amitsir-workshop"></a>-->
-      <!--</div>-->
-      <!--<div class="carousel-item">-->
-      <!--  <a href="https://docs.google.com/forms/d/1nJ5ZXyNU0eQ0nStydqghv7DrEl7Nz5WPUPB2MFeOYX0/viewform?edit_requested=true" target="_blank"><img src="images/rahulsir.jpg" class="d-block w-100" alt="rahulsir-workshop"></a>-->
-      <!--</div>-->
-      <!--<div class="carousel-item active">-->
-      <!--  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7sBd2fkjhd2EGbvGH2pYJchux2pEnc8a9521zo-9WaQLzDQ/viewform" target="_blank"><img src="https://testinggg.iicsindia.org/wp-content/uploads/2025/08/vandana_workshop_banner.jpg" class="d-block w-100" alt="vandana_vadera_workshop"></a>-->
-      <!--</div>-->
-      <!--<div class="carousel-item">-->
-      <!--  <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2LIUoMZYc64gUfR6JmnXTpfcWcbOf_8cvJXy7xHHyqNkXaA/viewform" target="_blank"><img src="https://testinggg.iicsindia.org/wp-content/uploads/2025/08/ashish_kant_workshop_banner.jpg" class="d-block w-100" alt="ashish_kant_workshop"></a>-->
-      <!--</div>-->
-      <!--<div class="carousel-item active">-->
-      <!--  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOjVPJQG_xPpsGYIfgOeJ40zRC6-pzFNRXltOH2Tv7oVSKlQ/viewform" target="_blank"><img src="images/gagandeep_sidhu_banner.jpg" class="d-block w-100" alt="gagandeep_workshop"></a>-->
-      <!--</div>-->
-      <!--<div class="carousel-item active">-->
-      <!--  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAzEpo8-JPyrojmmlWNepWkiclO7adzb_JNMFsAPekg71iag/viewform" target="_blank"><img src="https://testinggg.iicsindia.org/wp-content/uploads/2025/08/saikat_workshop_banner.jpg" class="d-block w-100" alt="saikat_workshop"></a>-->
-      <!--</div>-->
-      <!--<div class="carousel-item active">-->
-      <!--  <a href="https://docs.google.com/forms/d/e/1FAIpQLSelDBJzmkE8J9g6znYm2Aa_GrS2CUbVPe5JA4-5P5wekGHbog/viewform" target="_blank"><img src="https://testinggg.iicsindia.org/wp-content/uploads/2025/08/sohini_dasgupta_workshop.jpg" class="d-block w-100" alt="sohini_workshop"></a>-->
-      <!--</div>-->
-      <!--<div class="carousel-item active">-->
-      <!--  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaDvk0T914yfQDISjdI7-Rsceu5jk3lDTE6dt4YOZBmrZ4nA/viewform" target="_blank"><img src="https://testinggg.iicsindia.org/wp-content/uploads/2025/08/sayantan_dutta_workshop.jpg" class="d-block w-100" alt="sayantan_workshop"></a>-->
-      <!--</div>-->
-      <!--<div class="carousel-item active">-->
-      <!--  <a href="https://pages.razorpay.com/pl_R7xdGiYTZ0fGjs/view" target="_blank"><img src="https://testinggg.iicsindia.org/wp-content/uploads/2025/08/prasana_banner_new.jpg" class="d-block w-100" alt="rPrasana-workshop"></a>-->
-      <!--</div>-->
-             <div class="carousel-item active">
-        <a href="/admission/" target="_blank"><img src="images/21stDecEntranceBanner.webp" class="d-block w-100" alt="entrance-exam"></a>
+   <section class="relative">
+       <div id="carouselExampleInterval" class="carousel slide h-[30vh] md:h-[90vh]" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+                 <div class="carousel-item active">
+            <a href="/admission/" target="_blank"><img src="images/homepage_banner/BSF_8522.JPG" class="d-block w-100 h-[30vh] md:h-[90vh] object-cover" alt="entrance-exam"></a>
+          </div>
+                 <div class="carousel-item">
+            <a href="/admission/" target="_blank"><img src="images/homepage_banner/homeImg1.jpg" class="d-block w-100 h-[30vh] md:h-[90vh] object-cover" alt="entrance-exam"></a>
+          </div>
+                 <div class="carousel-item">
+            <a href="/admission/" target="_blank"><img src="images/homepage_banner/homeImg2.jpg" class="d-block w-100 h-[30vh] md:h-[90vh] object-cover" alt="entrance-exam"></a>
+          </div>
+                 <div class="carousel-item">
+            <a href="/admission/" target="_blank"><img src="images/homepage_banner/BSF_8520.JPG" class="d-block w-100 h-[30vh] md:h-[90vh] object-cover" alt="entrance-exam"></a>
+          </div>
+           
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <!--       <div class="carousel-item">-->
-      <!--  <a href="https://iicsindia.org/workshops/Film-Making/" target="_blank"><img src="images/film_making_workshop.webp" class="d-block w-100" alt="film_making_workshop"></a>-->
-      <!--</div>-->
-      <!--       <div class="carousel-item">-->
-      <!--  <a href="https://iicsindia.org/workshops/Makeup-Masterclass/" target="_blank"><img src="images/rishab-khanna-banner.webp" class="d-block w-100" alt="makeup_workshop"></a>-->
-      <!--</div>-->
-      <!--       <div class="carousel-item">-->
-      <!--  <a href="https://iicsindia.org/workshops/Career-Guidance-Delhi/" target="_blank"><img src="https://iicsindia.org/blog/wp-content/uploads/2025/09/generic_banner_delhi_-scaled.webp" class="d-block w-100" alt="career-workshop-delhi"></a>-->
-      <!--</div>-->
-       
-    </div>
-    <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">-->
-    <!--  <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-    <!--  <span class="visually-hidden">Previous</span>-->
-    <!--</button>-->
-    <!--<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">-->
-    <!--  <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-    <!--  <span class="visually-hidden">Next</span>-->
-    <!--</button>-->
-  </div>
+      <div class="w-[100%] lg:w-[40%] admissionFormContainer absolute top-[5%] right-0 hidden md:block">
+                <h6 class="text-white font-semibold">Connect with us</h6>
+                <div
+                  class="npf_wgts w-[80%]"
+                  style="border: 1px solid black; border-radius: 5px; backdrop-filter: blur(4px);"
+                  data-height="450px"
+                  data-w="4e9456bd4734aa4018d8c655c6ef1914"
+                ></div>
+              </div>
+
+   </section>
+
 
 
   <!-- Hero Section Start -->
@@ -690,865 +1062,243 @@
   </div> -->
   <!-- Hero Section End -->
 
-  <!-- Scrolling Ticker Section Start -->
-  <!-- <div class="our-scrolling-ticker">
-    Scrolling Ticker Start
-    <div class="scrolling-ticker-box">
-      <div class="scrolling-content leading-[30px] text-[#000]">
-        <span class="text-[22px] font-semibold ">Entrance Exam Date: 28 June 2025</span>
-        <span class="text-[22px] font-semibold">Batch Start Date: 31 July 2025</span>
-        <span class="text-[22px] font-semibold">Total No. of Seats in a Batch: 20</span>
-        <span class="text-[22px] font-semibold">Entrance Exam Date: 28 June 2025</span>
-        <span class="text-[22px] font-semibold">Batch Start Date: 31 July 2025</span>
-        <span class="text-[22px] font-semibold">Total No. of Seats in a batch: 20</span>
-        <span class="text-[22px] font-semibold">Entrance Exam Date: 28 June 2025</span>
-        <span class="text-[22px] font-semibold">Batch Start Date: 31 July 2025</span>
-        <span class="text-[22px] font-semibold">Total No. of Seats in a batch: 20</span>
-
-
-      </div>
-
-      <div class="scrolling-content leading-[30px] text-[#000]">
-        <span class="text-[22px] font-semibold">Entrance Exam Date: 28 June 2025</span>
-        <span class="text-[22px] font-semibold">Batch Start Date: 31 July 2025</span>
-        <span class="text-[22px] font-semibold">Total No. of Seats in a Batch: 20</span>
-        <span class="text-[22px] font-semibold">Entrance Exam Date: 28 June 2025</span>
-        <span class="text-[22px] font-semibold">Batch Start Date: 31 July 2025</span>
-        <span class="text-[22px] font-semibold">Total No. of Seats in a batch: 20</span>
-        <span class="text-[22px] font-semibold">Entrance Exam Date: 28 June 2025</span>
-        <span class="text-[22px] font-semibold">Batch Start Date: 31 July 2025</span>
-        <span class="text-[22px] font-semibold">Total No. of Seats in a batch: 20</span>
-      </div>
-    </div>
-  </div> -->
   <!-- Scrolling Ticker Section End -->
        <!-- Scrolling Ticker Section Start -->
   <div class="our-scrolling-ticker footer-scrolling-ticker">
     <!-- Scrolling Ticker Start -->
     <div class="scrolling-ticker-box">
       <div class="scrolling-content">
-        <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test - 21st December 2025</span>
+        <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level MECAT-IICS Entrance Test- 21st December 2025</span>
         <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Admissions Open for 2026-27</span>
         <!-- <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Last Date for Registration: 15th November 2025</span> -->
-        <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test - 21st December 2025</span>
+        <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level MECAT-IICS Entrance Test- 21st December 2025</span>
         <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Admissions Open for 2026-27</span>
         <!-- <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Last Date for Registration: 15th November 2025</span> -->
-        <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test - 21st December 2025</span>
+        <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level MECAT-IICS Entrance Test- 21st December 2025</span>
         <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Admissions Open for 2026-27</span>
-        <!-- <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Last Date for Registration: 15th November 2025</span> -->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test- 15th October 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Register Now</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Batch Start Date: 15th September 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test- 15th October 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Register Now</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Batch Start Date: 15th September 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test- 15th October 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Register Now</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Batch Start Date: 15th September 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test- 15th October 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Register Now</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Batch Start Date: 15th September 2025</span>-->
       </div>
 
       <div class="scrolling-content">
-           <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test - 21st December 2025</span>
+           <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level MECAT-IICS Entrance Test- 21st December 2025</span>
         <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Admissions Open for 2026-27</span>
         <!-- <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Last Date for Registration: 15th November 2025</span> -->
-         <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test - 21st December 2025</span>
+         <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level MECAT-IICS Entrance Test- 21st December 2025</span>
         <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Admissions Open for 2026-27</span>
         <!-- <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Last Date for Registration: 15th November 2025</span> -->
-         <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test - 21st December 2025</span>
+         <span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level MECAT-IICS Entrance Test- 21st December 2025</span>
         <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Admissions Open for 2026-27</span>
-        <!-- <span><img src="images/asterisk-icon.svg" alt="asterisk-icon"> Last Date for Registration: 15th November 2025</span> -->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test- 15th October 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Register Now</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Batch Start Date: 15th September 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test- 15th October 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Register Now</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Batch Start Date: 15th September 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test- 15th October 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Register Now</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Batch Start Date: 15th September 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test- 15th October 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Register Now</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Batch Start Date: 15th September 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">National Level Entrance Test- 15th October 2025</span>-->
-        <!--<span><img src="images/asterisk-icon.svg" alt="asterisk-icon">Register Now</span>-->
       </div>
     </div>
   </div>
   <!-- Scrolling Ticker Section End -->
-  
-  <!-- About us Section Start -->
-  <div class="about-us">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <!-- About Us Images Start -->
-          <div class="about-us-images">
-            <!-- About Image Box 1 Start -->
-            <div class="about-image-box-1">
-              <!-- Successful Circle Image Start -->
-              <div class="successful-circle-img">
-                <img src="images/IICS/iics_image/student-life/circle-img-1.png" alt="icon" />
-              </div>
-              <!-- Successful Circle Image End -->
 
-              <!-- About Image Start -->
-              <div class="about-image">
-                <figure class="image-anime reveal">
-                  <!--<img src="images/IICS/iics_image/home-about-left.webp" alt="" loading="lazy"/>-->
-                                    <img src="images/IICS/iics_image/home-about-left.webp" alt="home-about-image" loading="lazy"/>
+  <section class="flex justify-center w-full container mt-2">
+      <div class="w-[100%] lg:w-[40%] admissionFormContainer block md:hidden">
+                   <h6 class="text-black font-semibold w-full text-center">Connect with us</h6>
+                   <div
+                     class="npf_wgts w-[100%]"
+                     style="border: 1px solid black; border-radius: 5px; backdrop-filter: blur(4px);"
+                     data-height="500px"
+                     data-w="4e9456bd4734aa4018d8c655c6ef1914"
+                   ></div>
+                 </div>
+  </section>
 
-                  
-                </figure>
-              </div>
-              <!-- About Image End -->
-            </div>
-            <!-- About Image Box 1 End -->
 
-            <!-- About Image Box 2 Start -->
-            <div class="about-image-box-2">
-              <!-- About Image Start -->
-              <div class="about-image">
-                <figure class="image-anime reveal">
-                  <img src="images/IICS/iics_image/about/about-home1.jpg" alt="about" />
-                </figure>
-              </div>
-              <!-- About Image End -->
-            </div>
-            <!-- About Image Box 2 End -->
+   <div class="max-w-12xl md:max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 px-4">
 
-            <!-- About Image Box 3 Start -->
-            <div class="about-image-box-3">
-              <div class="about-image">
-                <figure class="image-anime">
-                  <!--<img src="images/IICS/iics_image/home-about-bottom.webp" alt="" loading="lazy" />-->
-                                    <img src="images/IICS/iics_image/home-about-bottom.webp" alt="about-bottom" loading="lazy"/>
-                </figure>
-              </div>
-
-              <!-- Year Experience Box Start -->
-              <div class="years-experience-box">
-                <h2><span class="counter">3</span></h2>
-                <p>State-of-the-Art Campus</p>
-              </div>
-              <!-- Year Experience Box End -->
-            </div>
-            <!-- About Image Box 3 End -->
-          </div>
-          <!-- About Us Images End -->
-        </div>
-
-        <div class="col-lg-6">
-          <!-- About us Content Start -->
-          <div class="about-us-content">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <h3 class="wow fadeInUp">about us</h3>
-              <h1 class="text-anime-style-2 text-size" data-cursor="-opaque">
-                Indian Institute of <span>Creative Skills</span>
-              </h1>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">
-                India’s first creative incubator dedicated to nurturing the
-                next generation of entrepreneurs in the Media and Entertainment industry.
-
-              </p>
-            </div>
-            <!-- Section Title End -->
-
-            <!-- About Body List Start -->
-            <div class="about-body-list">
-              <!-- About Body Item Start -->
-              <div class="about-body-item wow fadeInUp" data-wow-delay="0.4s">
-                <div class="icon-box">
-                  <img src="images/IICS/iics_image/launpadlogo.png" alt="launchpad_logo" />
-                </div>
-                <div class="about-body-item-content">
-                  <h3>Launchpad for Creative Careers</h3>
-                  <p>
-                    IICS empowers individuals to become globally benchmarked creators, innovators, and industry leaders.
-                  </p>
-                </div>
-              </div>
-              <!-- About Body Item End -->
-
-              <!-- About Body Item Start -->
-              <div class="about-body-item wow fadeInUp" data-wow-delay="0.6s">
-                <div class="icon-box">
-                  <img src="images/IICS/iics_image/globallogo.png" alt="global_logo" />
-                </div>
-                <div class="about-body-item-content">
-                  <h3>Real-World Training for Industry-Ready Creators</h3>
-                  <p>
-                    Students learn through real-world projects, international events, and expert mentorship
-                </div>
-              </div>
-              <!-- About Body Item End -->
-            </div>
-            <!-- About Body List End -->
-
-            <!-- About Button Start -->
-            <div class="about-btn wow fadeInUp" data-wow-delay="0.8s">
-              <a href="about.html" class="btn-default">Know More</a>
-            </div>
-            <!-- About Button End -->
-          </div>
-          <!-- About us Content End -->
-        </div>
+    <!-- Card 1 -->
+    <div class="bg-white/90 rounded overflow-hidden border-1">
+      <div class="bg-[#de4141] text-white text-center font-semibold py-3">
+        MAJOR EVENTS
       </div>
+      <ul class="p-6 flex flex-col gap-3 text-md text-gray-800 list-disc leading-[110%]">
+        <a href="admission.html" target="_blank"> <li>National Level Entrance Exam MECAT-IICS </li></a>
+        <a href="images/admission_notice.pdf" target="_blank"> <li>Admission Notice 2026</li></a>
+        <a href="3d-animation" target="_blank"> <li>Launch of Short Term Program 3D Animation for Media & Entertainment</li></a>
+        <a href="student-life.html" target="_blank"> <li>Gallery- Indian Institute of Creative Skills</li></a>
+        <a href="sample-paper.html" target="_blank"> <li>Sample Papers- MECAT IICS</li></a>
+        <a href="made-for-media.html" target="_blank"> <li>Made for Media 2025</li></a>
+      </ul>
     </div>
-  </div>
-  <!-- About us Section End -->
 
-  <!-- Our Services Section Start -->
+    <!-- Card 2 -->
+    <div class="bg-white/90 rounded overflow-hidden border-1">
+      <div class="bg-[#de4141] text-white text-center font-semibold py-3">
+        ADMISSIONS
+      </div>
+      <ul class="p-6 space-y-3 text-md text-gray-800 list-disc">
+        <li><a href="admission.html" target="_blank">Click here</a> for Registration for Admissions - 2026</li>
+        <li><a href="admission.html" target="_blank">Click Here</a> to register for National Level Entrance Exam MECAT IICS</li>
+        <li><a href="costume-design.html" target="_blank">Know more</a>- Bsc. in Costume Design</li>
+        <li><a href="sound-design-&-music-video-production.html" target="_blank">Know more</a>- Bsc. in Sound Design & Music Production</li>
+        <li>
+          <a href="event-&-experimental-management.html" target="_blank">Know more</a>- BBA in Events & Experiential Management
+        </li>
+        <li><a href="3d-animation/" target="_blank">Know more</a>- Certificate in 3D Animation for Media & Entertainment
+        </li>
+        <li><a href="images/IICS_Prospectus2026.pdf">Prospectus - 2026 - English</a>
+        </li>
+        <li>Helpdesk No.: (Mon-Sat, 10:00 AM-7:00 PM) <br>+91 959-4949-959
+        </li>
+        <li>Email: <a href="mailto:info@iicsindia.org">info@iicsindia.org</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <section class="max-w-7xl mx-auto py-6 md:py-16 px-3 rounded-lg">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+      <div>
+        <h1 class="text-4xl text-gray-900 mb-4 ">
+          About <span class="text-[#de4141]">Indian Institute of Creative Skills</span>
+        </h1>
+
+        <p class="text-black leading-relaxed">
+          The Indian Institute of Creative Skills (IICS) is more than an institution; it is a launchpad for innovation, leadership, and entrepreneurship in the Media and Entertainment Industry. Our purpose is to nurture visionaries who can redefine Global benchmarks in creativity and content creation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+
+        <div>
+          <h3 class="text-3xl font-bold text-gray-900">13+</h3>
+          <p class="text-black text-sm">Years of Shaping Creative Futures</p>
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold text-gray-900">7Lac+</h3>
+          <p class="text-black text-sm">Candidates Skilled & Upskilled</p>
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold text-gray-900">5k+</h3>
+          <p class="text-black text-sm">Certified Trainers PAN India</p>
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold text-gray-900">1500+</h3>
+          <p class="text-black text-sm">Affiliated Institutions</p>
+        </div>
+
+        <div>
+          <h3 class="text-3xl font-bold text-gray-900">1000+</h3>
+          <p class="text-black text-sm">Celebrity Interactions</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+   <!-- Our Services Section Start -->
   <div class="our-services" id="certificate-courses">
     <div class="container">
       <div class="row section-row align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
           <!-- Section Title Start -->
-          <div class="section-title">
-            <h3 class="wow fadeInUp">Your Future Starts NOW</h3>
-            <h2 class="text-anime-style-2" data-cursor="-opaque" data-wow-delay="0.2s">
-              Discover IICS's Untapped <span>Career Goldmine</span>
+          <div class="section-title ">
+            <!-- <h3 class=" text-center">Your Future Starts NOW</h3> -->
+            <h2 class="text-anime-style-2 text-center" style="font-size: 30px;" data-cursor="-opaque"
+              data-wow-delay="0.2s">
+             Pursue the Most in Demand Creative Careers
             </h2>
           </div>
           <!-- Section Title End -->
         </div>
 
-        <div class="col-lg-6 !flex items-center gap-[20px]">
-          <!-- Service Button Start -->
-          <div class="section-btn wow fadeInUp" data-wow-delay="0.2s" onclick="showTab('degree')">
-            <p class="btn-default">view degree courses</p>
-          </div>
-          <div class="section-btn wow fadeInUp" data-wow-delay="0.2s" onclick="showTab('certificate')">
-            <p class="btn-default">view certificate courses</p>
-          </div>
-          <!-- Service Button End -->
-        </div>
-      </div>
+      <div class="col-lg-6 !flex items-center justify-center mx-auto mt-4 gap-[10px]">
 
-      <div class="row service-list degree">
-        <div class="col-lg-3 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item-box wow fadeInUp">
-            <div class="service-item active">
-              <div class="icon-box ">
-                <img src="images/IICS/iics_image/eventlogo.png" alt="event_logo" />
-              </div>
-              <div class="service-item-content">
-                <h3><a> Events & Experiential Management</a></h3>
-                <p>
-                  Learn to design experiences and promote events through social media and digital campaigns.
-                </p>
-              </div>
-              <div class="service-readmore-btn">
-                <a href="event-&-experimental-management.html" class="readmore-btn">Apply Now</a>
-                <!--<a href="images/sample-paper/Events & Experiential Management.pdf" target="_blank"-->
-                <!--  class="sample-paper">Sample Paper</a>-->
-              </div>
-            </div>
-          </div>
-          <!-- Service Item End -->
-        </div>
+  <div id="degreeBtnTab" class="wow fadeInUp" onclick="showTab('degree')">
+    <p class="btn-default">degree courses</p>
+  </div>
 
-        <div class="col-lg-3 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item-box wow fadeInUp" data-wow-delay="0.2s">
-            <div class="service-item">
-              <div class="icon-box ">
-                <img src="images/IICS/iics_image/course_logo/console.png" alt="console-image" />
-              </div>
-              <div class="service-item-content !bg-transparent">
-                <h3><a>Animation & Game Production</a></h3>
-                <p>
-                  Learn to animate, design, and build game through studio-based training and industry experience.
-                </p>
-              </div>
-              <div class="service-readmore-btn">
-                <a href="animation-&-gaming.html" class="readmore-btn">Apply Now</a>
-                <!--<a href="images/sample-paper/Animation & Game Development.pdf" target="_blank"-->
-                <!--  class="sample-paper">Sample Paper</a>-->
-              </div>
-            </div>
-          </div>
-          <!-- Service Item End -->
-        </div>
+  <div id="certificateBtnTab" class="wow fadeInUp" onclick="showTab('certificate')">
+    <p class="btn-default">certificate courses</p>
+  </div>
 
-        <!--<div class="col-lg-3 col-md-6">-->
-          <!-- Service Item Start -->
-          <!--<div class="service-item-box wow fadeInUp" data-wow-delay="0.4s">-->
-          <!--  <div class="service-item">-->
-          <!--    <div class="icon-box ">-->
-          <!--      <img src="images/IICS/iics_image/course_logo/digital-content-creation.png" alt="digital-content" />-->
-          <!--    </div>-->
-          <!--    <div class="service-item-content">-->
-          <!--      <h3><a>Digital Content Creation & Media Management</a></h3>-->
-          <!--      <p>-->
-          <!--        Learn to shoot, edit, and manage content while building your brand across digital platforms.-->
-          <!--      </p>-->
-          <!--    </div>-->
-          <!--    <div class="service-readmore-btn">-->
-          <!--      <a href="digital-content-creation-and-media-managment.html" class="readmore-btn">Apply Now</a>-->
-          <!--      <a href="images/sample-paper/Digital Content Creation & Media Management.pdf" target="_blank"-->
-          <!--        class="sample-paper">Sample Paper</a>-->
-          <!--    </div>-->
-          <!--  </div>-->
-          <!--</div>-->
-          <!-- Service Item End -->
-        <!--</div>-->
-        
-         <div class="col-lg-3 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item-box wow fadeInUp">
-            <div class="service-item">
-              <div class="icon-box ">
-                <img src="images/IICS/iics_image/course_logo/costume.png" alt="costume-image" />
-              </div>
-              <div class="service-item-content">
-                <h3><a>Costume Designing</a></h3>
-                <p>
-                  Learn to design iconic costumes for film, theatre, and fashion using fabric, styling, history, and
-                  AI-powered techniques.
-                </p>
-              </div>
-              <div class="service-readmore-btn">
-                <a href="costume-design.html" class="readmore-btn">Apply Now</a>
-                <!--<a href="images/sample-paper/Certificate_Costume Designing.pdf" target="_blank"-->
-                <!--  class="sample-paper">Sample Paper</a>-->
-              </div>
-            </div>
-          </div>
-          <!-- Service Item End -->
-        </div>
+</div>
 
-                <div class="col-lg-3 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item-box wow fadeInUp" data-wow-delay="0.6s">
-            <div class="service-item">
-              <div class="icon-box ">
-                <img src="images/IICS/iics_image/course_logo/sound.png" alt="sound-image" />
-              </div>
-              <div class="service-item-content">
-                <h3><a>Sound Design & Music Production</a></h3>
-                <p>
-                  Learn to create compelling music videos, and master audio tools and music tech.
-                </p>
-              </div>
-              <div class="service-readmore-btn">
-                <a href="sound-design-&-music-video-production.html" class="readmore-btn">Apply Now</a>
-                <!--<a href="images/sample-paper/Sound Design & Music Video Production.pdf" target="_blank"-->
-                <!--  class="sample-paper">Sample Paper</a>-->
-              </div>
-            </div>
-          </div>
-          <!-- Service Item End -->
-        </div>
-        
-        
-        <!--<div class="col-lg-3 col-md-6">-->
-          <!-- Service Item Start -->
-          <!-- <div class="service-item-box wow fadeInUp" data-wow-delay="0.6s">-->
-          <!--  <div class="service-item">-->
-          <!--     <div class="icon-box ">-->
-          <!--      <img src="images/IICS/iics_image/course_logo/digital-content-creation.png" alt="digital-content" />-->
-          <!--    </div>-->
-          <!--    <div class="service-item-content">-->
-          <!--      <h3><a>Digital Content Creation & Performing Arts</a></h3>-->
-          <!--      <p>-->
-          <!--        Learn to shoot, edit, and manage content while building your brand across digital platforms.-->
-          <!--      </p>-->
-          <!--    </div>-->
-          <!--    <div class="service-readmore-btn">-->
-          <!--      <a href="sound-design-&-music-video-production.html" class="readmore-btn">Apply Now</a>-->
-                <!--<a href="images/sample-paper/Sound Design & Music Video Production.pdf" target="_blank"-->
-                <!--  class="sample-paper">Sample Paper</a>-->
-          <!--    </div>-->
-          <!--  </div>-->
-          <!--</div> -->
-          <!-- Service Item End -->
-        <!--</div>-->
+     <div class="degree" id="degree" style="display:block;">
+  <div class="swiper myDegreeSwiper">
+    <div class="swiper-wrapper" id="cardsContainer"></div>
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+  </div>
+</div>
 
-        <div class="col-lg-12">
-          <!-- Section Footer Text Start -->
-          <div class="section-footer-text wow fadeInUp" data-wow-delay="0.8s">
-            <p>
-              <span>free Career Guidance</span>Crafting Your Path to Creative Success -
-              <a href="tel:+919594949959">Talk to our Counsellors Today!</a>
-            </p>
-          </div>
-          <!-- Section Footer Text End -->
-        </div>
-      </div>
-      <div class="row service-list certificate" style="display: none;">
-
-        <div class="col-lg-3 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item-box wow fadeInUp" data-wow-delay="0.2s">
-            <div class="service-item">
-              <div class="icon-box ">
-                <img src="images/IICS/iics_image/course_logo/make-up.png" alt="make-up-image" />
-              </div>
-              <div class="service-item-content">
-                <h3><a>Makeup & Prosthetics</a></h3>
-                <p>
-                  Learn to create stunning looks for film and fashion with hands-on training in makeup, hair, and
-                  prosthetics
-                </p>
-              </div>
-              <div class="service-readmore-btn">
-                <a href="hair-make-up-&-prosthetics.html" class="readmore-btn">Apply Now</a>
-                <!--<a href="images/sample-paper/Certificate_Makeup & Prosthetics.pdf" target="_blank"-->
-                <!--  class="sample-paper">Sample Paper</a>-->
-              </div>
-            </div>
-          </div>
-          <!-- Service Item End -->
-        </div>
-
-        <!--<div class="col-lg-3 col-md-6">-->
-          <!-- Service Item Start -->
-        <!--  <div class="service-item-box wow fadeInUp" data-wow-delay="0.4s">-->
-        <!--    <div class="service-item">-->
-        <!--      <div class="icon-box ">-->
-        <!--        <img src="images/IICS/iics_image/course_logo/newspaper.png" alt="newspaper-icon" />-->
-        <!--      </div>-->
-        <!--      <div class="service-item-content">-->
-        <!--        <h3><a>Digital PR & Journalism</a></h3>-->
-        <!--        <p>-->
-        <!--          Learn to craft powerful stories, build public image, and navigate the fast-paced world of media and-->
-        <!--          journalism.-->
-        <!--        </p>-->
-        <!--      </div>-->
-        <!--      <div class="service-readmore-btn">-->
-        <!--        <a href="pr-&-journalism.html" class="readmore-btn">Apply Now</a>-->
-                <!--<a href="images/sample-paper/Certificate_Digital PR & Journalism.pdf" target="_blank"</-->
-                <!--  class="sample-paper">Sample Papera>-->
-        <!--      </div>-->
-        <!--    </div>-->
-        <!--  </div>-->
-          <!-- Service Item End -->
-        <!--</div>-->
-        <!--<div class="col-lg-3 col-md-6">-->
-        <!--   Service Item Start -->
-        <!--  <div class="service-item-box wow fadeInUp" data-wow-delay="0.4s">-->
-        <!--    <div class="service-item">-->
-        <!--      <div class="icon-box ">-->
-        <!--        <img src="images/IICS/iics_image/course_logo/digital-content-creation.png" alt="digital-content" />-->
-        <!--      </div>-->
-        <!--      <div class="service-item-content">-->
-        <!--        <h3><a>Visual and Communication Design</a></h3>-->
-        <!--        <p>-->
-        <!--          Learn to shoot, edit, and manage content while building your brand across digital platforms.-->
-        <!--        </p>-->
-        <!--      </div>-->
-        <!--      <div class="service-readmore-btn">-->
-        <!--        <a href="VisualandCommunicationDesign.html" class="readmore-btn">Apply Now</a>-->
-        <!--                      <a href="images/sample-paper/Certificate_Visual & Communication design.pdf" target="_blank"-->
-        <!--        class="sample-paper">Sample Paper</a>-->
-        <!--      </div>-->
-        <!--    </div>-->
-        <!--  </div>-->
-        <!--   Service Item End -->
-        <!--</div>-->
-        <div class="col-lg-3 col-md-6">
-          <!-- Service Item Start -->
-          <div class="service-item-box wow fadeInUp" data-wow-delay="0.4s">
-            <div class="service-item">
-              <div class="icon-box ">
-                <img src="images/IICS/iics_image/course_logo/dance-logo-png.png" alt="dance" />
-              </div>
-              <div class="service-item-content">
-                <h3><a>Dance</a></h3>
-                <p>
-                  Master the art of movement for stage and screen with expert-led training in dance styles, choreography, and performance skills.
-                </p>
-              </div>
-              <div class="service-readmore-btn">
-                <a href="" class="readmore-btn">Apply Now</a>
-                <!--              <a href="images/sample-paper/Certificate_Visual & Communication design.pdf" target="_blank"-->
-                <!--class="sample-paper">Sample Paper</a>-->
-              </div>
-            </div>
-          </div>
-          <!-- Service Item End -->
-        </div>
-
-        <div class="col-lg-12">
-          <!-- Section Footer Text Start -->
-          <div class="section-footer-text wow fadeInUp" data-wow-delay="0.8s">
-            <p>
-              <span>free Career Support</span>Your Creative Journey Starts Here-
-              <a href="contact.html">Talk to our Experts Today!</a>
-            </p>
-          </div>
-          <!-- Section Footer Text End -->
-        </div>
+      <div class="certificate" style="display: none;" id="certificate">
+        <div id="certCardContainer" class="course-container"></div>
       </div>
     </div>
+  </div>
   </div>
   <!-- Our Services Section End -->
+  
+  <!-- IICS showcase section -->
+  <!-- <section
+      class="flex justify-center items-center w-full h-auto flex-col gap-4 md:gap-10 pt-2"
+    >
+      <h1 class="text-3xl">IICS Showcase</h1>
+      <p class="mx-auto text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro.
+      </p>
 
-  <!-- Why Choose us Section Start -->
-  <div class="why-choose-us">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <!-- Why Choose Content Start -->
-          <div class="why-choose-content">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <h3 class="wow fadeInUp">why choose us?</h3>
-              <h2 class="text-anime-style-2" data-cursor="-opaque" data-wow-delay="0.2s">
-                Shaping the Next League of <span>Creative Entrepreneurs</span>
-              </h2>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">
-                At the Indian Institute of Creative Skills, we go
-                beyond traditional creative training — we help students build
-                real skills and become future-ready creative leaders
-              </p>
-            </div>
-            <!-- Section Title End -->
-
-            <!-- Why Choose list Start -->
-            <div class="why-choose-list wow fadeInUp" data-wow-delay="0.4s">
-              <ul>
-                <li>Global Exposure</li>
-                <li>Focus on Entrepreneurship</li>
-                <li>Assured Apprenticeship</li>
-                <li>Industry-Led Learning</li>
-              </ul>
-            </div>
-            <!-- Why Choose list End -->
-          </div>
-          <!-- Why Choose Content End -->
+      <div
+        class="bg-white rounded-xl flex justify-center gap-6 md:gap-8 flex-col md:flex-row"
+      >
+        <div class="border border-white">
+          <img class="w-80" src="./images/IICS/iics_image/costumedesign.webp" alt="" />
+          <p class="text-center">IICS Showreel</p>
         </div>
-
-        <div class="col-lg-6">
-          <!-- Why Choose Image Start -->
-          <div class="why-choose-image">
-            <!-- <figure class="image-anime reveal">
-                <img src="images/why-choose-image.jpg" alt="" />
-              </figure> -->
-
-            <!-- Video Play Button Start -->
-            <div class="video-play-button">
-              <video controls="" loop="" playsinline="" poster="images/IICS/iics_image/thumbnail.jpg" loading="lazy">
-                <source src="images/IICS/iics_image/why-choose-us.mp4" type="video/mp4" loading="lazy">
-                Your browser does not support the video tag.
-              </video>
-
-            </div>
-            <!-- Video Play Button End -->
-          </div>
-          <!-- Why Choose Image End -->
+        <div class="border border-white">
+          <img class="w-80" src="./images/IICS/iics_image/costumedesign.webp" alt="" />
+          <p class="text-center">Illustrious Alumni</p>
         </div>
-
-        <div class="col-lg-12">
-          <!-- Why Choose Item List Start -->
-          <div class="why-choose-item-list">
-            <!-- Why Choose Item Start -->
-            <div class="why-choose-item wow fadeInUp">
-              <div class="icon-box">
-                <img src="images/IICS/iics_image/whychooseus/international-study-tour.png" alt="international-study-tour" />
-              </div>
-              <div class="why-choose-item-content">
-                <h3>International Study Tours</h3>
-                <p>
-                  Represent India at top global film, music, and gaming events like Cannes, SIGGRAPH, and MIPCOM.
-                </p>
-              </div>
-            </div>
-            <!-- Why Choose Item End -->
-
-            <!-- Why Choose Item Start -->
-            <div class="why-choose-item wow fadeInUp" data-wow-delay="0.2s">
-              <div class="icon-box">
-                <img src="images/IICS/iics_image/whychooseus/on-the-job-training.png" alt="job-training" />
-              </div>
-              <div class="why-choose-item-content">
-                <h3>On-the-Job Training</h3>
-                <p>
-                  Work on Indian and international projects under expert mentor guidance during your training.
-                </p>
-              </div>
-            </div>
-            <!-- Why Choose Item End -->
-
-            <!-- Why Choose Item Start -->
-            <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
-              <div class="icon-box">
-                <img src="images/IICS/iics_image/whychooseus/global-portfolio.png" alt="global-portfolio" />
-              </div>
-              <div class="why-choose-item-content">
-                <h3>Global Portfolio</h3>
-                <p>
-                  Showcase your talent to the world by presenting your work at global expos and events.
-                </p>
-              </div>
-            </div>
-            <!-- Why Choose Item End -->
-
-            <!-- Why Choose Item Start -->
-            <div class="why-choose-item wow fadeInUp" data-wow-delay="0.6s">
-              <div class="icon-box">
-                <img src="images/IICS/iics_image/whychooseus/Masterclasses&Workshops.png" alt="masterclasses_workhops" />
-              </div>
-              <div class="why-choose-item-content">
-                <h3>Masterclass & Workshops</h3>
-                <p>
-                  Learn directly from award-winning creators through hands-on sessions and live industry workshops.
-                </p>
-              </div>
-            </div>
-            <!-- Why Choose Item End -->
-          </div>
-          <!-- Why Choose Item List End -->
+        <div class="border border-white">
+          <img class="w-80" src="./images/IICS/iics_image/costumedesign.webp" alt="" />
+          <p class="text-center">Students Project</p>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Why Choose us Section End -->
+    </section> -->
 
-  <!-- What We Do Section Start -->
-  <div class="what-we-do dark-section" id="creativeContainer">
-    <div class="container-fluid">
-      <div class="row no-gutters">
-        <div class="col-lg-6">
-          <!-- What We Do Image Start -->
-          <div class="what-we-do-image">
-            <figure class="image-anime">
-              <img src="images/IICS/iics_image/what-we-build/webuild-1.jpeg" alt="what-we-build" loading="lazy" />
-            </figure>
-          </div>
-          <!-- What We Do Image End -->
-        </div>
-
-        <div class="col-lg-6">
-          <!-- What We Do Content Start -->
-          <div class="what-we-do-content">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <h3 class="wow fadeInUp">what we build?</h3>
-              <h2 class="text-anime-style-2" data-cursor="-opaque">
-                Empowering Creators through
-                <span>India’s First Creative Incubator</span>
-              </h2>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">
-                We nurture the next-gen creators and
-                aspiring entrepreneurs with international exposure,
-                hands-on industry experience and focused, mentor-led batches —
-                turning raw talent into future-ready leaders.
-              </p>
-            </div>
-            <!-- Section Title End -->
-
-            <!-- About Body List Start -->
-            <div class="what-do-body-list wow fadeInUp" data-wow-delay="0.4s">
-              <!-- About Body Item Start -->
-              <div class="what-do-body-item">
-                <div class="icon-box">
-                  <img src="images/IICS/iics_image/whatwebuild/ip-creation.png" class="filter brightness-0 invert"
-                    alt="ip-creation-icon" loading="lazy"/>
-                </div>
-                <div class="what-do-body-content">
-                  <h3>Integrated Modules on IP Creation</h3>
-                </div>
-              </div>
-              <!-- About Body Item End -->
-
-              <!-- About Body Item Start -->
-              <div class="what-do-body-item">
-                <div class="icon-box">
-                  <img src="images/IICS/iics_image/whatwebuild/global-m&e-industry.png"
-                    class="filter brightness-0 invert" alt="global-industry-logo" loading="lazy"/>
-                </div>
-                <div class="what-do-body-content">
-                  <h3>Global M&E industry Mentors</h3>
-                </div>
-              </div>
-              <!-- About Body Item End -->
-            </div>
-            <!-- About Body List End -->
-
-            <!-- What We Do Footer Start -->
-            <div class="what-we-do-footer">
-              <!-- What We Do List Start -->
-              <div class="what-we-do-list wow fadeInUp" data-wow-delay="0.6s">
-                <ul>
-                  <li>Access to World Class Infrastructure</li>
-                  <li>Business Mentorship & Startup Guidance</li>
-                  <li>
-                    Opportunities for Networking & Partnerships
-                  </li>
-                </ul>
-              </div>
-              <!-- What We Do List End -->
-
-              <!-- What We Do Circle Start -->
-              <!-- <div class="what-we-do-circle">
-                  <a href="contact.html">
-                    <img src="images/contact-us-circle-2.svg" alt="" />
-                  </a>
-                </div> -->
-              <!-- What We Do Circle End -->
-            </div>
-            <!-- What We Do Footer End -->
-          </div>
-          <!-- What We Do Content End -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- What We Do Section End -->
-
-  <!-- Company Success Section Start -->
-  <div class="company-success">
+<!-- Our mentors section -->
+ <div class="our-team">
     <div class="container">
       <div class="row section-row align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
           <!-- Section Title Start -->
           <div class="section-title">
-            <h3 class="wow fadeInUp">Our Campuses</h3>
-            <h2 class="text-anime-style-2" data-cursor="-opaque" data-wow-delay="0.2s">
-              State of the Art Facilities <span> Across India</span>
-            </h2>
+            <!-- <h3 class="wow fadeInUp">Nurturing your journey with India’s creative legends</h3> -->
+            <h2 class="text-anime-style-2 text-center" data-cursor="-opaque">Master Your Skill With Our Industry Mentors</h2>
           </div>
           <!-- Section Title End -->
         </div>
 
-        <div class="col-lg-6">
+      </div>
+
+      <div class="row">
+        <div class="swiper mySwiperSecond">
+          <div class="swiper-wrapper" id="courseContainer"></div>
+          <!-- <div class="swiper-pagination mt-4"></div> -->
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
           <!-- Service Button Start -->
-          <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-            <a href="contact.html" class="btn-default">contact us</a>
+          <div class="viewall-btn" data-wow-delay="0.2s">
+            <a href="industry-mentor.html">View All Industry Mentors</a>
           </div>
           <!-- Service Button End -->
         </div>
       </div>
-
-      <div class="row campusContainerArea">
-        <div class="col-md-3 col-6 campusItem">
-          <!-- Company Success Item Start -->
-          <div class="company-success-item">
-            <div class="company-success-header">
-              <div class="icon-box">
-                <img src="images/IICS/iics_image/delhi.png" class="filter brightness-0 invert" alt="delhi-campus" />
-              </div>
-              <div class="company-success-title">
-                <h3> +91 959-4949-959</h3><br>
-                <span>info@iicsindia.org</span>
-              </div>
-            </div>
-            <div class="company-success-content">
-              <h3><span>Delhi</span></h3>
-              <p>
-                Indian Institute of Creative Skills <br> 3rd Floor, Plot No. 13A, Ring Rd,
-                Lajpat Nagar 4, New Delhi, Delhi 110024
-              </p>
-            </div>
-          </div>
-          <!-- Company Success Item End -->
-        </div>
-
-        <div class="col-md-3 col-6 campusItem">
-          <!-- Company Success Item Start -->
-          <div class="company-success-item">
-            <div class="company-success-header">
-              <div class="icon-box">
-                <img src="images/IICS/iics_image/bhopal.png" class="filter brightness-0 invert" alt="bhopal_campus" />
-              </div>
-              <div class="company-success-title">
-                <h3>+91 74285 99748</h3><br>
-                <span>admissionsbhopal@iicsindia.org</span>
-              </div>
-            </div>
-            <div class="company-success-content">
-              <h3><span>Bhopal</span></h2>
-                <p>
-                  Jagran Lakecity University <br>Near Kaliasoth Barrage, Chandanpura, Bhopal- 462007
-                </p>
-            </div>
-          </div>
-          <!-- Company Success Item End -->
-        </div>
-
-        <div class="col-md-3 col-6 campusItem">
-          <!-- Company Success Item Start -->
-          <div class="company-success-item">
-            <div class="company-success-header">
-              <div class="icon-box">
-                <img src="images/IICS/iics_image/chandigarh.png" class="filter brightness-0 invert" alt="chandigarh_campus" />
-              </div>
-              <div class="company-success-title">
-                <h3>+91 959-4949-959</h3><br>
-                <span>chandigarh@iicsindia.org</span>
-              </div>
-            </div>
-            <div class="company-success-content">
-              <h3><span>Chandigarh</span></h2>
-                <p>
-                  CH Devi Lal Centre of Learning <br>5, Madhya Marg, 28B, Sector 28, Chandigarh, 160028
-                </p>
-            </div>
-            <h6 style="background-color: #914d94; width: fit-content; padding: 5px; border-radius: 10px; color: #ffffff;">Coming Soon</h6>
-          </div>
-          <!-- Company Success Item End -->
-        </div>
-
-        <div class="col-md-3 col-6 campusItem">
-          <!-- Company Success Item Start -->
-          <div class="company-success-item">
-            <div class="company-success-header">
-              <div class="icon-box">
-                <img src="images/IICS/iics_image/kolkata.png" class="filter brightness-0 invert" alt="kolkata-campus" />
-              </div>
-              <div class="company-success-title">
-                <h3>+91 959-4949-959</h3><br>
-                <span>kolkata@iicsindia.org</span>
-              </div>
-            </div>
-            <div class="company-success-content">
-              <h3><span>Kolkata</span></h2>
-                <p>
-                  Where Art Breathes and Stories Live, <br>
-                  In the heart of Kolkata, <br>
-                  IICS is coming up.
-                </p>
-            </div>
-            <h6 style="background-color: #914d94; width: fit-content; padding: 5px; border-radius: 10px; color: #ffffff;">Coming Soon</h6>
-          </div>
-          <!-- Company Success Item End -->
-        </div>
-      </div>
     </div>
   </div>
-  <!-- Company Success Section End -->
 
-  <!-- Scrolling Ticker Start -->
-  <div class="scrolling-ticker-text">
-    <div class="scrolling-ticker-text-box">
-      <div class="scrolling-ticker-text-content">
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />GLOBAL STUDY TOUR</span>
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />PAID APPRENTICESHIP</span>
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />INDUSTRY LED TRAINING</span>
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />LIVE PROJECTS</span>
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />CREATIVE INCUBATOR</span>
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />ENTREPRENEURSHIP FOCUSED</span>
-      </div>
-
-      <div class="scrolling-ticker-text-content">
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />Strategic Hiring</span>
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />HR Consulting</span>
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />Support</span>
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />Strategic Hiring</span>
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />HR Consulting</span>
-        <span><img src="images/icon-asterisk.svg" alt="asterisk-icon" />Support</span>
-      </div>
-    </div>
-  </div>
-  <!-- Scrolling Ticker End -->
-
-  <!-- Our Benefits Section Start -->
+    <!-- Our Benefits Section Start -->
   <div class="our-benefits">
     <div class="container">
       <div class="row align-items-center">
@@ -1556,12 +1306,12 @@
           <!-- Benefits Content Start -->
           <div class="benefits-content">
             <!-- Section Title Start -->
-            <div class="section-title">
-              <h3 class="wow fadeInUp">Life@IICS</h3>
-              <h2 class="text-anime-style-2" data-cursor="-opaque">
-                Empowering Aspirants with a <span>culture that Inspires</span>
+            <div class="left-heading">
+              <h3 class="wow fadeInUp">Life at IICS</h3>
+              <h2 style="font-size: 28px;" data-cursor="-opaque">
+                Empowering Aspirants with a culture that Inspires
               </h2>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">
+              <p class="wow fadeInUp text-black" data-wow-delay="0.2s">
                 A platform that brings together a unique combination
                 of creative learning with hands-on experience,
                 project-based modules and
@@ -1575,7 +1325,7 @@
               <!-- Benefits Body Item Start -->
               <div class="benefits-body-item">
                 <h3>Masterclass & Workshops</h3>
-                <p>
+                <p class="text-black">
                   Regular masterclasses and guest sessions with
                   industry icons, creators, and global thought leaders.
                 </p>
@@ -1585,7 +1335,7 @@
               <!-- Benefits Body Item Start -->
               <div class="benefits-body-item">
                 <h3> Talent Showcases</h3>
-                <p>
+                <p class="text-black">
                   In-house screenings, live demos, and stage
                   performances that let your talent shine center stage.
                 </p>
@@ -1595,888 +1345,167 @@
             <!-- Benefits Body End -->
 
             <!-- Benefits Footer Start -->
-            <div class="benefits-body-item benefits-body-list wow fadeInUp" data-wow-delay="0.6s">
+            <!-- <div class="benefits-body-item benefits-body-list wow fadeInUp" data-wow-delay="0.6s">
               <ul>
                 <li>International Event Exposure</li>
                 <li>Live Industry Projects</li>
                 <li>Industry Visits & Tours</li>
                 <li>Access to Studio</li>
               </ul>
-            </div>
+            </div> -->
             <!-- Benefits Footer End -->
           </div>
           <!-- Benefits Content End -->
         </div>
 
         <div class="col-lg-6">
-          <!-- Benefits Image Start -->
-          <div class="benefits-images">
-            <!-- Benefits Image 1 Start -->
-            <div class="benefit-image-1">
-              <!-- Benefits Image Start -->
-              <div class="benefit-image">
-                <figure class="image-anime reveal">
-                  <img src="images/IICS/iics_image/life_iics/iicslife-4.webp" alt="iics_life" loading="lazy"/>
-                </figure>
-              </div>
-              <!-- Benefits Image End -->
 
-              <!-- Benefits Image Circle Start -->
-              <!-- <div class="benefit-image-circle">
-                  <a href="contact.html">
-                    <img src="images/contact-us-circle-2.svg" alt="" />
-                  </a>
-                </div> -->
-              <!-- Benefits Image Circle End -->
-            </div>
-            <!-- Benefits Image 1 End -->
-
-            <!-- Benefits Image 2 Start -->
-            <div class="benefit-image-2">
-              <!-- Benefits Image Start -->
-              <div class="benefit-image">
-                <figure class="image-anime">
-                  <img src="images/IICS/iics_image/life_iics/lifeimage-3.jpeg" alt="iics_life" loading="lazy" />
-                </figure>
-              </div>
-              <!-- Benefits Image End -->
-
-              <!-- Benefits Project Info Start -->
-              <div class="benefit-project-info">
-                <div class="icon-box">
-                  <img src="images/icon-what-do-body-1.svg" alt="paid_apprenticeship" loading="lazy" />
-                </div>
-                <div class="benefit-project-content">
-                  <h3><span>3 Months</span></h3>
-                  <p>Paid Apprenticeship</p>
-                </div>
-              </div>
-              <!-- Benefits Project Info End -->
-            </div>
-            <!-- Benefits Image 2 End -->
-          </div>
-          <!-- Benefits Image End -->
+          <div class="swiper mySwiper what-we-do-image">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="images/IICS/iics_image/student-life/about-img-1.jpg" alt="incubator 1" class="img-fluid rounded-xl" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/IICS/iics_image/life_iics/lifeimage-3.jpeg" alt="incubator 2" class="img-fluid rounded-xl" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/IICS/iics_image/student-life/masterclass-by-industry-legends.JPG" alt="incubator 3" class="img-fluid rounded-xl" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/IICS/iics_image/student-life/sound-img-2.JPG" alt="incubator 3" class="img-fluid rounded-xl" />
+    </div>
+    <div class="swiper-slide">
+      <img src="images/IICS/iics_image/what-we-build/webuild-1.jpeg" alt="incubator 3" class="img-fluid rounded-xl" />
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </div>
   </div>
   <!-- Our Benefits Section End -->
 
-  <!-- How It Work Section Start -->
-  <div class="how-it-work">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <!-- How Work Content Start -->
-          <div class="how-work-content">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <h3 class="wow fadeInUp">Admission Process (2026-27)</h3>
-              <h2 class="text-anime-style-2" data-cursor="-opaque">
-                Your gateway to IICS <span>begins here </span>
-              </h2>
-              <p class="wow fadeInUp" data-wow-delay="0.2s">
-                The IICS admission journey is designed to
-                discover talent, passion, and creative potential.
-                With just four focused steps, we help you
-                transition from a curious learner to a future-ready creator.
-              </p>
-            </div>
-            <!-- Section Title End -->
+  <section class="how-to-apply my-5">
+    <div class="section-heading to-apply">
+      <h3>How <br> to Apply</h3>
+    </div>
+    <div class="steps-container">
+      <div class="step">
+        <div class="circle"></div>
+        <h4>Step 1</h4>
+        <p>Fill out the application form for MECAT IICS and submit it.</p>
+      </div>
 
-            <div class="how-it-work-btn wow fadeInUp" data-wow-delay="0.4s">
-              <a href="admission.html" class="btn-default">Apply Now</a>
-            </div>
-          </div>
-        </div>
+      <div class="line"></div>
 
-        <div class="col-lg-6">
-          <!-- How Work Process List Start -->
-          <div class="how-work-process-list">
-            <!-- Work Process Item Start -->
-            <div class="work-process-item wow fadeInUp">
-              <div class="work-process-content">
-                <h3>step 01</h3>
-                <h2>Registration & Application Form</h2>
-                <p>
-                  Begin your journey by choosing your preferred
-                  program and filling out a simple online form. <a href="admission.html">Apply Now</a>
-                </p>
-              </div>
-              <div class="work-process-image">
-                <figure class="image-anime">
-                  <img src="images/IICS/iics_image/registration.jpg" alt="registration_icon" />
-                </figure>
-              </div>
-            </div>
-            <!-- Work Process Item End -->
+      <div class="step">
+        <div class="circle"></div>
+        <h4>Step 2</h4>
+        <p>
+          After submission, you’ll receive your login credentials at the email
+          address you provided.
+        </p>
+      </div>
 
-            <!-- Work Process Item Start -->
-            <div class="work-process-item wow fadeInUp" data-wow-delay="0.2s">
-              <div class="work-process-content">
-                <h3>step 02</h3>
-                <h2>Entrance Exam & Evaluation</h2>
-                <p>
-                  Take the online entrance exam that evaluates your
-                  creative aptitude and logical thinking</p>
-                  <p class="font-semibold">Entrance Exam Date: 21st Dec</p>
-                  <!-- <p class="font-semibold">Last Date for Registration: 15th Nov</p> -->
-              </div>
-              <div class="work-process-image">
-                <figure class="image-anime">
-                  <img src="images/IICS/iics_image/admission-process/entrance-exam.webp" alt="entrance-exam-icon" />
-                </figure>
-              </div>
-            </div>
-            <!-- Work Process Item End -->
+      <div class="line"></div>
 
-            <!-- Work Process Item Start -->
-            <div class="work-process-item wow fadeInUp" data-wow-delay="0.4s">
-              <div class="work-process-content">
-                <h3>step 03</h3>
-                <h2>Portfolio Review & Interview</h2>
-                <p>
-                  Showcase your portfolio, followed by a personal interview.
-                  Our mentors gauges your passion for creative field.
-                </p>
-              </div>
-              <div class="work-process-image">
-                <figure class="image-anime">
-                  <img src="images/IICS/iics_image/admission-process/portfolio-review.webp" alt="portfolio-review-icon" loading="lazy"/>
-                </figure>
-              </div>
-            </div>
+      <div class="step">
+        <div class="circle"></div>
+        <h4>Step 3</h4>
+        <p>
+          Click the Login button and sign in using your username and password.
+        </p>
+      </div>
 
-            <div class="work-process-item wow fadeInUp" data-wow-delay="0.4s">
-              <div class="work-process-content">
-                <h3>step 04</h3>
-                <h2>Final Offer & Onboarding</h2>
-                <p>
-                  Receive your offer letter and step into the ranks of India’s top selected creative minds.
-                </p>
-              </div>
-              <div class="work-process-image">
-                <figure class="image-anime">
-                  <img src="images/IICS/iics_image/admission-process-step4.webp" alt="admission-process" />
-                </figure>
-              </div>
-            </div>
-            <!-- Work Process Item End -->
-          </div>
-          <!-- How Work Process List End -->
-        </div>
+      <div class="line"></div>
+
+      <div class="step">
+        <div class="circle"></div>
+        <h4>Step 4</h4>
+        <p>
+          Once logged in, you’ll be redirected to your dashboard — complete
+          your application form there.
+        </p>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="step">
+        <div class="circle"></div>
+        <h4>Step 5</h4>
+        <p>Pay the application fee for MECAT IICS and submit your final application.</p>
       </div>
     </div>
-  </div>
-  <!-- How It Work Section End -->
+  </section>
 
-  <!-- Our Testimonials Section Start -->
-  <div class="our-testimonials dark-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <!-- Testimonials Content Start -->
-          <div class="testimonials-content">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <h3 class="wow fadeInUp">Backed by Government & Industry</h3>
-              <h2 class="text-anime-style-2" data-cursor="-opaque">
-                Where MESC’s Expertise <span>Guides Your Path </span>
-              </h2>
-            </div>
-            <!-- Section Title End -->
+  <!-- Talk to us section start -->
+  <div class="w-full bg-white py-12">
+  <div class="max-w-7xl mx-auto px-4 md:px-0 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
-            <!-- Testimonials Button Start -->
-            <div class="testimonials-btn wow fadeInUp flex gap-[20px] items-center bg-white w-fit pl-[10px]"
-              data-wow-delay="0.2s">
-              <img src="images/IICS/iics_image/skill-logo-small.webp" class="w-[150px] " alt="skill-india">
-              <img src="images/IICS/iics_image/mesc-logo-small.webp" class="w-[150px] h-[110px] object-contain" alt="mesc-logo">
+    <!-- LEFT SIDE CONTENT -->
+    <div>
+      <!-- <p class="text-gray-500 text-sm font-semibold tracking-wide">FIND US NEARBY</p> -->
+
+      <h2 class="text-3xl lg:text-4xl font-bold mt-2">
+        Talk to us <span class="text-red-600">in-person</span>
+      </h2>
+
+      <ul class="mt-6 space-y-4 text-gray-700 contact_pointers">
+
+  <li class="flex items-start gap-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-600">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+    </svg>
+    <span>Visit our campus to explore India’s first creative Incubator</span>
+  </li>
+
+  <li class="flex items-start gap-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-600">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M18 18v-1.5A2.25 2.25 0 0015.75 14.25H14.25M6 18v-1.5A2.25 2.25 0 018.25 14.25H9.75m4.5-3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zM12 10.5a2.25 2.25 0 10-4.5 0 2.25 2.25 0 004.5 0z" />
+    </svg>
+    <span>Get personalized expert guidance on your career path</span>
+  </li>
+
+  <li class="flex items-start gap-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-600">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 3L1.5 9l10.5 6L22.5 9 12 3z" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 10.5v4.875c0 .621.5 1.125 1.125 1.125h8.25c.621 0 1.125-.504 1.125-1.125V10.5" />
+    </svg>
+    <span>Register for a free seminar in your area of interest</span>
+  </li>
+
+</ul>
 
 
-            </div>
-            <!-- Testimonials Button End -->
-          </div>
-          <!-- Testimonials Content End -->
-        </div>
 
-        <div class="col-lg-6">
-          <!-- Testimonial Slider Start -->
-          <div class="testimonial-slider">
-            <div class="swiper">
-              <div class="swiper-wrapper" data-cursor-text="Drag">
-                <!-- Testimonial Slide Start -->
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <!-- <div class="testimonial-rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div> -->
-                    <div class="testimonial-content">
-                      <p>
-                        "Creativity is the heartbeat of progress.
-                        Indian Institute of Creative Skills nurture
-                        the creators who will define tomorrow’s
-                        world through passion, innovation, and skill"
-                      </p>
-                    </div>
-                    <div class="testimonial-author">
-                      <div class="author-image">
-                        <figure class="image-anime">
-                          <img src="images/IICS/iics_image/testimonials/Kamal-Haasan.jpg" alt="kamal_haasan" loading="lazy"/>
-                        </figure>
-                        <div class="testimonial-quote">
-                          <img src="images/testimonials-quotes-img.svg" alt="quote_testimonial" loading="lazy"/>
-                        </div>
-                      </div>
-                      <div class="author-content">
-                        <h3>Shri Kamal Haasan</h3>
-                        <p>Chairman Emeritus of MESC</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Testimonial Slide End -->
+      <!-- BUTTONS -->
+      <div class="mt-8 flex flex-wrap gap-4">
+        <button class="px-6 py-3 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
+          Explore centres
+        </button>
 
-                <!-- Testimonial Slide Start -->
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <!-- <div class="testimonial-rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div> -->
-                    <div class="testimonial-content">
-                      <p>
-                        "In the world of cinema and creativity,
-                        excellence is not a choice but a journey.
-                        Indian institute of Creative Skils is where
-                        the future filmmakers, artists, and leaders
-                        are sculpted with knowledge, passion, and skill"
-                      </p>
-                    </div>
-                    <div class="testimonial-author">
-                      <div class="author-image">
-                        <figure class="image-anime">
-                          <img src="images/IICS/iics_image/testimonials/subash-ghai.jpg" alt="subhash-ghai" loading="lazy"/>
-                        </figure>
-                        <div class="testimonial-quote">
-                          <img src="images/testimonials-quotes-img.svg" alt="quote_testimonial" loading="lazy"/>
-                        </div>
-                      </div>
-                      <div class="author-content">
-                        <h3>Shri Subhash Ghai</h3>
-                        <p>Chairman Emeritus of MESC</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Testimonial Slide End -->
-
-                <!-- Testimonial Slide Start -->
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <!-- <div class="testimonial-rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div> -->
-                    <div class="testimonial-content">
-                      <p>
-                        "The future of cinema and creativity lies
-                        in the hands of skilled storytellers and
-                        innovators. Indian Institute of Creative Skills
-                        is where those stories begin, and the skills to tell them are crafted."
-                      </p>
-                    </div>
-                    <div class="testimonial-author">
-                      <div class="author-image">
-                        <figure class="image-anime">
-                          <img src="images/IICS/iics_image/testimonials/Ramesh-Sippy.jpg" alt="ramesh-sippy" loading="lazy"/>
-                        </figure>
-                        <div class="testimonial-quote">
-                          <img src="images/testimonials-quotes-img.svg" alt="quote_testimonial" />
-                        </div>
-                      </div>
-                      <div class="author-content">
-                        <h3>Padma Shri Ramesh Sippy</h3>
-                        <p>Chairman Emeritus of MESC</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Testimonial Slide End -->
-
-                <!-- Testimonial Slide Start -->
-                <div class="swiper-slide">
-                  <div class="testimonial-item">
-                    <!-- <div class="testimonial-rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                      </div> -->
-                    <div class="testimonial-content">
-                      <p>
-                        “Music, like all art forms, thrives on creativity and skill. Indian institute of Creative Skills
-                        tune the minds of tomorrow’s artists, preparing them to create, inspire, and lead the future of
-                        the entertainment world.”
-                      </p>
-                    </div>
-                    <div class="testimonial-author">
-                      <div class="author-image">
-                        <figure class="image-anime">
-                          <img src="images/IICS/iics_image/shankar-small.jpg" alt="shankar_mahadewan" loading="lazy" />
-                        </figure>
-                        <div class="testimonial-quote">
-                          <img src="images/testimonials-quotes-img.svg" alt="quote_testimonial" />
-                        </div>
-                      </div>
-                      <div class="author-content">
-                        <h3>Padma Shri Dr. Shankar Mahadevan</h3>
-                        <p>Chairman, Media and Entertainment Skills</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Testimonial Slide End -->
-              </div>
-              <div class="testimonial-pagination"></div>
-            </div>
-          </div>
-          <!-- Testimonial Slider End -->
-        </div>
-
-        <div class="col-lg-12">
-          <!-- Testimonials Counter List Start -->
-          <div class="testimonials-counter-list">
-            <!-- Testimonials Counter Item Start -->
-            <div class="testimonials-counter-item">
-              <h2><span class="counter">13</span>+</h2>
-              <p>Years of Shaping Creative Futures</p>
-            </div>
-            <!-- Testimonials Counter Item End -->
-
-            <!-- Testimonials Counter Item Start -->
-            <div class="testimonials-counter-item">
-              <h2><span>7 L</span>+</h2>
-              <p>Candidates Skilled & Upskilled</p>
-            </div>
-            <!-- Testimonials Counter Item End -->
-
-            <!-- Testimonials Counter Item Start -->
-            <div class="testimonials-counter-item">
-              <h2><span>5K</span>+</h2>
-              <p>Certified Trainers PAN India</p>
-            </div>
-            <!-- Testimonials Counter Item End -->
-
-            <!-- Testimonials Counter Item Start -->
-            <div class="testimonials-counter-item">
-              <h2><span class="counter">1500</span>+</h2>
-              <p>Affiliated Institutions</p>
-            </div>
-            <!-- Testimonials Counter Item End -->
-          </div>
-          <!-- Testimonials Counter List End -->
-        </div>
+        <button class="px-6 py-3 rounded-md bg-red-600 text-white hover:bg-red-700 transition flex items-center gap-2">
+          <a href="contact.html" class="text-white">
+          Book a Visit
+          </a>
+        </button>
       </div>
     </div>
-  </div>
-  <!-- Our Testimonials Section End -->
 
-  <!-- Our Pricing Section Start -->
-  <div class="our-pricing hidden">
-    <div class="container">
-      <div class="row section-row align-items-center">
-        <div class="col-lg-6">
-          <!-- Section Title Start -->
-          <div class="section-title">
-            <h3 class="wow fadeInUp">pricing plan</h3>
-            <h2 class="text-anime-style-2" data-cursor="-opaque" data-wow-delay="0.2s">
-              Flexible HR solutions for every <span>business need</span>
-            </h2>
-          </div>
-          <!-- Section Title End -->
-        </div>
-
-        <div class="col-lg-6">
-          <!-- Service Button Start -->
-          <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-            <a href="pricing.html" class="btn-default">all pricing plans</a>
-          </div>
-          <!-- Service Button End -->
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <!-- Pricing Box Start -->
-          <div class="pricing-item wow fadeInUp">
-            <!-- Pricing Header Start -->
-            <div class="pricing-header">
-              <img src="images/icon-pricing-1.svg" alt="pricing-icon" />
-              <h3>Basic plan</h3>
-              <p>
-                Our basic plan offers essential HR service, including
-                recruitment, onboarding.
-              </p>
-              <h2>$29<sub>/per month</sub></h2>
-            </div>
-            <!-- Pricing Header End -->
-
-            <!-- Pricing Body Start -->
-            <div class="pricing-body">
-              <ul>
-                <li>Basic compliance support</li>
-                <li>HR documentation</li>
-                <li>Performance management</li>
-              </ul>
-            </div>
-            <!-- Pricing Body End -->
-
-            <!-- Pricing Footer Start -->
-            <div class="pricing-footer">
-              <a href="contact.html" class="btn-default">Get started now</a>
-            </div>
-            <!-- Pricing Button End -->
-          </div>
-          <!-- Pricing Box End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Pricing Box Start -->
-          <div class="pricing-item highlighted-box wow fadeInUp" data-wow-delay="0.2s">
-            <!-- Pricing Header Start -->
-            <div class="pricing-header">
-              <img src="images/icon-pricing-2.svg" alt="pricing-icon" />
-              <h3>Standard plan</h3>
-              <p>
-                Our Standard plan offers essential HR service, including
-                recruitment, onboarding.
-              </p>
-              <h2>$39<sub>/per month</sub></h2>
-            </div>
-            <!-- Pricing Header End -->
-
-            <!-- Pricing Body Start -->
-            <div class="pricing-body">
-              <ul>
-                <li>Standard compliance support</li>
-                <li>HR documentation</li>
-                <li>Performance management</li>
-              </ul>
-            </div>
-            <!-- Pricing Body End -->
-
-            <!-- Pricing Footer Start -->
-            <div class="pricing-footer">
-              <a href="contact.html" class="btn-default btn-highlighted">Get started now</a>
-            </div>
-            <!-- Pricing Button End -->
-          </div>
-          <!-- Pricing Box End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Pricing Box Start -->
-          <div class="pricing-item wow fadeInUp" data-wow-delay="0.4s">
-            <!-- Pricing Header Start -->
-            <div class="pricing-header">
-              <img src="images/icon-pricing-3.svg" alt="pricing-icon" />
-              <h3>premium plan</h3>
-              <p>
-                Our premium plan offers essential HR service, including
-                recruitment, onboarding.
-              </p>
-              <h2>$49<sub>/per month</sub></h2>
-            </div>
-            <!-- Pricing Header End -->
-
-            <!-- Pricing Body Start -->
-            <div class="pricing-body">
-              <ul>
-                <li>Premium compliance support</li>
-                <li>HR documentation</li>
-                <li>Performance management</li>
-              </ul>
-            </div>
-            <!-- Pricing Body End -->
-
-            <!-- Pricing Footer Start -->
-            <div class="pricing-footer">
-              <a href="contact.html" class="btn-default">Get started now</a>
-            </div>
-            <!-- Pricing Footer End -->
-          </div>
-          <!-- Pricing Box End -->
-        </div>
-
-        <div class="col-lg-12">
-          <!-- Pricing Benifit List Start -->
-          <div class="pricing-benefit-list wow fadeInUp" data-wow-delay="0.6s">
-            <ul>
-              <li>
-                <img src="images/icon-pricing-benefit-1.svg" alt="icon" />Get 30
-                day free trial
-              </li>
-              <li>
-                <img src="images/icon-pricing-benefit-2.svg" alt="icon" />No any
-                hidden fees pay
-              </li>
-              <li>
-                <img src="images/icon-pricing-benefit-3.svg" alt="icon" />You can
-                cancel anytime
-              </li>
-            </ul>
-          </div>
-          <!-- Pricing Benifit List End -->
-        </div>
-      </div>
+    <!-- RIGHT SIDE IMAGE -->
+    <div class="w-full flex justify-center">
+      <img 
+        src="images/iics_institute.webp"
+        alt="iics center"
+        class="rounded-lg shadow-lg w-full object-cover"
+      />
     </div>
+
   </div>
-  <!-- Our Pricing Section End -->
-
-  <!-- Our Faqs Section Start -->
-  <div class="our-faqs">
-    <div class="container">
-      <div class="row section-row align-items-center">
-        <div class="col-lg-6">
-          <!-- Section Title Start -->
-          <div class="section-title">
-            <h3 class="wow fadeInUp">faq</h3>
-            <h2 class="text-anime-style-2" data-cursor="-opaque">
-              What Students and Parents <span> Ask Us the Most</span>
-            </h2>
-          </div>
-          <!-- Section Title End -->
-        </div>
-
-        <div class="col-lg-6">
-          <!-- Service Button Start -->
-          <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-            <a href="faqs.html" class="btn-default">view all FAQs</a>
-          </div>
-          <!-- Service Button End -->
-        </div>
-      </div>
-
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <!-- Faqs Image Start -->
-          <div class="faqs-image">
-            <div class="faqs-img">
-              <figure class="image-anime reveal">
-                <img src="images/IICS/iics_image/faq-main-final.webp" alt="faq-img" loading="lazy"/>
-              </figure>
-            </div>
-
-            <!-- Faqs Contact Circle Start -->
-            <!-- <div class="faq-contact-circle">
-                <a href="contact.html">
-                  <img src="images/contact-us-circle-1.svg" alt="" />
-                </a>
-              </div> -->
-            <!-- Faqs Contact Circle End -->
-
-            <!-- Faqs CTA Box Start -->
-            <div class="faqs-cta-box">
-              <div class="icon-box">
-                <img src="images/icon-faqs-cta.svg" alt="icon-faq" />
-              </div>
-              <div class="faqs-cta-box-content">
-                <h3> Your Questions? Guided by Experts.</h3>
-              </div>
-            </div>
-            <!-- Faqs CTA Box End -->
-          </div>
-          <!-- Faqs Image End -->
-        </div>
-
-        <div class="col-lg-6">
-          <!-- Faqs Content Start -->
-          <div class="faqs-content">
-            <!-- FAQ Accordion Start -->
-            <div class="faq-accordion" id="faqaccordion">
-              <!-- FAQ Item Start -->
-              <div class="accordion-item wow fadeInUp">
-                <h2 class="accordion-header" id="heading1">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                    What makes IICS different from other media institutes?
-                  </button>
-                </h2>
-                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
-                  data-bs-parent="#faqaccordion">
-                  <div class="accordion-body">
-                    <p>
-                      IICS is India’s first government-backed creative incubator,
-                      funded by NSDC & operated by MESC. It offers real-world projects,
-                      international exposure, and assured industry mentorship.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- FAQ Item End -->
-
-              <!-- FAQ Item Start -->
-              <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                <h2 class="accordion-header" id="heading2">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
-                    aria-expanded="false" aria-controls="collapse2">
-                    Will I get a recognized degree or certificate?
-                  </button>
-                </h2>
-                <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2"
-                  data-bs-parent="#faqaccordion">
-                  <div class="accordion-body">
-                    <p>
-                      Yes, you’ll receive industry-recognized Skill India
-                      certifications, with selected programs offering degrees
-                      through partner universities.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- FAQ Item End -->
-
-              <!-- FAQ Item Start -->
-              <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                <h2 class="accordion-header" id="heading3">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                    Do students get placement or job support after completing the course?
-                  </button>
-                </h2>
-                <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
-                  data-bs-parent="#faqaccordion">
-                  <div class="accordion-body">
-                    <p>
-                      Absolutely. Students graduate with a
-                      job-ready portfolio, paid apprenticeships,
-                      and direct industry links for placement
-                      and freelancing opportunities.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- FAQ Item End -->
-
-              <!-- FAQ Item Start -->
-              <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                <h2 class="accordion-header" id="heading4">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                    Is there a loan facility or financial assistance available for the course?
-                  </button>
-                </h2>
-                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
-                  data-bs-parent="#faqaccordion">
-                  <div class="accordion-body">
-                    <p>
-                      Yes, IICS offers access to education loan
-                      facilities through our banking partners.
-                      Eligible students can apply for low-interest
-                      loans to cover tuition fees, making quality
-                      creative education more accessible.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- FAQ Item End -->
-
-              <!-- FAQ Item Start -->
-              <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
-                <h2 class="accordion-header" id="heading5">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                    Who are the faculty or mentors at indian institute of creative skills?
-                  </button>
-                </h2>
-                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
-                  data-bs-parent="#faqaccordion">
-                  <div class="accordion-body">
-                    <p>
-                      Students learn from leading industry experts,
-                      creators, and professionals actively working
-                      in media, design, gaming, sound, and performing arts.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- FAQ Item End -->
-            </div>
-            <!-- FAQ Accordion End -->
-          </div>
-          <!-- Faqs Content End -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Our Faqs Section End -->
-  <div class="our-testimonials dark-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 ">
-          <!-- Testimonials Content Start -->
-          <div class="testimonials-content">
-            <!-- Section Title Start -->
-            <div class="section-title">
-              <!--<h4 class="wow fadeInUp text-center text-white mb-2" style="font-weight: 400;">Bank</h4>-->
-              <h2 class="text-anime-style-2 text-center" data-cursor="-opaque">
-                Our Student<span> Bank Partners</span>
-              </h2>
-            </div>
-            <!-- Section Title End -->
-
-            <!-- Testimonials Button Start -->
-            <div class="testimonials-btn wow fadeInUp flex gap-[20px] align-items-center" data-wow-delay="0.2s"
-              style="display: flex; justify-content: center;">
-              <img src="images/icici-logo.png" alt="icici_logo" style="height: 110px;">
-              <!-- <img src="images/IICS/iics_image/mesc-logo-small.webp" class="w-[150px] h-[110px] object-contain" alt=""> -->
+</div>
 
 
-            </div>
-            <!-- Testimonials Button End -->
-          </div>
-          <!-- Testimonials Content End -->
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-  <!-- Our Blog Section Start -->
-  <div class="our-blog">
-    <div class="container">
-      <div class="row section-row align-items-center">
-        <div class="col-lg-12">
-          <!-- Section Title Start -->
-          <div class="section-title">
-            <h3 class="wow fadeInUp">Experience the IICS Advantage</h3>
-            <h2 class="text-anime-style-2" data-cursor="-opaque">
-              Apply Now, <span>Reap the Rewards</span>
-            </h2>
-          </div>
-          <!-- Section Title End -->
-        </div>
-
-
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <a href="blog-single.html" data-cursor-text="View">
-                <figure class="image-anime">
-                  <img src="images/IICS/iics_image/reap-reward/celebrity-workshop.webp" alt="celebrity_image" />
-                </figure>
-              </a>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Blog Item Body Start -->
-            <div class="blog-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h2>
-                  <a>Free access to online classes by Celebrities</a>
-                </h2>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="blog-item-btn">
-                <a href="admission.html" class="readmore-btn">Apply Now</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Blog Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <a data-cursor-text="View">
-                <figure class="image-anime">
-                  <img src="images/IICS/iics_image/movie_ticket_img.jpg" alt="movies_section" />
-                </figure>
-              </a>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Blog Item Body Start -->
-            <div class="blog-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h2>
-                  <a>Complimentary movie tickets & screening invites</a>
-                </h2>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="blog-item-btn">
-                <a href="admission.html" class="readmore-btn">Apply Now</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Blog Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-
-        <div class="col-lg-4 col-md-6">
-          <!-- Post Item Start -->
-          <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
-            <!-- Post Featured Image Start-->
-            <div class="post-featured-image">
-              <a data-cursor-text="View">
-                <figure class="image-anime">
-                  <img src="images/IICS/iics_image/workshopimage.webp" alt="workshop_image" loading="lazy"/>
-                </figure>
-              </a>
-            </div>
-            <!-- Post Featured Image End -->
-
-            <!-- Blog Item Body Start -->
-            <div class="blog-item-body">
-              <!-- Post Item Content Start -->
-              <div class="post-item-content">
-                <h2>
-                  <a>Entry to exclusive workshops & masterclasses</a>
-                </h2>
-              </div>
-              <!-- Post Item Content End -->
-
-              <!-- Blog Item Button Start -->
-              <div class="blog-item-btn">
-                <a href="admission.html" class="readmore-btn">Apply Now</a>
-              </div>
-              <!-- Blog Item Button End -->
-            </div>
-            <!-- Blog Item Body End -->
-          </div>
-          <!-- Post Item End -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Our Blog Section End -->
 
   <!-- Scrolling Ticker Section Start -->
   <div class="our-scrolling-ticker footer-scrolling-ticker">
@@ -2732,14 +1761,14 @@
   <script src="js/parallaxie.js"></script>
   <!-- MagicCursor js file -->
   <script src="js/gsap.min.js"></script>
-  <script src="js/magiccursor.js" defer></script>
+  <!-- <script src="js/magiccursor.js" defer></script> -->
   <!-- Text Effect js file -->
   <script src="js/SplitText.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
   <!-- YTPlayer js File -->
   <!--<script src="js/jquery.mb.YTPlayer.min.js"></script>-->
   <!-- Wow js file -->
-  <script src="js/wow.min.js" defer></script>
+  <!-- <script src="js/wow.min.js" defer></script> -->
   <!-- Main Custom js file -->
   <script src="js/function.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -2757,7 +1786,7 @@
       }
     }
   </script>
-  <script>
+  <!-- <script>
     const video = document.getElementById("myVideo");
 
     video.addEventListener("click", function () {
@@ -2767,12 +1796,433 @@
         video.pause();
       }
     });
-  </script>
+  </script> -->
   <script>
        setTimeout(function(){
     $(".initial").fadeOut(600);
 }, 2000);
   </script>
+  <script>
+    const swiperSecond = new Swiper(".mySwiperSecond", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+        992: {
+          slidesPerView: 4,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  </script>
+  <script>
+    const industryMentor = [
+      {
+        name: "Padma Shri Resul Pookutty",
+        designation:
+          "Indian film director, film production designer, and television host",
+        image: "images/IICS/iics_image/industry-mentors/Padma-Shri-Resul-Pookutty.png",
+      },
+      {
+        name: "Padma Shri Shankar Mahadevann",
+        designation:
+          "Indian singer and composer",
+        image: "images/IICS/iics_image/industry-mentors/Padma-Shri-Shankar-Mahadevan.png",
+      },
+      {
+        name: "Ms. Dia Mirza",
+        designation: "Actress",
+        image: "images/IICS/iics_image/industry-mentors/Ms-Dia-Mirza.jpg",
+      },
+      {
+        name: "Ms. Kavita Krishnamurthy",
+        designation: "Indian playback singer",
+        image:
+          "images/IICS/iics_image/industry-mentors/Ms-Kavita-Krishnamurthy.png",
+      },
+      {
+        name: "Ms. Neeta Lulla",
+        designation: "Costume Designer",
+        image:
+          "images/IICS/iics_image/industry-mentors/Ms-Neeta-Lulla.png",
+      },
+      {
+        name: "Ms. Revathy Asha Kelunni",
+        designation: "Indian Actress and Director",
+        image:
+          "images/IICS/iics_image/industry-mentors/Ms-Revathy-Asha-Kelunni.png",
+      },
+      //   {
+      //     name: "Mr. Zakir Khan",
+      //     designation: "Comedian",
+      //     image:
+      //       "images/IICS/iics_image/industry-mentors/zakir-khan.png",
+      //   },
+      {
+        name: "Ms.Sushma Gaikwad",
+        designation: "Co-founder Ice Global, Wizcraft MIME & Sukhoon",
+        image:
+          "images/IICS/iics_image/industry-mentors/sushma.png",
+      },
+      {
+        name: "Mr. Suresh Eriyat",
+        designation: "Indian animator & director",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Suresh-Eriyat.png",
+      },
+      {
+        name: "Mr. Bharat Dabholkar",
+        designation: "Actor",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Bharat-Dabholkar.png",
+      },
+      {
+        name: "Mr. Amit Sadh",
+        designation: "Actor",
+        image:
+          "images/IICS/iics_image/industry-mentors/amit-sadh.png",
+      },
+      {
+        name: "Mr. Sameer Tobaccowala",
+        designation: "CEO, Shobiz Experiential Communications",
+        image:
+          "images/IICS/iics_image/industry-mentors/sameer-tobaccowala.png",
+      },
+      {
+        name: "Mr. Amit Behl",
+        designation: "Indian Theatre, Television and Film Actor",
+        image:
+          "images/IICS/iics_image/industry-mentors/amit-behl.png",
+      },
+      {
+        name: "Ms. Bina Paul",
+        designation: "Indian film editor",
+        image:
+          "images/IICS/iics_image/industry-mentors/bina-paul.png",
+      },
+      {
+        name: "Mr. Omung Kumar",
+        designation: "Indian film director, film production designer, and television host",
+        image:
+          "images/IICS/iics_image/industry-mentors/omung_kumar.png",
+      },
+      {
+        name: "Mr. Kamlesh Pandey",
+        designation: "Writer",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Kamlesh-Pandey_.png",
+      },
+      {
+        name: "Mr. Shayam Kaushal",
+        designation: "Director",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Shayam-Kaushal.png",
+      },
+      {
+        name: "Ms. Jaya Bhattacharya",
+        designation: "Indian television actress",
+        image:
+          "images/IICS/iics_image/industry-mentors/jaya-bhattacharya.png",
+      },
+      {
+        name: "Mr. Rahul Rawail",
+        designation: "Indian Film Director",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Rahul-Rawail.png",
+      },
+      {
+        name: "Mr. Jaya Kumar",
+        designation: "CEO, Toonz Media Group",
+        image:
+          "images/IICS/iics_image/industry-mentors/jaya-kumar.png",
+      },
+      // {
+      //   name: "Mr. Jan Horn",
+      //   designation: "Managing Director of SAE Dubai University",
+      //   image:
+      //     "images/IICS/iics_image/industry-mentors/Mr-jan-horn.png",
+      // },
+      {
+        name: "Mr. Salim Arif",
+        designation: "Indian Theatre & Film Actor",
+        image:
+          "images/IICS/iics_image/industry-mentors/salim-arif.png",
+      },
+      {
+        name: "Dr. L. Subramaniam",
+        designation: "Indian Violinist",
+        image:
+          "images/IICS/iics_image/industry-mentors/L-Subramaniam-4.png",
+      },
+      {
+        name: "Ms. Kausar Munir",
+        designation: "Lyricist/Writer",
+        image:
+          "images/IICS/iics_image/industry-mentors/mr-kausar-munir.png",
+      },
+      {
+        name: "Mr. Anupam Shobhakar",
+        designation: "Indian musician, Composer, Instrumentalist, Record Producer",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Anupam-Shobhakar.png",
+      },
+      {
+        name: "Mr. Vaibhav Kumaresh",
+        designation: "Founder, Creative Director of Vaibhav Studios",
+        image:
+          "images/IICS/iics_image/industry-mentors/vaibhav-kumaresh.png",
+      },
+      {
+        name: "Mr. Sumanto Ray",
+        designation: "Actor, Voice Artist, Dubbing Director, Dialogue writer, Music creator",
+        image:
+          "images/IICS/iics_image/industry-mentors/Sumanto-Ray-.png",
+      },
+      {
+        name: "Ms. Anusha Srinivasan Iyer",
+        designation: "Digital Creator, Filmaker, Director",
+        image:
+          "images/IICS/iics_image/industry-mentors/anusha-mam_.png",
+      },
+      {
+        name: "Mr. Sudeep Chatterjee",
+        designation: "Cinematographer",
+        image:
+          "images/IICS/iics_image/industry-mentors/sudeep-Chatterjee.png",
+      },
+      {
+        name: "Mr. Avijit Dutt",
+        designation: "Indian Actor and Theatre Director",
+        image:
+          "images/IICS/iics_image/industry-mentors/Avijit-dutt.png",
+      },
+      {
+        name: "Mr. Vishnu Patel",
+        designation: "UFO Group CEO – Special Projects",
+        image:
+          "images/IICS/iics_image/industry-mentors/Vishnu-Patel.png",
+      },
+      {
+        name: "Mr. Kireet khurana",
+        designation: "Founder & director, Climb Media Pvt. Ltd.",
+        image:
+          "images/IICS/iics_image/industry-mentors/Ms-Kireet-khurana.png",
+      },
+      {
+        name: "Mr. Shibasish Sarkar",
+        designation: "Group CEO - Reliance Studios; Chairman/ Film Producer",
+        image:
+          "images/IICS/iics_image/industry-mentors/Shibashish-Sarkar.png",
+      },
+      {
+        name: "Mr. Anand Jha",
+        designation: "CEO, Nilee Games",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-Anand-Jha.png",
+      },
+
+    ];
+    const container = document.getElementById("courseContainer");
+
+    industryMentor.forEach((course) => {
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      slide.innerHTML = `
+        <div class="col-lg-12 col-md-12">
+                     <!-- Team Item Start -->
+                     <div class="team-item wow fadeInUp">
+                         <div class="team-image">
+                             <a  data-cursor-text="View">
+                                 <figure class="image-anime">
+                                     <img src=${course.image} alt="">
+                                 </figure>
+                             </a>
+  
+                             <!-- Team Social Icon Start -->
+                            
+                             <!-- Team Social Icon End -->
+                         </div>
+  
+                         <!-- Team Content Start -->
+                         <div class="team-content">
+                             <h2><a >${course.name}</a></h2>
+                             <p class="text-black">${course.designation}</p>
+                         </div>
+                         <!-- Team Content End -->
+                     </div>
+                     <!-- Team Item End -->
+                 </div>
+     `;
+      container.appendChild(slide);
+    });
+  </script>
+
+  <script>
+      const courses = [
+  {
+    image: "images/IICS/iics_image/event-&-experiential.jpg",
+    name: "Events & Experiential Management",
+    description: "Learn to design experiences and promote events through social media and digital campaigns.",
+    info: `<p>
+                    <strong>Course Duration:</strong> 3-Year(6-12 Months of Paid Apprenticeship)
+                  </p>
+                  <p class="pb-4">
+                    <strong>Eligibility:</strong> 10+12(any stream, pass)
+                  </p>
+                  `,
+    applyLink: "event-&-experimental-management.html",
+    sampleLink: "https://iicsindia.org/images/IICS_Prospectus2026.pdf"
+  },
+  {
+    image: "images/IICS/iics_image/student-life/animation-img-1.webp",
+    name: "Animation & Game Production",
+    description: "Learn to animate, design, and build games through studio-based training and industry experience.",
+    info: `<p>
+                    <strong>Course Duration:</strong>  3-Year(6-12 Months of Paid Apprenticeship)
+                  </p>
+                  <p class="pb-4">
+                    <strong>Eligibility:</strong> 10+12(any stream, pass)
+                  </p>
+                  `,
+    applyLink: "animation-&-gaming.html",
+    sampleLink: "https://iicsindia.org/images/IICS_Prospectus2026.pdf"
+  },
+  {
+    image: "images/IICS/iics_image/costume-design-main.webp",
+    name: "Costume Designing",
+    description: "Learn to design iconic costumes for film, theatre, and fashion using fabric, styling, history, and AI-powered techniques.",
+    info: `<p>
+                    <strong>Course Duration:</strong> 3-Year(6-12 Months of Paid Apprenticeship)
+                  </p>
+                  <p class="pb-4">
+                    <strong>Eligibility:</strong> 10+12(any stream, pass)
+                  </p>
+                  `,
+    applyLink: "costume-design.html",
+    sampleLink: "https://iicsindia.org/images/IICS_Prospectus2026.pdf"
+  },
+  {
+    image: "images/IICS/iics_image/life_iics/life-image-4.webp",
+    name: "Sound Design & Music Production",
+    description: "Learn to create compelling music, and master audio tools and music tech.",
+    info: ` <p>
+                    <strong>Course Duration:</strong> 3-Year(6-12 Months of Paid Apprenticeship)
+                  </p>
+                  <p class="pb-4">
+                    <strong>Eligibility:</strong> 10+12(any stream, pass)
+                  </p>
+                  `,
+    applyLink: "sound-design-&-music-video-production.html",
+    sampleLink: "https://iicsindia.org/images/IICS_Prospectus2026.pdf"
+  }
+];
+
+const certCourses = [
+   {
+    image: "images/IICS/iics_image/makeup-course-main.webp",
+    name: "Makeup & Prosthetics",
+    description: "Learn to create stunning looks for film and fashion with hands-on training in makeup, hair, and prosthetics",
+    info: ` <p>
+                    <strong>Course Duration:</strong> 1-Year Certificate Program (3 Terms)
+                  </p>
+                  <p class="pb-4">
+                    <strong>Eligibility:</strong> 10+12(any stream, pass)
+                  </p>
+                  `,
+    applyLink: "hair-make-up-&-prosthetics.html",
+    sampleLink: "https://iicsindia.org/images/IICS_Prospectus.pdf"
+  }
+]
+
+document.addEventListener("DOMContentLoaded", function() {
+  const courseContainer = document.getElementById("cardsContainer");
+
+  // clear if needed
+  courseContainer.innerHTML = "";
+
+  courses.forEach(course => {
+    const slide = document.createElement("div");
+    slide.classList.add("swiper-slide", "course-card");
+
+    slide.innerHTML = `
+      <img src="${course.image}" alt="${course.name}">
+      <h3>${course.name}</h3>
+      <p>${course.description}</p>
+      <p class="course-info">${course.info}</p>
+      <div class="btn-group">
+        <a href="${course.applyLink}" class="btn btn-apply">Know More</a>
+        <a href="${course.sampleLink}" target="_blank" class="btn btn-sample">Download Prospectus</a>
+      </div>
+    `;
+
+    courseContainer.appendChild(slide);
+  });
+
+  const degreeSwiper = new Swiper(".myDegreeSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    navigation: {
+  nextEl: ".swiper-button-next",
+  prevEl: ".swiper-button-prev",
+},
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1200: { slidesPerView: 3 }
+    }
+  });
+
+});
+
+
+const certContainer = document.getElementById("certCardContainer");
+
+certCourses.forEach(course => {
+  const card = document.createElement("div");
+  card.classList.add("course-card");
+
+  card.innerHTML = `
+    <img src="${course.image}" alt="${course.name}">
+    <h3>${course.name}</h3>
+    <p>${course.description}</p>
+    <p class="course-info">${course.info}</p>
+    <div class="btn-group">
+      <a href="${course.applyLink}" class="btn btn-apply">Know More </a>
+      <a href="${course.sampleLink}" target="_blank" class="btn btn-sample">Download Prospectus</a>
+    </div>
+  `;
+
+  certContainer.appendChild(card);
+});
+
+
+    </script>
+     <script type="text/javascript">
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://widgets.in6.nopaperforms.com/emwgts.js";
+      document.body.appendChild(s);
+    </script>
+    
   <script src="./chatbot.js"></script>
   <!-- <script>
     const toggleBtn = document.getElementById('chatbot-toggle');
@@ -2837,6 +2287,88 @@
     }
   </script> -->
   <script src="js/cookies.js"></script>
+   <script>
+(function () {
+  function $ (sel) { return document.querySelector(sel); }
+  function $all(sel) { return Array.from(document.querySelectorAll(sel)); }
+
+  const degreeEl = document.getElementById('degree');
+  const certEl   = document.getElementById('certificate');
+
+  // Your tab buttons
+  const degreeBtn = document.getElementById("degreeBtnTab");
+  const certBtn   = document.getElementById("certificateBtnTab");
+
+  if (!degreeEl || !certEl) {
+    console.warn('Degree / Certificate elements not found');
+    return;
+  }
+
+  function setInitial() {
+    degreeEl.style.display = '';
+    certEl.style.display = '';
+
+    degreeEl.classList.add('show-tab');
+    certEl.classList.add('hide-tab');
+
+    // initial active state
+    degreeBtn.classList.add("tab-active");
+    certBtn.classList.add("tab-inactive");
+  }
+
+  window.showTab = function(tabName) {
+
+    // Clear fade classes
+    degreeEl.classList.remove("fade-in");
+    certEl.classList.remove("fade-in");
+
+    // Reset inline styles
+    degreeEl.removeAttribute("style");
+    certEl.removeAttribute("style");
+
+    if (tabName === "certificate") {
+
+      degreeEl.classList.remove("show-tab");
+      degreeEl.classList.add("hide-tab");
+
+      certEl.classList.remove("hide-tab");
+      certEl.classList.add("show-tab");
+
+      // Animate
+      void certEl.offsetWidth;
+      certEl.classList.add("fade-in");
+
+      // Active button styling
+      certBtn.classList.add("tab-active");
+      certBtn.classList.remove("tab-inactive");
+
+      degreeBtn.classList.remove("tab-active");
+      degreeBtn.classList.add("tab-inactive");
+
+    } else {
+
+      certEl.classList.remove("show-tab");
+      certEl.classList.add("hide-tab");
+
+      degreeEl.classList.remove("hide-tab");
+      degreeEl.classList.add("show-tab");
+
+      void degreeEl.offsetWidth;
+      degreeEl.classList.add("fade-in");
+
+      // Active button styling
+      degreeBtn.classList.add("tab-active");
+      degreeBtn.classList.remove("tab-inactive");
+
+      certBtn.classList.remove("tab-active");
+      certBtn.classList.add("tab-inactive");
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', setInitial);
+  window.addEventListener('load', () => setTimeout(setInitial, 60));
+})();
+</script>
 </body>
 
 </html>
