@@ -25,10 +25,12 @@
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+      <link href="https://fonts.googleapis.com/css2?family=Alice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!-- Bootstrap Css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
     <!-- SlickNav Css -->
@@ -44,7 +46,8 @@
     <!-- Mouse Cursor Css File -->
     <link rel="stylesheet" href="css/mousecursor.css" />
     <!-- Main Custom Css -->
-    <link href="css/custom.css" rel="stylesheet" media="screen" />
+    <!-- <link href="css/custom.css" rel="stylesheet" media="screen" /> -->
+    <link href="css/custom2.css" rel="stylesheet" media="screen" />
     <link
       rel="canonical"
       href="https://iicsindia.org/sound-design-&-music-video-production.html"
@@ -90,8 +93,7 @@
 
       .course-card {
         background-color: #fff;
-        border-radius: 16px;
-        box-shadow: 0 4px 4px #000000;
+        border-radius: 4px;
         padding: 20px;
         width: 400px;
         color: #1e1e1e;
@@ -123,8 +125,8 @@
       .btn {
         text-decoration: none;
         padding: 12px 20px;
-        border-radius: 8px;
-        font-weight: 600;
+        border-radius: 0px;
+        font-weight: 400;
         font-size: 0.95rem;
         transition: 0.3s;
       }
@@ -151,6 +153,7 @@
       @media (max-width: 768px) {
         .course-card{
           width: 100%;
+          padding: 5px;
         }
         .course-card .subtitle {
         margin-bottom: 10px;
@@ -162,8 +165,9 @@
         text-decoration: none;
         padding: 5px 10px;
       }
-}
-
+    }
+    
+    /* curriculum accordion */
       .accordion-button {
         background-color: #de4141 !important;
       }
@@ -173,7 +177,7 @@
       }
       .accordion-body {
         background-color: #ffffff !important;
-        border: 1px solid rgba(222, 65, 65, 0.5);
+        /* border: 1px solid rgba(222, 65, 65, 0.5); */
       }
       .accordion-body p {
         color: #000000 !important;
@@ -181,6 +185,77 @@
       .arrowColor li::before {
         color: #de4141 !important;
       }
+
+      .gov-accordion {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+/* Header */
+.gov-accordion .accordion-button {
+  /* background-color: #f7f7f7; */
+  color: #de4141;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 12px 16px;
+  box-shadow: none;
+}
+
+/* Active */
+.gov-accordion .accordion-button:not(.collapsed) {
+  background-color: #de4141;
+  color: #fff;
+}
+
+/* Body */
+.gov-accordion .accordion-body {
+  font-size: 14px;
+  line-height: 1.6;
+  background: #fff;
+}
+
+/* Lists */
+.gov-subtitle {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.gov-list {
+  margin-left: 20px;
+}
+
+.gov-list li {
+  list-style: disc;
+  margin-bottom: 4px;
+  list-style-type: none;
+}
+
+.gov-table-box {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.gov-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.gov-table th,
+.gov-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.gov-table th {
+  width: 30%;
+  color: #de4141;
+  font-weight: 600;
+}
+
     </style>
 
     <!-- Preloader Start -->
@@ -232,7 +307,7 @@
     <div class="pt-[20px] px-[10px] md:px-[50px]" id="courseContainer">
       <div class="container">
         <div class="row">
-          <div class="  col-lg-4">
+          <div class="col-lg-4">
             <!-- Page Single Sidebar Start -->
             <div>
               <!-- Course card -->
@@ -283,10 +358,11 @@
           <div class="col-sm-12 col-lg-8 mt-3 md:mt-0">
             <!-- Page Single Image Start -->
             <div class="page-single-image">
-              <figure class="image-anime reeval">
+              <figure class="image-anime reeval" style="border-radius: 0px !important;">
                 <img
                   src="images/IICS/iics_image/life_iics/life-image-4.webp"
-                  alt=""
+                  alt="sound course"
+                  style="border-radius: 0px !important;"
                 />
               </figure>
             </div>
@@ -336,205 +412,140 @@
                   <!-- Service Solution Image Content End -->
 
                   <!-- Service Solution Item List Start -->
-                  <div
-                    class="service-solution-item-list wow fadeInUp"
-                    data-wow-delay="0.4s"
-                  >
-                    <div class="why-choose-item !w-full">
-                      <div
-                        class="why-choose-item-content border border-[#FFFFFF1A] rounded-[20px] overflow-hidden"
-                      >
-                        <div
-                          class="flex items-center justify-between border-b border-[#FFFFFF1A] p-[20px] !pb-0 flex-wrap"
-                        >
-                          <h3
-                            class="p-[20px] !mb-0 rounded-[20px] head-1 cursor-pointer"
-                            onclick="showTab('term-1')"
-                            style="background-color: #de4141; color: #fff"
-                          >
-                            Year 1 (Diploma)
-                          </h3>
-                          <h3
-                            class="p-[20px] !mb-0 head-2 rounded-[20px] cursor-pointer"
-                            onclick="showTab('term-2')"
-                          >
-                            Year 2 (Advanced Diploma)
-                          </h3>
-                          <h3
-                            class="p-[20px] !mb-0 head-3 rounded-[20px] cursor-pointer"
-                            onclick="showTab('term-3')"
-                          >
-                            Year 3 (Degree)
-                          </h3>
-                        </div>
+                  <div class="accordion gov-accordion" id="curriculumAccordion">
 
-                        <div class="term-1 flex p-[20px] justify-between">
-                          <div>
-                            <p class="!mb-0 font-semibold">Modules Covered</p>
+  <!-- Year 1 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="year1">
+      <button class="accordion-button" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#year1Content"
+        aria-expanded="true"
+        aria-controls="year1Content">
+        Year 1 (Diploma)
+      </button>
+    </h2>
+    <div id="year1Content" class="accordion-collapse collapse show"
+      aria-labelledby="year1" data-bs-parent="#curriculumAccordion">
+      <div class="accordion-body">
+        <p class="gov-subtitle">Modules Covered</p>
+        <ul class="gov-list">
+          <li>Introduction to Cinema & Filmmaking</li>
+          <li>Ear Training & Principles of Sound</li>
+          <li>Foundations of Music Production</li>
+          <li>Production Sound Recording</li>
+          <li>Production Sound Editing</li>
+          <li>Live Sound Project</li>
+          <li>Digital Marketing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-                            <div class="service-approach-box">
-                              <h2 class="text-anime-style-2 hidden">
-                                India's Creative
-                                <span>Launchpad Advantage</span>
-                              </h2>
-                              <p class="wow fadeInUp hidden">
-                                From international exposure to real industry
-                                projects, every element of our program is
-                                designed to turn your passion into a powerful
-                                profession. With guaranteed stipends, expert
-                                mentors, and hands-on training, we prepare you
-                                to lead, create, and thrive in the global
-                                creative economy.
-                              </p>
+  <!-- Year 2 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="year2">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#year2Content"
+        aria-expanded="false"
+        aria-controls="year2Content">
+        Year 2 (Advanced Diploma)
+      </button>
+    </h2>
+    <div id="year2Content" class="accordion-collapse collapse"
+      aria-labelledby="year2" data-bs-parent="#curriculumAccordion">
+      <div class="accordion-body">
+        <p class="gov-subtitle">Modules Covered</p>
+        <ul class="gov-list">
+          <li>Post Sound Recording</li>
+          <li>Post Sound Editing</li>
+          <li>Music Recording & Editing</li>
+          <li>Music Composition & Scoring</li>
+          <li>Storytelling & Direction</li>
+          <li>Podcast / Audible / Short Film Project</li>
+          <li>Entrepreneurship Program</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-                              <ul
-                                class="!mt-[10px] arrowColor"
-                                style="
-                                  background-color: rgba(222, 65, 65, 0.2);
-                                  color: #000000 !important;
-                                "
-                                data-wow-delay="0.2s"
-                              >
-                                <li>Introduction to Cinema & Filmmaking</li>
-                                <li>Ear Training & Principles of Sound</li>
-                                <li>Foundations of Music Production</li>
-                                <li>Production Sound Recording</li>
-                                <!-- <li>Sound Recording – Live & Studio</li> -->
-                                <li>Production Sound Editing</li>
-                                <!-- <li>Music Video Production Project</li> -->
-                                <li>Live Sound Project</li>
-                                <li>Digital Marketing</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="term-2 flex p-[20px] justify-between items-center"
-                          style="display: none"
-                        >
-                          <div>
-                            <p class="!mb-0 font-semibold">Modules Covered</p>
-                            <div class="service-approach-box !mt-[10px]">
-                              <h2 class="text-anime-style-2 hidden">
-                                India's Creative
-                                <span>Launchpad Advantage</span>
-                              </h2>
-                              <p class="wow fadeInUp hidden">
-                                From international exposure to real industry
-                                projects, every element of our program is
-                                designed to turn your passion into a powerful
-                                profession. With guaranteed stipends, expert
-                                mentors, and hands-on training, we prepare you
-                                to lead, create, and thrive in the global
-                                creative economy.
-                              </p>
+  <!-- Year 3 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="year3">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#year3Content"
+        aria-expanded="false"
+        aria-controls="year3Content">
+        Year 3 (Degree)
+      </button>
+    </h2>
+    <div id="year3Content" class="accordion-collapse collapse"
+      aria-labelledby="year3" data-bs-parent="#curriculumAccordion">
+      <div class="accordion-body">
+        <p class="gov-subtitle">Modules Covered</p>
+        <ul class="gov-list">
+          <li>Track Laying & Sound Designing Principles</li>
+          <li>Sound Mastering</li>
+          <li>Music Production</li>
+          <li>Camera, Editing & Grading</li>
+          <li>AI Integration in Sound & Music</li>
+          <li>Music Video Project</li>
+          <li>Industry Induction</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-                              <ul
-                                class="!mt-[10px] arrowColor"
-                                data-wow-delay="0.2s"
-                                style="
-                                  background-color: rgba(222, 65, 65, 0.2);
-                                  color: #000000 !important;
-                                "
-                              >
-                                <!-- <li>Studio Sound Recording</li> -->
-                                <li>Post Sound Recording</li>
-                                <!-- <li>Advanced Sound Recording</li> -->
-                                <li>Post Sound Editing</li>
-                                <li>Music Recording & Editing</li>
-                                <li>Music Composition & Scoring</li>
-                                <li>Storytelling & Direction</li>
-                                <li>Podacst/ Audible/ Short film projectt</li>
-                                <li>Entrepreneurship Program</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="term-3 flex p-[20px] justify-between items-center"
-                          style="display: none"
-                        >
-                          <div>
-                            <p class="!mb-0 font-semibold">Modules Covered</p>
+</div>
 
-                            <div class="service-approach-box !mt-[10px]">
-                              <h2 class="text-anime-style-2 hidden">
-                                India's Creative
-                                <span>Launchpad Advantage</span>
-                              </h2>
-                              <p class="wow fadeInUp hidden">
-                                From international exposure to real industry
-                                projects, every element of our program is
-                                designed to turn your passion into a powerful
-                                profession. With guaranteed stipends, expert
-                                mentors, and hands-on training, we prepare you
-                                to lead, create, and thrive in the global
-                                creative economy.
-                              </p>
-
-                              <ul
-                                class="!mt-[10px] arrowColor"
-                                data-wow-delay="0.2s"
-                                style="
-                                  background-color: rgba(222, 65, 65, 0.2);
-                                  color: #000000 !important;
-                                "
-                              >
-                                <li>
-                                  Track Laying & Sound Designing Principles
-                                </li>
-                                <li>Sound Mastering</li>
-                                <!-- <li>Sound Production for Music</li> -->
-                                <li>Music Production</li>
-                                <li>Camera, Editing & Grading</li>
-                                <li>AI Integration in Sound & Music</li>
-                                <!-- <li>Music Production III Project</li> -->
-                                <li>Music Video Project</li>
-                                <li>Industry Induction</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                   <!-- Service Solution Item List End -->
                 </div>
                 <!-- Service Solution Box End -->
 
                 <!-- Service Approach Box Start -->
-                <div class="service-approach-box !mt-[60px]">
-                  <h2 class="text-anime-style-2">
-                    India's Creative Launchpad Advantage
-                  </h2>
-                  <p class="wow fadeInUp">
-                    From international exposure to real industry projects, every
-                    element of our program is designed to turn your passion into
-                    a powerful profession. With guaranteed stipends, expert
-                    mentors, and hands-on training, we prepare you to lead,
-                    create, and thrive in the global creative economy.
-                  </p>
+                <div class="gov-table-box">
+  <h2 class="gov-heading">Programme Highlights</h2>
 
-                  <ul
-                    class="wow fadeInUp arrowColor"
-                    data-wow-delay="0.2s"
-                    style="
-                      background-color: rgba(222, 65, 65, 0.2);
-                      color: #000000 !important;
-                    "
-                  >
-                    <li>Global exposure</li>
-                    <li>Paid apprenticeships</li>
-                    <li>UGC Recognized Degree</li>
-                    <li>Training by industry experts</li>
-                    <li>Entrepreneurship Focused</li>
-                    <li>Live projects with top studios</li>
-                    <li>Celebrity masterclasses</li>
-                    <li>₹35K–₹50K Assured stipend</li>
+  <table class="gov-table">
+    <tbody>
+      <tr>
+        <th>Global Exposure</th>
+        <td>International exposure and industry interaction</td>
+      </tr>
+      <tr>
+        <th>Apprenticeships</th>
+        <td>Paid apprenticeship opportunities</td>
+      </tr>
+      <tr>
+        <th>Degree</th>
+        <td>UGC recognized degree</td>
+      </tr>
+      <tr>
+        <th>Training</th>
+        <td>Training by industry professionals</td>
+      </tr>
+      <tr>
+        <th>Projects</th>
+        <td>Live projects with industry partners</td>
+      </tr>
+      <tr>
+        <th>Entrepreneurship</th>
+        <td>Entrepreneurship-focused curriculum</td>
+      </tr>
+      <tr>
+        <th>Stipend</th>
+        <td>₹35K–₹50K Assured stipend</td>
+      </tr>
+      <tr>
+        <th>Incubation</th>
+        <td>Access to creative incubator facilities</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-                    <li>Creative Incubator</li>
-                  </ul>
-                </div>
                 <!-- Service Approach Box End -->
               </div>
               <!-- Service Entry End -->
@@ -798,14 +809,14 @@
     <script src="js/parallaxie.js"></script>
     <!-- MagicCursor js file -->
     <script src="js/gsap.min.js"></script>
-    <script src="js/magiccursor.js"></script>
+    <!-- <script src="js/magiccursor.js"></script> -->
     <!-- Text Effect js file -->
     <script src="js/SplitText.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <!-- YTPlayer js File -->
     <!--<script src="js/jquery.mb.YTPlayer.min.js"></script>-->
     <!-- Wow js file -->
-    <script src="js/wow.min.js"></script>
+    <!-- <script src="js/wow.min.js"></script> -->
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>

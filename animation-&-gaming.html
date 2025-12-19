@@ -16,8 +16,9 @@
   <!-- Google Fonts Css-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <!-- SlickNav Css -->
@@ -33,7 +34,8 @@
   <!-- Mouse Cursor Css File -->
   <link rel="stylesheet" href="css/mousecursor.css">
   <!-- Main Custom Css -->
-  <link href="css/custom.css" rel="stylesheet" media="screen">
+  <!-- <link href="css/custom.css" rel="stylesheet" media="screen"> -->
+  <link href="css/custom2.css" rel="stylesheet" media="screen">
   <link rel="canonical" href="https://iicsindia.org/animation-&-gaming.html" />
   
    <style>
@@ -77,7 +79,7 @@
       .course-card {
         background-color: #fff;
         border-radius: 16px;
-        box-shadow: 0 4px 4px #000000;
+        /* box-shadow: 0 4px 4px #000000; */
         padding: 20px;
         width: 400px;
         color: #1e1e1e;
@@ -109,8 +111,8 @@
       .btn {
         text-decoration: none;
         padding: 12px 20px;
-        border-radius: 8px;
-        font-weight: 600;
+        border-radius: 0px;
+        font-weight: 400;
         font-size: 0.95rem;
         transition: 0.3s;
       }
@@ -167,6 +169,95 @@
       .arrowColor li::before {
         color: #de4141 !important;
       }
+
+      /* curriculum accordion */
+      .accordion-button {
+        background-color: #de4141 !important;
+      }
+
+      .accordion-button.collapsed {
+        background-color: #ffffff !important;
+      }
+      .accordion-body {
+        background-color: #ffffff !important;
+        /* border: 1px solid rgba(222, 65, 65, 0.5); */
+      }
+      .accordion-body p {
+        color: #000000 !important;
+      }
+      .arrowColor li::before {
+        color: #de4141 !important;
+      }
+
+      .gov-accordion {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+/* Header */
+.gov-accordion .accordion-button {
+  /* background-color: #f7f7f7; */
+  color: #de4141;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 12px 16px;
+  box-shadow: none;
+}
+
+/* Active */
+.gov-accordion .accordion-button:not(.collapsed) {
+  background-color: #de4141;
+  color: #fff;
+}
+
+/* Body */
+.gov-accordion .accordion-body {
+  font-size: 14px;
+  line-height: 1.6;
+  background: #fff;
+}
+
+/* Lists */
+.gov-subtitle {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.gov-list {
+  margin-left: 20px;
+}
+
+.gov-list li {
+  list-style: disc;
+  margin-bottom: 4px;
+  list-style-type: none;
+}
+
+.gov-table-box {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.gov-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.gov-table th,
+.gov-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.gov-table th {
+  width: 30%;
+  color: #de4141;
+  font-weight: 600;
+}
     </style>
 
   <!-- Preloader Start -->
@@ -287,8 +378,8 @@
         <div class="col-lg-8 mt-3 md:mt-0">
         <!-- Page Single Image Start -->
         <div class="page-single-image">
-          <figure class="image-anime reeval">
-            <img src="images/IICS/iics_image/student-life/animation-img-1.webp" alt="">
+          <figure class="image-anime reeval" style="border-radius: 0px !important;">
+            <img src="images/IICS/iics_image/student-life/animation-img-1.webp" alt="" style="border-radius: 0px !important;">
           </figure>
         </div>
         </div>
@@ -331,105 +422,106 @@
                 <!-- Service Solution Item List Start -->
                 <div class="service-solution-item-list wow fadeInUp" data-wow-delay="0.4s">
                   <!-- Why Choose Item Start -->
-                  <div class="why-choose-item !w-full">
+                  <div class="accordion gov-accordion" id="animationCurriculum">
 
-                    <div class="why-choose-item-content border border-[#FFFFFF1A] rounded-[20px] overflow-hidden">
-                      <div
-                        class="flex items-center justify-between border-b border-[#FFFFFF1A] p-[20px] !pb-0 flex-wrap">
-                        <h3 class="  p-[20px] !mb-0  rounded-[20px] head-1 cursor-pointer" onclick="showTab('term-1')"
-                          style="background-color: #de4141; color: #fff">Year 1 (Diploma)</h3>
-                        <h3 class="  p-[20px] !mb-0 head-2 rounded-[20px] cursor-pointer" onclick="showTab('term-2')">
-                          Year 2 (Advanced Diploma)</h3>
-                        <h3 class="  p-[20px] !mb-0 head-3 rounded-[20px] cursor-pointer" onclick="showTab('term-3')">
-                          Year 3 (Degree)</h3>
-                      </div>
+  <!-- Year 1 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="animYear1">
+      <button class="accordion-button" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#animYear1Content"
+        aria-expanded="true"
+        aria-controls="animYear1Content">
+        Year 1 (Diploma)
+      </button>
+    </h2>
 
+    <div id="animYear1Content"
+      class="accordion-collapse collapse show"
+      aria-labelledby="animYear1"
+      data-bs-parent="#animationCurriculum">
 
-                      <div class="term-1 flex p-[20px]   justify-between ">
-                        <div>
-                          <p class="!mb-0 font-semibold">Modules Covered</p>
+      <div class="accordion-body">
+        <p class="gov-subtitle">Modules Covered</p>
+        <ul class="gov-list">
+          <li>Art Foundation</li>
+          <li>Fundamentals of Game Design</li>
+          <li>Introduction to Animation</li>
+          <li>Visual Design</li>
+          <li>Illustration</li>
+          <li>Traditional 2D Animation</li>
+          <li>Experimental Animation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-                          <div class="service-approach-box ">
-                            <h2 class="text-anime-style-2 hidden">India's Creative <span>Launchpad Advantage</span></h2>
-                            <p class="wow fadeInUp hidden">From international exposure to real industry projects, every
-                              element of our program is designed to turn your passion into a powerful profession. With
-                              guaranteed stipends, expert mentors, and hands-on training, we prepare you to lead,
-                              create, and thrive in the global creative economy.</p>
+  <!-- Year 2 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="animYear2">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#animYear2Content"
+        aria-expanded="false"
+        aria-controls="animYear2Content">
+        Year 2 (Advanced Diploma)
+      </button>
+    </h2>
 
-                            <ul class="!mt-[10px] arrowColor" data-wow-delay="0.2s" style="
-                                  background-color: rgba(222, 65, 65, 0.2);
-                                  color: #000000 !important;
-                                ">
-                              <li>Art Foundation</li>
-                              <li>Fundamentals of Game Design</li>
-                              <li>Introduction to Animation</li>
-                              <li>Visual Design</li>
-                              <li>Illustration</li>
-                              <li>Traditional 2D Animation</li>
-                              <li>Experimental Animation</li>
-                            </ul>
-                          </div>
-                        </div>
+    <div id="animYear2Content"
+      class="accordion-collapse collapse"
+      aria-labelledby="animYear2"
+      data-bs-parent="#animationCurriculum">
 
-                      </div>
-                      <div class="term-2 flex p-[20px] justify-between items-center" style="display: none;">
-                        <div>
-                          <p class="!mb-0 font-semibold">Modules Covered</p>
-                          <div class="service-approach-box !mt-[10px]">
-                            <h2 class="text-anime-style-2 hidden">India's Creative Launchpad Advantage</h2>
-                            <p class="wow fadeInUp hidden">From international exposure to real industry projects, every
-                              element of our program is designed to turn your passion into a powerful profession. With
-                              guaranteed stipends, expert mentors, and hands-on training, we prepare you to lead,
-                              create, and thrive in the global creative economy.</p>
+      <div class="accordion-body">
+        <p class="gov-subtitle">Modules Covered</p>
+        <ul class="gov-list">
+          <li>Fundamentals of 3D</li>
+          <li>Gameplay & Mechanics</li>
+          <li>Mobile Game Development</li>
+          <li>Digital Art</li>
+          <li>Concept Creation</li>
+          <li>Asset Creation</li>
+          <li>Anatomy Study</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-                            <ul class="!mt-[10px] arrowColor" data-wow-delay="0.2s" style="
-                                  background-color: rgba(222, 65, 65, 0.2);
-                                  color: #000000 !important;
-                                ">
-                              <li>Fundamentals of 3D</li>
-                              <li>Gameplay & Mechanics</li>
-                              <li>Mobile Game Development</li>
-                              <li>Digital Art</li>
-                              <li>Concept Creation</li>
-                              <li>Asset Creation</li>
-                              <li>Anatomy Study</li>
-                            </ul>
-                          </div>
-                        </div>
+  <!-- Year 3 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="animYear3">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#animYear3Content"
+        aria-expanded="false"
+        aria-controls="animYear3Content">
+        Year 3 (Degree)
+      </button>
+    </h2>
 
+    <div id="animYear3Content"
+      class="accordion-collapse collapse"
+      aria-labelledby="animYear3"
+      data-bs-parent="#animationCurriculum">
 
-                      </div>
-                      <div class="term-3 flex p-[20px] justify-between items-center" style="display: none;">
-                        <div>
-                          <p class="!mb-0 font-semibold">Modules Covered</p>
+      <div class="accordion-body">
+        <p class="gov-subtitle">Modules Covered</p>
+        <ul class="gov-list">
+          <li>High Poly to Low Poly Modelling</li>
+          <li>Character Animation</li>
+          <li>Shading & Texturing</li>
+          <li>Game Level Design</li>
+          <li>Unreal / Unity</li>
+          <li>UX & UI for Game</li>
+          <li>Capstone Project</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-                          <div class="service-approach-box !mt-[10px]">
-                            <h2 class="text-anime-style-2 hidden">India's Creative <span>Launchpad Advantage</span></h2>
-                            <p class="wow fadeInUp hidden">From international exposure to real industry projects, every
-                              element of our program is designed to turn your passion into a powerful profession. With
-                              guaranteed stipends, expert mentors, and hands-on training, we prepare you to lead,
-                              create, and thrive in the global creative economy.</p>
+</div>
 
-                            <ul class="!mt-[10px] arrowColor" data-wow-delay="0.2s" style="
-                                  background-color: rgba(222, 65, 65, 0.2);
-                                  color: #000000 !important;
-                                ">
-                              <li>High Poly to Low Poly Modelling</li>
-                              <li>Character Animation</li>
-                              <li>Shading & Texturing</li>
-                              <li>Game Level Design</li>
-                              <li>Unreal / Unity</li>
-                              <li>UX & UI for Game</li>
-                              <li>Capstone Project</li>
-                            </ul>
-                          </div>
-                        </div>
-
-
-                      </div>
-
-                    </div>
-                  </div>
                   <!-- Why Choose Item End -->
 
                   <!-- Why Choose Item Start -->
@@ -461,29 +553,55 @@
               <!-- Service Solution Box End -->
 
                <!-- Service Approach Box Start -->
-              <div class="service-approach-box !mt-[60px]">
-                <h2 class="text-anime-style-2">India's Creative Launchpad Advantage</h2>
-                <p class="wow fadeInUp">From international exposure to real industry projects, every element of our
-                  program is designed to turn your passion into a powerful profession. With guaranteed stipends, expert
-                  mentors, and hands-on training, we prepare you to lead, create, and thrive in the global creative
-                  economy.</p>
+              <div class="service-approach-box gov-table-box !mt-[60px]">
 
-                <ul class="wow fadeInUp arrowColor" data-wow-delay="0.2s" style="
-                                  background-color: rgba(222, 65, 65, 0.2);
-                                  color: #000000 !important;
-                                ">
-                  <li>Global exposure</li>
-                  <li>Paid apprenticeships</li>
-                  <li>UGC Recognized Degree</li>
-                  <li>Training by industry experts</li>
-                  <li>Entrepreneurship Focused</li>
-                  <li>Live projects with top studios</li>
-                  <li>Celebrity masterclasses</li>
-                  <li>₹35K–₹50K Assured stipend</li>
+  <h2 class="gov-heading">
+    Programme Highlights
+  </h2>
 
-                  <li>Creative Incubator</li>
-                </ul>
-              </div>
+  <table class="gov-table">
+    <tbody>
+      <tr>
+        <th>Global Exposure</th>
+        <td>International exposure and industry interaction</td>
+      </tr>
+      <tr>
+        <th>Apprenticeships</th>
+        <td>Paid apprenticeship opportunities</td>
+      </tr>
+      <tr>
+        <th>Degree</th>
+        <td>UGC recognized degree</td>
+      </tr>
+      <tr>
+        <th>Training</th>
+        <td>Training by industry professionals</td>
+      </tr>
+      <tr>
+        <th>Entrepreneurship</th>
+        <td>Entrepreneurship-focused curriculum</td>
+      </tr>
+      <tr>
+        <th>Projects</th>
+        <td>Live projects with leading studios</td>
+      </tr>
+      <tr>
+        <th>Masterclasses</th>
+        <td>Sessions conducted by industry professionals</td>
+      </tr>
+      <tr>
+        <th>Stipend</th>
+        <td>Assured stipend of ₹35,000–₹50,000 during final semester (as applicable)</td>
+      </tr>
+      <tr>
+        <th>Incubation</th>
+        <td>Creative incubator support</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
               <!-- Service Approach Box End -->
             </div>
             <!-- Service Entry End -->
