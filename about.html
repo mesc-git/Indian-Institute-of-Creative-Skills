@@ -16,8 +16,9 @@
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Alice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Bootstrap Css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <!-- SlickNav Css -->
@@ -33,7 +34,7 @@
     <!-- Mouse Cursor Css File -->
     <link rel="stylesheet" href="css/mousecursor.css">
     <!-- Main Custom Css -->
-    <link href="css/custom.css" rel="stylesheet" media="screen">
+    <link href="css/custom2.css" rel="stylesheet" media="screen">
     <link rel="canonical" href="https://iicsindia.org/about.html" />
     
     <style>
@@ -51,6 +52,34 @@
 </head>
 
 <body>
+
+    <style>
+        .gov-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.gov-grid-item{
+    border: 1px solid #de4141;
+    padding: 5px;
+}
+
+.gov-grid-item h4 {
+  color: #de4141;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.gov-grid-item p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+    </style>
 
     <!-- Preloader Start -->
     <div class="preloader">
@@ -99,7 +128,7 @@
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-2" data-cursor="-opaque">About <span>us</span></h1>
+                        <h1 class="" data-cursor="-opaque">About us</h1>
                         <nav class="wow fadeInUp">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="./">home</a></li>
@@ -159,10 +188,10 @@
                             </div>
 
                             <!-- Year Experience Box Start -->
-                            <div class="years-experience-box">
+                            <!-- <div class="years-experience-box">
                                 <h2><span class="counter">3</span></h2>
                                 <p>State of the Art Campus</p>
-                            </div>
+                            </div> -->
                             <!-- Year Experience Box End -->
                         </div>
                         <!-- About Image Box 3 End -->
@@ -176,26 +205,22 @@
                         <!-- Section Title Start -->
                         <div class="section-title">
                             <h3 class="wow fadeInUp">about IICS</h3>
-                            <h2 class="text-anime-style-2" data-cursor="-opaque">Shaping the Next League of
+                            <h2 data-cursor="-opaque">Shaping the Next League of
                                 <span>Creative Entrepreneurs </span>
                             </h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">The Indian Institute of Creative Skills (IICS)
-                                is
-                                more than an institution; it is a launchpad for
-                                innovation, leadership, and entrepreneurship in the
-                                Media and Entertainment Industry. Our purpose is to
-                                nurture visionaries who can redefine Global benchmarks
-                                in creativity and content creation.</p>
+                            <p>
+                                Indian Institute of Creative Skills operating the aegis Ministry of Skill Development and Entrepreneurship, Government of India, is India's First Creative Incubator. It is designed to establish India as a global Creative powerhouse by empowering the next gen creative entrepreneurs, operated by the Media and Entertainment Skills Council & Funded by NSDC. 
+                            </p>
                         </div>
                         <!-- Section Title End -->
 
                         <!-- About Body List Start -->
                         <div class="about-body-list">
                             <!-- About Body Item Start -->
-                            <div class="about-body-item wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="icon-box">
+                            <div class="about-body-item" data-wow-delay="0.4s">
+                                <!-- <div class="icon-box">
                                     <img src="images/icon-about-body-1.svg" alt="about-us-icon">
-                                </div>
+                                </div> -->
                                 <div class="about-body-item-content">
                                     <h3>Shaping Creators Who Drive Change</h3>
                                     <p>We turn bold ideas into real-world impact — shaping careers that fuel India’s
@@ -205,10 +230,10 @@
                             <!-- About Body Item End -->
 
                             <!-- About Body Item Start -->
-                            <div class="about-body-item wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="icon-box">
+                            <div class="about-body-item" data-wow-delay="0.6s">
+                                <!-- <div class="icon-box">
                                     <img src="images/icon-about-body-2.svg" alt="">
-                                </div>
+                                </div> -->
                                 <div class="about-body-item-content">
                                     <h3>Built for Visionaries, Powered by Industry</h3>
                                     <p>Global exposure, expert mentorship, and industry-led training to launch your
@@ -220,9 +245,9 @@
                         <!-- About Body List End -->
 
                         <!-- About Button Start -->
-                        <div class="about-btn wow fadeInUp" data-wow-delay="0.8s">
-                            <a href="contact.html" class="btn-default">Apply Now</a>
-                        </div>
+                        <div class="header-btn mt-5">
+              <a href="/admission.html" class="bg-[#de4141] p-3 text-white">Apply Now</a>
+            </div>
                         <!-- About Button End -->
                     </div>
                     <!-- About us Content End -->
@@ -476,63 +501,45 @@
                     <!-- Why Choose Image End -->
                 </div>
 
-                <div class="col-lg-12">
-                    <!-- Why Choose Item List Start -->
-                    <div class="why-choose-item-list">
-                        <!-- Why Choose Item Start -->
-                        <div class="why-choose-item wow fadeInUp">
-                            <div class="icon-box">
-                                <img src="images/icon-why-choose-1.svg" alt="">
-                            </div>
-                            <div class="why-choose-item-content">
-                                <h3>MSDE</h3>
-                                <p>Driving India’s skilling revolution by aligning education with future-ready
-                                    employment.</p>
-                            </div>
-                        </div>
-                        <!-- Why Choose Item End -->
+                <div class="gov-info-grid !mt-[40px]">
 
-                        <!-- Why Choose Item Start -->
-                        <div class="why-choose-item wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="icon-box">
-                                <img src="images/icon-why-choose-2.svg" alt="">
-                            </div>
-                            <div class="why-choose-item-content">
-                                <h3>Skill India Mission</h3>
-                                <p>A national movement empowering youth with industry-relevant skills for a stronger,
-                                    self-reliant India.</p>
-                            </div>
-                        </div>
-                        <!-- Why Choose Item End -->
+  <h2 class="gov-heading">
+    Government Associations & Affiliations
+  </h2>
 
-                        <!-- Why Choose Item Start -->
-                        <div class="why-choose-item wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="icon-box">
-                                <img src="images/icon-why-choose-3.svg" alt="">
-                            </div>
-                            <div class="why-choose-item-content">
-                                <h3>NSDC</h3>
-                                <p>India’s skilling backbone funding impactful, high-quality vocational training
-                                    initiatives.</p>
-                            </div>
-                        </div>
-                        <!-- Why Choose Item End -->
+  <div class="gov-grid">
+    <div class="gov-grid-item">
+      <h4>MSDE</h4>
+      <p>
+        Ministry of Skill Development and Entrepreneurship, Government of India,
+        overseeing national skilling initiatives.
+      </p>
+    </div>
 
-                        <!-- Why Choose Item Start -->
-                        <div class="why-choose-item wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="icon-box">
-                                <img src="images/icon-why-choose-4.svg" alt="">
-                            </div>
-                            <div class="why-choose-item-content">
-                                <h3>MESC</h3>
-                                <p>India’s apex skilling body for media and entertainment, shaping standards and future
-                                    talent.</p>
-                            </div>
-                        </div>
-                        <!-- Why Choose Item End -->
-                    </div>
-                    <!-- Why Choose Item List End -->
-                </div>
+    <div class="gov-grid-item">
+      <h4>Skill India Mission</h4>
+      <p>
+        National mission focused on enhancing employability through
+        skill-based education.
+      </p>
+    </div>
+
+    <div class="gov-grid-item">
+      <h4>NSDC</h4>
+      <p>
+        Supports high-quality vocational education and training across sectors.
+      </p>
+    </div>
+
+    <div class="gov-grid-item">
+      <h4>MESC</h4>
+      <p>
+        Apex body for media and entertainment skilling standards and frameworks.
+      </p>
+    </div>
+  </div>
+
+</div>
             </div>
         </div>
     </div>
@@ -706,29 +713,6 @@
     </div>
     <!-- Our Commitment Section End -->
 
-    <!-- Scrolling Ticker Start -->
-    <div class="scrolling-ticker-text">
-        <div class="scrolling-ticker-text-box">
-            <div class="scrolling-ticker-text-content">
-                <span><img src="images/icon-asterisk.svg" alt="" />GLOBAL STUDY TOUR</span>
-                <span><img src="images/icon-asterisk.svg" alt="" />PAID APPRENTICESHIP</span>
-                <span><img src="images/icon-asterisk.svg" alt="" />INDUSTRY LED TRAINING</span>
-                <span><img src="images/icon-asterisk.svg" alt="" />LIVE PROJECTS</span>
-                <span><img src="images/icon-asterisk.svg" alt="" />CREATIVE INCUBATOR</span>
-                <span><img src="images/icon-asterisk.svg" alt="" />ENTREPRENEURSHIP FOCUSED</span>
-            </div>
-
-            <div class="scrolling-ticker-text-content">
-                <span><img src="images/icon-asterisk.svg" alt="" />Strategic Hiring</span>
-                <span><img src="images/icon-asterisk.svg" alt="" />HR Consulting</span>
-                <span><img src="images/icon-asterisk.svg" alt="" />Support</span>
-                <span><img src="images/icon-asterisk.svg" alt="" />Strategic Hiring</span>
-                <span><img src="images/icon-asterisk.svg" alt="" />HR Consulting</span>
-                <span><img src="images/icon-asterisk.svg" alt="" />Support</span>
-            </div>
-        </div>
-    </div>
-    <!-- Scrolling Ticker End -->
 
     <!-- Our Benefits Section Start -->
     <div class="our-benefits hidden">
@@ -1405,7 +1389,7 @@
     <script src="js/parallaxie.js"></script>
     <!-- MagicCursor js file -->
     <script src="js/gsap.min.js"></script>
-    <script src="js/magiccursor.js"></script>
+    <!-- <script src="js/magiccursor.js"></script> -->
     <!-- Text Effect js file -->
     <script src="js/SplitText.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>

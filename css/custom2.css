@@ -3089,7 +3089,7 @@ header.main-header .header-sticky.active{
 
 .page-header-box ol li.breadcrumb-item{
 	font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
 	text-transform: capitalize;
 	line-height: normal;
 	color: var(--white-color);
@@ -3196,10 +3196,12 @@ header.main-header .header-sticky.active{
 	font-size: 20px;
 	text-transform: capitalize;
 	margin-bottom: 15px;
+    font-weight: 400;
 }
 
 .mission-vision-item-content p{
 	margin: 0;
+    color: #000;
 }
 
 .mission-vision-image{
@@ -3766,8 +3768,8 @@ header.main-header .header-sticky.active{
     right: 20px;
     top: 50%;
     transform: translate(0px, -50%);
-    background-image: url('../images/arrow-accent.svg');
-	background-color: var(--secondary-color);
+    /* background-image: url('../images/arrow-accent.svg'); */
+	/* background-color: var(--secondary-color); */
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 20px auto;

@@ -16,8 +16,9 @@
   <!-- Google Fonts Css-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <!-- SlickNav Css -->
@@ -33,7 +34,8 @@
   <!-- Mouse Cursor Css File -->
   <link rel="stylesheet" href="css/mousecursor.css">
   <!-- Main Custom Css -->
-  <link href="css/custom.css" rel="stylesheet" media="screen">
+  <link href="css/custom2.css" rel="stylesheet" media="screen">
+  <!-- <link href="css/custom.css" rel="stylesheet" media="screen"> -->
 </head>
 
 <body>
@@ -58,9 +60,18 @@
     </div>
   </div>
   <!-- Preloader End -->
+
+  <div id="social-icons"></div>
+  <script>
+    fetch("socialicons.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("social-icons").innerHTML = data;
+      });
+  </script>
   <div class="fixed z-[1001] top-[50%] right-0  py-2 px-2">
     <div class="flex flex-col items-center gap-3">
-      <a href="https://www.facebook.com/IICSIndiaorg?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"> <img
+      <!-- <a href="https://www.facebook.com/IICSIndiaorg?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"> <img
           src="images/IICS/iics_image/creative-incubator/facbook.png" class="w-[40px] box-shadow-img" alt=""></a>
       <a href="https://www.instagram.com/iicsindiaorg/" target="_blank" rel="noopener noreferrer">
         <img src="images/IICS/iics_image/creative-incubator/instagram.png" class="w-[40px] box-shadow-img" alt="">
@@ -68,17 +79,16 @@
       </a>
       <a href="https://www.youtube.com/@IICSIndiaorg" target="_blank" rel="noopener noreferrer">
         <img src="images/IICS/iics_image/creative-incubator/youtube.png" class="w-[40px] box-shadow-img" alt="">
-      </a>
+      </a> -->
 
 
       <!-- Chatbot Toggle Button -->
-      <img id="chatbot-toggle" src="images/IICS/iics_image/robot-img.png" class="w-[50px] !mt-[60px]" alt="">
-      <!-- <button  class="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center text-black font-bold">💬</button> -->
+      <!-- <img id="chatbot-toggle" src="images/IICS/iics_image/robot-img.png" class="w-[50px] !mt-[60px]" alt=""> -->
     </div>
   </div>
 
   <!-- Chatbot Overlay -->
-  <div id="chatbot-overlay" class="fixed inset-0 z-[1000] bg-black/70 hidden">
+  <!-- <div id="chatbot-overlay" class="fixed inset-0 z-[1000] bg-black/70 hidden">
     <div id="chatbot"
       class="absolute top-1/2 left-1/2 right-[-38%] -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded shadow-lg max-w-[400px] w-full"
       onclick="event.stopPropagation()">
@@ -93,7 +103,7 @@
         <button id="send-btn" class="bg-blue-600 px-4 py-2 rounded">Ask</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
   <!-- Topbar Section Start -->
@@ -165,12 +175,12 @@
         <div class="col-lg-12">
           <!-- Page Header Box Start -->
           <div class="page-header-box">
-            <h1 class="text-anime-style-2" data-cursor="-opaque">Our <span>Stakeholders </span></h1>
-            <nav class="wow fadeInUp">
+            <h1 class="text-anime-style-2" data-cursor="-opaque">Our Stakeholders</h1>
+            <!-- <nav class="wow fadeInUp">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./">Powering a New Era of Creative Entrepreneurship</a></li>
               </ol>
-            </nav>
+            </nav> -->
           </div>
           <!-- Page Header Box End -->
         </div>
@@ -196,7 +206,7 @@
                     Skill India Mission</a></li>
                 <li><a href="national-skill-development-corporation.html#stakeholderContainer">National Skill
                     Development Corporation</a></li>
-                <li><a class="!bg-[#914d94] !text-[#fff]" href="#">Media & Entertainment Skills Council</a></li>
+                <li><a class="!bg-[#de1414] !text-[#fff]" href="#">Media & Entertainment Skills Council</a></li>
                 <li><a href="national-council-for-vocational-education-&-training.html#stakeholderContainer">National
                     Council for Vocational Education & Training</a></li>
               </ul>
@@ -248,7 +258,7 @@
                 <img src="images/IICS/iics_image/mesc-logo-small.webp"
                   class="w-[300px] h-[200px] object-contain ml-[-35px]" alt="">
                   <h1 class="text-anime-style-2 text-size">Media & Entertainment Skills
-                  <span class="text-[#914d94]">Council (MESC) </span>
+                  <span class="text-[#de1414]">Council (MESC) </span>
                 </h1>
                 <p class="wow fadeInUp">
                   Established in 2012, MESC is a not-for-profit council working under the aegis of Ministry of Skill
