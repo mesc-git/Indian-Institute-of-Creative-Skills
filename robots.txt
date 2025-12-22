@@ -145,5 +145,6 @@ Disallow: /img1.jpg
 Disallow: /img2.jpg
 Disallow: /img5.jpg
 Disallow: /admission_banner_image_.webp
+Disallow: /index2.html
 
 Sitemap: https://iicsindia.org/sitemap.xml
