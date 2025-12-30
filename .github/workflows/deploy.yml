@@ -23,10 +23,7 @@ jobs:
           fetch-depth: 0   # Optional but safer for some workflows
 
       # (Extra safety – ensures LFS is fully set up)
-      - name: Ensure Git LFS files are downloaded
-        run: |
-          git lfs install
-          git lfs pull
+     
 
       # 2. Configure AWS credentials
       - name: Configure AWS Credentials
