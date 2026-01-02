@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Loading... - IICS</title>
+  <title>Blog Article - IICS</title>
   <meta name="description" content="" id="meta-desc" />
   <script src="https://cdn.tailwindcss.com"></script>
       <!-- Main Custom Css -->
@@ -669,6 +669,13 @@
 
   slug = slug.trim();
   console.log("Detected slug:", slug);
+  if (slug) {
+  const fallbackTitle = slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, c => c.toUpperCase());
+
+  document.title = `${fallbackTitle} - IICS`;
+}
 
   // =========================
   // FETCH FROM STRAPI
