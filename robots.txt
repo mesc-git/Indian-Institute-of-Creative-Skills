@@ -100,7 +100,6 @@ Disallow: /event-planning-management.php
 Disallow: /nilee-games-ai-gamejam.php
 Disallow: /Kerala_AVGC-XR_Policy_final__Version_4.0.pdf
 Disallow: /tot
-Disallow  /home
 Disallow: /19.jpg
 Disallow: /20.jpg
 Disallow: /17.jpg
