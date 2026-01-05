@@ -6,7 +6,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <meta name="description" content="Experience vibrant student life at the Indian Institute of Creative Skills - from creative projects and workshops to events and campus culture.">
+  <meta name="description"
+    content="Experience vibrant student life at the Indian Institute of Creative Skills - from creative projects and workshops to events and campus culture.">
   <meta name="keywords" content="">
   <meta name="author" content="Awaiken">
   <!-- Page Title -->
@@ -16,9 +17,7 @@
   <!-- Google Fonts Css-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- Bootstrap Css -->
   <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   <!-- SlickNav Css -->
@@ -34,40 +33,164 @@
   <!-- Mouse Cursor Css File -->
   <link rel="stylesheet" href="css/mousecursor.css">
   <!-- Main Custom Css -->
-  <!-- <link href="css/custom.css" rel="stylesheet" media="screen"> -->
-  <!-- <link href="css/custom.css" rel="stylesheet" media="screen"> -->
+  <!-- <link href="css/customcopy.css" rel="stylesheet" media="screen"> -->
   <link href="css/custom2.css" rel="stylesheet" media="screen">
   <link rel="canonical" href="https://iicsindia.org/student-life.html" />
-  
-   <style>
+
+  <style>
     @media (max-width:576px) {
-      .mobile-footer-campus{
+      .mobile-footer-campus {
         display: flex;
         flex-direction: row !important;
       }
-      .mobile-footer-links{
+
+      .mobile-footer-links {
         display: flex;
         gap: 25px;
       }
     }
-</style>
+
+    .carousel-caption {
+      padding-bottom: 20px;
+    }
+
+    .carousel-caption>h5 {
+      padding: 15px;
+      font-size: 24px;
+      font-weight: 700;
+      background-color: #DE4141;
+    }
+  </style>
 </head>
 
 <body>
-    
-     <style>
-        .text-size{
-        font-size: 18px !important;
-        color: #914d94;
-        text-transform: uppercase;
-        font-weight: normal;
+
+  <style>
+    .text-size {
+      font-size: 18px !important;
+      color: #914d94;
+      text-transform: uppercase;
+      font-weight: normal;
     }
+
     @media (max-width:576px) {
-      .text-size{
+      .text-size {
         font-size: 15px !important;
+      }
     }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      color: #fff;
+      background-color: #DE4141;
+      padding: 10px;
+      font-size: 14px;
+      /* background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px; */
     }
-    </style>
+
+    /* Change background color of buttons on hover */
+    /* .tab button:hover {
+      background-color: #ddd;
+    } */
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      color: #fff;
+      background-color: #DE4141;
+      padding: 10px;
+      font-size: 14px;
+      /* background-color: #ccc; */
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      /* padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none; */
+    }
+
+
+
+    .mfp-two-col {
+      display: flex;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+      /* background-color: #DE4141; */
+    }
+
+    /* Image column */
+    .mfp-img-wrap {
+      width: 50%;
+    }
+
+    .mfp-img {
+      width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+    }
+
+    /* Text column */
+    .mfp-text-wrap {
+      width: 50%;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .mfp-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .mfp-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .mfp-two-col {
+        flex-direction: column;
+      }
+
+      .mfp-img-wrap,
+      .mfp-text-wrap {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    /* 
+    .mfp-title {
+      color: #fff;
+      text-align: center;
+      margin-top: 15px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .mfp-desc {
+      color: #ddd;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 8px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    } */
+  </style>
 
   <!-- Preloader Start -->
   <div class="preloader initial">
@@ -78,7 +201,7 @@
     </div>
   </div>
   <!-- Preloader End -->
- <div id="social-icons"></div>
+  <div id="social-icons"></div>
   <script>
     fetch("socialicons.html")
       .then(res => res.text())
@@ -90,26 +213,26 @@
 
 
   <!-- Topbar Section Start -->
- <div id="topbar-placeholder"></div>
-        <script>
-  fetch("topbar.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("topbar-placeholder").innerHTML = data;
-    });
-        </script>
+  <div id="topbar-placeholder"></div>
+  <script>
+    fetch("topbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("topbar-placeholder").innerHTML = data;
+      });
+  </script>
   <!-- Topbar Section End -->
 
   <!-- Header Start -->
- <header class="main-header !bg-[#fff] !sticky top-0">
+  <header class="main-header !bg-[#fff] !sticky top-0">
     <div id="header-placeholder"></div>
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("header-placeholder").innerHTML = data;
-    });
-</script>
+    <script>
+      fetch("header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
   </header>
   <!-- Header End -->
 
@@ -143,9 +266,9 @@
           <div class="why-choose-content">
             <!-- Section Title Start -->
             <div class="section-title">
-              <!-- <h1 class="wow fadeInUp text-size">Student Life at IICS</h1> -->
-              <h2 class="text-anime-style-2" data-cursor="-opaque" data-wow-delay="0.2s">
-                A Campus That <span>Breathes Creativity</span>
+              <!-- <h1 class=" text-size left-heading">Student Life at IICS</h1> -->
+              <h2 class="" data-cursor="-opaque" data-wow-delay="0.2s">
+                A Campus That Breathes Creativity
               </h2>
               <p class="wow fadeInUp" data-wow-delay="0.2s">
                 Student life at IICS isn’t just about classes —
@@ -256,324 +379,964 @@
       </div>
     </div>
   </div>
-  <!-- <div class="scrolling-ticker-text">
-    <div class="scrolling-ticker-text-box">
-      <div class="scrolling-ticker-text-content">
-        <span><img src="images/icon-asterisk.svg" alt="" />GLOBAL STUDY TOUR</span>
-        <span><img src="images/icon-asterisk.svg" alt="" />PAID APPRENTICESHIP</span>
-        <span><img src="images/icon-asterisk.svg" alt="" />INDUSTRY LED TRAINING</span>
-        <span><img src="images/icon-asterisk.svg" alt="" />LIVE PROJECTS</span>
-        <span><img src="images/icon-asterisk.svg" alt="" />CREATIVE INCUBATOR</span>
-        <span><img src="images/icon-asterisk.svg" alt="" />ENTREPRENEURSHIP FOCUSED</span>
-      </div>
-
-      <div class="scrolling-ticker-text-content">
-        <span><img src="images/icon-asterisk.svg" alt="" />GLOBAL STUDY TOUR</span>
-        <span><img src="images/icon-asterisk.svg" alt="" />PAID APPRENTICESHIP</span>
-        <span><img src="images/icon-asterisk.svg" alt="" />INDUSTRY LED TRAINING</span>
-        <span><img src="images/icon-asterisk.svg" alt="" />LIVE PROJECTS</span>
-        <span><img src="images/icon-asterisk.svg" alt="" />CREATIVE INCUBATOR</span>
-        <span><img src="images/icon-asterisk.svg" alt="" />ENTREPRENEURSHIP FOCUSED</span>
-      </div>
-    </div>
-  </div> -->
 
 
-  <div class="page-projects !pt-0">
-    <div class="container">
-      <div class="our-blog">
-        <div class="container">
-          <div class="row section-row align-items-center">
-            <div class="col-lg-6">
-              <!-- Section Title Start -->
-              <div class="section-title">
-                <!-- <h3 class="wow fadeInUp">Experience. Engage. Excel.</h3> -->
-                <h2 class="text-anime-style-2" data-cursor="-opaque">
-                  Real-World Learning Beyond <span>the Classroom</span>
-                </h2>
-              </div>
-              <!-- Section Title End -->
-            </div>
 
-            <div class="col-lg-6 hidden">
-              <!-- Service Button Start -->
-              <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-                <a href="blog.html" class="btn-default">view all blogs</a>
-              </div>
-              <!-- Service Button End -->
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <!-- Post Item Start -->
-              <div class="post-item wow fadeInUp">
-                <!-- Post Featured Image Start-->
-                <div class="post-featured-image">
-                  <a data-cursor-text="View">
-                    <figure class="image-anime">
-                      <img src="images/IICS/iics_image/student-life/skill-building-workshop.JPG" alt="" />
-                    </figure>
-                  </a>
-                </div>
-                <!-- Post Featured Image End -->
-
-                <!-- Blog Item Body Start -->
-                <div class="blog-item-body">
-                  <!-- Post Item Content Start -->
-                  <div class="post-item-content !mb-0">
-                    <h2>
-                      <a>Exposure to Global Events</a>
-                    </h2>
-                  </div>
-                  <!-- Post Item Content End -->
-
-                  <!-- Blog Item Button Start -->
-                  <!-- <div class="blog-item-btn">
-                        <a  class="readmore-btn">read more</a>
-                      </div> -->
-                  <!-- Blog Item Button End -->
-                </div>
-                <!-- Blog Item Body End -->
-              </div>
-              <!-- Post Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-              <!-- Post Item Start -->
-              <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-                <!-- Post Featured Image Start-->
-                <div class="post-featured-image">
-                  <a data-cursor-text="View">
-                    <figure class="image-anime">
-                      <img src="images/IICS/iics_image/student-life/sushma_mam.png" alt="" />
-                    </figure>
-                  </a>
-                </div>
-                <!-- Post Featured Image End -->
-
-                <!-- Blog Item Body Start -->
-                <div class="blog-item-body">
-                  <!-- Post Item Content Start -->
-                  <div class="post-item-content !mb-0">
-                    <h2>
-                      <a>Masterclasses by Industry Legends</a>
-                    </h2>
-                  </div>
-                  <!-- Post Item Content End -->
-
-                  <!-- Blog Item Button Start -->
-                  <!-- <div class="blog-item-btn">
-                        <a  class="readmore-btn">read more</a>
-                      </div> -->
-                  <!-- Blog Item Button End -->
-                </div>
-                <!-- Blog Item Body End -->
-              </div>
-              <!-- Post Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-              <!-- Post Item Start -->
-              <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
-                <!-- Post Featured Image Start-->
-                <div class="post-featured-image">
-                  <a data-cursor-text="View">
-                    <figure class="image-anime">
-                      <img src="images/IICS/iics_image/student-life/about-img-3.jpg" alt="" />
-                    </figure>
-                  </a>
-                </div>
-                <!-- Post Featured Image End -->
-
-                <!-- Blog Item Body Start -->
-                <div class="blog-item-body">
-                  <!-- Post Item Content Start -->
-                  <div class="post-item-content !mb-0">
-                    <h2>
-                      <a>Live Projects & Collaborations</a>
-                    </h2>
-                  </div>
-                  <!-- Post Item Content End -->
-
-                  <!-- Blog Item Button Start -->
-                  <!-- <div class="blog-item-btn">
-                        <a  class="readmore-btn">read more</a>
-                      </div> -->
-                  <!-- Blog Item Button End -->
-                </div>
-                <!-- Blog Item Body End -->
-              </div>
-              <!-- Post Item End -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Page Projects End -->
-  <div class="our-team">
+  <div class="our-blog ">
     <div class="container">
       <div class="row section-row align-items-center">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
           <!-- Section Title Start -->
           <div class="section-title">
-            <!-- <h3 class="wow fadeInUp">Nurturing your journey with India’s creative legends</h3> -->
-            <h2 class="text-anime-style-2" data-cursor="-opaque">Our Industry <span>Mentors</span></h2>
+            <!-- <h3 class="">Experience. Engage. Excel.</h3> -->
+            <h2 class="text-center" data-cursor="-opaque">
+              Real-World Learning Beyond the Classroom
+            </h2>
           </div>
           <!-- Section Title End -->
         </div>
 
-        <div class="col-lg-6">
-          <!-- Service Button Start -->
-          <div class="section-btn wow fadeInUp" data-wow-delay="0.2s">
-            <a href="industry-mentor.html" class="btn-default">View All Industry Mentors</a>
-          </div>
-          <!-- Service Button End -->
-        </div>
+
       </div>
 
       <div class="row">
-        <div class="swiper mySwiperSecond">
-          <div class="swiper-wrapper" id="courseContainer"></div>
-          <!-- <div class="swiper-pagination mt-4"></div> -->
+        <div class="col-lg-4 col-md-6">
+          <!-- Post Item Start -->
+          <div class="post-item wow fadeInUp">
+            <!-- Post Featured Image Start-->
+            <div class="post-featured-image">
+              <a data-cursor-text="View">
+                <figure class="image-anime">
+                  <img src="images/IICS/iics_image/student-life/skill-building-workshop.JPG" alt="" />
+                </figure>
+              </a>
+            </div>
+            <!-- Post Featured Image End -->
+
+            <!-- Blog Item Body Start -->
+            <div class="blog-item-body">
+              <!-- Post Item Content Start -->
+              <div class="post-item-content !mb-0">
+                <h2>
+                  <a>Exposure to Global Events</a>
+                </h2>
+              </div>
+              <!-- Post Item Content End -->
+
+              <!-- Blog Item Button Start -->
+              <!-- <div class="blog-item-btn">
+                        <a  class="readmore-btn">read more</a>
+                      </div> -->
+              <!-- Blog Item Button End -->
+            </div>
+            <!-- Blog Item Body End -->
+          </div>
+          <!-- Post Item End -->
         </div>
 
+        <div class="col-lg-4 col-md-6">
+          <!-- Post Item Start -->
+          <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
+            <!-- Post Featured Image Start-->
+            <div class="post-featured-image">
+              <a data-cursor-text="View">
+                <figure class="image-anime">
+                  <img src="images/IICS/iics_image/student-life/sushma_mam.png" alt="masterclass" />
+                </figure>
+              </a>
+            </div>
+            <!-- Post Featured Image End -->
+
+            <!-- Blog Item Body Start -->
+            <div class="blog-item-body">
+              <!-- Post Item Content Start -->
+              <div class="post-item-content !mb-0">
+                <h2>
+                  <a>Masterclasses by Industry Legends</a>
+                </h2>
+              </div>
+              <!-- Post Item Content End -->
+
+              <!-- Blog Item Button Start -->
+              <!-- <div class="blog-item-btn">
+                        <a  class="readmore-btn">read more</a>
+                      </div> -->
+              <!-- Blog Item Button End -->
+            </div>
+            <!-- Blog Item Body End -->
+          </div>
+          <!-- Post Item End -->
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <!-- Post Item Start -->
+          <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
+            <!-- Post Featured Image Start-->
+            <div class="post-featured-image">
+              <a data-cursor-text="View">
+                <figure class="image-anime">
+                  <img src="images/IICS/iics_image/student-life/about-img-3.jpg" alt="live_projects" />
+                </figure>
+              </a>
+            </div>
+            <!-- Post Featured Image End -->
+
+            <!-- Blog Item Body Start -->
+            <div class="blog-item-body">
+              <!-- Post Item Content Start -->
+              <div class="post-item-content !mb-0">
+                <h2>
+                  <a>Live Projects & Collaborations</a>
+                </h2>
+              </div>
+              <!-- Post Item Content End -->
+
+              <!-- Blog Item Button Start -->
+              <!-- <div class="blog-item-btn">
+                        <a  class="readmore-btn">read more</a>
+                      </div> -->
+              <!-- Blog Item Button End -->
+            </div>
+            <!-- Blog Item Body End -->
+          </div>
+          <!-- Post Item End -->
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Photo Gallery Section Start -->
-  <div class="page-gallery" id="galleryContainer">
+
+
+  <div class="container-fluid">
     <div class="container">
-      <div class="section-title">
-            <!-- <h3 class="wow fadeInUp">Nurturing your journey with India’s creative legends</h3> -->
-            <h2 class="text-anime-style-2" data-cursor="-opaque">Our <span>Gallery</span></h2>
-          </div>
-      <!-- gallery section start -->
-      <div class="row gallery-items page-gallery-box">
-        <div class="col-lg-4 col-6">
-          <!-- Image Gallery start -->
-          <div class="photo-gallery wow fadeInUp">
-            <a href="images/IICS/iics_image/gallery/gallery_1.webp" data-cursor-text="View">
-              <figure class="image-anime">
-                <img src="images/IICS/iics_image/gallery/gallery_1.webp" alt="" loading="lazy">
-              </figure>
-            </a>
-          </div>
-          <!-- Image Gallery end -->
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center mb-3">Events </h2>
+          <!-- <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus earum cumque blanditiis inventore.
+            Distinctio laborum reprehenderit minima, dicta deserunt possimus ex nesciunt repudiandae sunt ratione
+            incidunt fugiat quia repellendus! Blanditiis ea quae fugiat rerum eligendi accusamus repellendus quibusdam,
+            doloremque odio?
+          </p> -->
         </div>
+        <div class="col-12" style="display: flex; justify-content: center;">
+          <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'all')" id="defaultOpen">All</button>
+            <button class="tablinks" onclick="openCity(event, 'made-for-media')">Made For Media</button>
 
-        <div class="col-lg-4 col-6">
-          <!-- Image Gallery start -->
-          <div class="photo-gallery wow fadeInUp" data-wow-delay="0.2s">
-            <a href="images/IICS/iics_image/gallery/gallery_2.webp" data-cursor-text="View">
-              <figure class="image-anime">
-                <img src="images/IICS/iics_image/gallery/gallery_2.webp" alt="" loading="lazy">
-              </figure>
-            </a>
+            <button class="tablinks" onclick="openCity(event, 'master-class')">ComicCon</button>
+            <button class="tablinks" onclick="openCity(event, 'workshops')">Workshops</button>
           </div>
-          <!-- Image Gallery end -->
         </div>
+        <div class="col-12">
+          <div id="all" class="tabcontent">
+            <div class="container mt-3">
+              <!-- gallery section start -->
+              <div class="row all-gallery page-gallery-box ">
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/New Project.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="
+Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
 
-        <div class="col-lg-4 col-6">
-          <!-- Image Gallery start -->
-          <div class="photo-gallery wow fadeInUp" data-wow-delay="0.4s">
-            <a href="images/IICS/iics_image/gallery/gallery_3.webp" data-cursor-text="View">
-              <figure class="image-anime">
-                <img src="images/IICS/iics_image/gallery/gallery_3.webp" alt="" loading="lazy">
-              </figure>
-            </a>
-          </div>
-          <!-- Image Gallery end -->
-        </div>
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/New Project.jpg" alt="">
+                      </figure>
 
-        <div class="col-lg-4 col-6">
-          <!-- Image Gallery start -->
-          <div class="photo-gallery wow fadeInUp" data-wow-delay="0.6s">
-            <a href="images/IICS/iics_image/gallery/gallery_4.webp" data-cursor-text="View">
-              <figure class="image-anime">
-                <img src="images/IICS/iics_image/gallery/gallery_4.webp" alt="" loading="lazy">
-              </figure>
-            </a>
-          </div>
-          <!-- Image Gallery end -->
-        </div>
 
-        <div class="col-lg-4 col-6">
-          <!-- Image Gallery start -->
-          <div class="photo-gallery wow fadeInUp" data-wow-delay="0.8s">
-            <a href="images/IICS/iics_image/gallery/gallery_6.webp" data-cursor-text="View">
-              <figure class="image-anime">
-                <img src="images/IICS/iics_image/gallery/gallery_6.webp" alt="" loading="lazy">
-              </figure>
-            </a>
-          </div>
-          <!-- Image Gallery end -->
-        </div>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/COMICON/Untitled-2-01.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+                Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+                ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-01.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
 
-        <div class="col-lg-4 col-6">
-          <!-- Image Gallery start -->
-          <div class="photo-gallery wow fadeInUp" data-wow-delay="1s">
-            <a href="images/IICS/iics_image/gallery/gallery_7.webp" data-cursor-text="View">
-              <figure class="image-anime">
-                <img src="images/IICS/iics_image/gallery/gallery_7.webp" alt="" loading="lazy">
-              </figure>
-            </a>
-          </div>
-          <!-- Image Gallery end -->
-        </div>
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/3.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/3.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
 
-        <div class="col-lg-4 col-6">
-          <!-- Image Gallery start -->
-          <div class="photo-gallery wow fadeInUp" data-wow-delay="1.2s">
-            <a href="images/IICS/iics_image/gallery/gallery_8.webp" data-cursor-text="View">
-              <figure class="image-anime">
-                <img src="images/IICS/iics_image/gallery/gallery_8.webp" alt="" loading="lazy">
-              </figure>
-            </a>
-          </div>
-          <!-- Image Gallery end -->
-        </div>
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/madeformediaevent/1.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/1.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
 
-        <div class="col-lg-4 col-6">
-          <!-- Image Gallery start -->
-          <div class="photo-gallery wow fadeInUp" data-wow-delay="1.4s">
-            <a href="images/IICS/iics_image/gallery/gallery_5.webp" data-cursor-text="View">
-              <figure class="image-anime">
-                <img src="images/IICS/iics_image/gallery/gallery_5.webp" alt="" loading="lazy">
-              </figure>
-            </a>
-          </div>
-          <!-- Image Gallery end -->
-        </div>
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/2.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/2.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
 
-        <div class="col-lg-4 col-6">
-          <!-- Image Gallery start -->
-          <div class="photo-gallery wow fadeInUp" data-wow-delay="1.6s">
-            <a href="images/IICS/iics_image/gallery/gallery_9.webp" data-cursor-text="View">
-              <figure class="image-anime">
-                <img src="images/IICS/iics_image/gallery/gallery_9.webp" alt="" loading="lazy">
-              </figure>
-            </a>
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/COMICON/Untitled-2-02.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+                Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+                ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-02.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/5.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/5.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/7.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/7.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/6.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/6.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/COMICON/Untitled-2-03.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+                Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+                ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-03.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/17.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/17.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/11.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/11.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/12.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/12.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/COMICON/Untitled-2-04.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+                Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+                ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-04.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/15.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/15.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+              </div>
+              <!-- gallery section end -->
+            </div>
           </div>
-          <!-- Image Gallery end -->
+          <div id="made-for-media" class="tabcontent">
+            <div class="container mt-3">
+              <!-- gallery section start -->
+              <div class="row madeformedia page-gallery-box ">
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/New Project.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="
+                                            Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/New Project.jpg" alt="">
+                      </figure>
+
+
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/3.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/3.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/madeformediaevent/1.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/1.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/2.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/2.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+
+
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/5.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/5.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/7.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/7.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/6.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/6.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/17.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/17.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/8.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/8.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/10.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/10.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/11.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/11.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/12.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/12.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/madeformediaevent/13.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/13.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/14.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/14.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/madeformediaevent/15.jpg" data-cursor-text="View"
+                      data-title="Made for Media - Launch of IICS"
+                      data-desc="Made for media and built for success, this grand celebration by the Indian Institute of Creative Skills brought together vision, voice, and talent on one powerful platform. From a power panel of legends spanning Oscars to Bollywood, to inspiring conversations where the creative industry met campus, the day unfolded as a vibrant launchpad for next-gen creators elevated further by showstopping performances, electrifying energy, and a shared celebration of creativity, opportunity, and pure talent.">
+                      <figure class="image-anime">
+                        <img src="images/madeformediaevent/15.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+              </div>
+              <!-- gallery section end -->
+            </div>
+          </div>
+          <div id="master-class" class="tabcontent">
+            <div class="container mt-3">
+              <!-- gallery section start -->
+              <div class="row comicon page-gallery-box">
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/COMICON/Untitled-2-01.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+            Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+            ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-01.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/COMICON/Untitled-2-02.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+            Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+            ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-02.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/COMICON/Untitled-2-03.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+            Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+            ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-03.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/COMICON/Untitled-2-04.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+            Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+            ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-04.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+
+
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/COMICON/Untitled-2-05.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+            Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+            ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-05.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/COMICON/Untitled-2-06.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+            Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+            ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-06.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <!-- <div class="col-lg-4 col-6">
+                                        Image Gallery start
+                                        <div class="photo-gallery">
+                                          <a href="images/COMICON/Untitled-2-07.jpg" data-cursor-text="View">
+                                            <figure class="image-anime">
+                                              <img src="images/COMICON/Untitled-2-07.jpg" alt="">
+                                            </figure>
+                                          </a>
+                                        </div>
+                                        Image Gallery end
+                                      </div> -->
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/COMICON/Untitled-2-07.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+            Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+            ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-07.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/COMICON/Untitled-2-08.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+            Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+            ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-08.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/COMICON/Untitled-2-09.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+            Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+            ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-09.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/COMICON/Untitled-2-10.jpg" data-cursor-text="View" data-title="Comicon India"
+                      data-desc="
+            Straight from Comicon Delhi, we captured the real voices, real stories, and real excitement of India’s biggest AVCG celebration where passionate creators and vibrant cosplayers came together in a burst of creativity. At the heart of it all was the Indian Institute of Creative Skills, connecting with future artists, designers, animators, and storytellers who aspire to build meaningful careers in the creative industry.
+            ">
+                      <figure class="image-anime">
+                        <img src="images/COMICON/Untitled-2-10.jpg" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+
+              </div>
+              <!-- gallery section end -->
+            </div>
+
+          </div>
+          <div id="workshops" class="tabcontent">
+
+            <div class="container mt-3">
+              <!-- gallery section start -->
+              <div class="row workshops page-gallery-box ">
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/kethrina/1.webp" data-cursor-text="View" data-title="Mentor: Katharina Suckale | COO & Producer at Bombay
+                      Berlin Film Productions​
+                      
+                      " data-desc="This workshop introduced students to global production
+                      practices and international workflows. Katharina Suckale
+                      shared insights into cross-border collaboration, production
+                      planning, and global standards in filmmaking.">
+
+                      <figure class="image-anime">
+                        <img src="images/kethrina/1.webp" alt="">
+                      </figure>
+
+
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/kethrina/k2.webp" data-cursor-text="View" data-title="Mentor: Katharina Suckale | COO & Producer at Bombay
+                      Berlin Film Productions​
+                      
+                      " data-desc="This workshop introduced students to global production
+                      practices and international workflows. Katharina Suckale
+                      shared insights into cross-border collaboration, production
+                      planning, and global standards in filmmaking.">
+                      <figure class="image-anime">
+                        <img src="images/kethrina/k2.webp" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery ">
+                    <a href="images/kethrina/k3.webp" data-cursor-text="View" data-title="Mentor: Katharina Suckale | COO & Producer at Bombay
+                      Berlin Film Productions​
+                      
+                      " data-desc="This workshop introduced students to global production
+                      practices and international workflows. Katharina Suckale
+                      shared insights into cross-border collaboration, production
+                      planning, and global standards in filmmaking.">
+                      <figure class="image-anime">
+                        <img src="images/kethrina/k3.webp" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/kethrina/k4.webp" data-cursor-text="View" data-title="Mentor: Katharina Suckale | COO & Producer at Bombay
+                      Berlin Film Productions​
+                      
+                      " data-desc="This workshop introduced students to global production
+                      practices and international workflows. Katharina Suckale
+                      shared insights into cross-border collaboration, production
+                      planning, and global standards in filmmaking.">
+                      <figure class="image-anime">
+                        <img src="images/kethrina/k4.webp" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+
+
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/kethrina/k5.webp" data-cursor-text="View" data-title="Mentor: Katharina Suckale | COO & Producer at Bombay
+                      Berlin Film Productions​
+                      
+                      " data-desc="This workshop introduced students to global production
+                      practices and international workflows. Katharina Suckale
+                      shared insights into cross-border collaboration, production
+                      planning, and global standards in filmmaking.">
+                      <figure class="image-anime">
+                        <img src="images/kethrina/k5.webp" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+                <div class="col-lg-4 col-6">
+                  <!-- Image Gallery start -->
+                  <div class="photo-gallery">
+                    <a href="images/kethrina/k6.webp" data-cursor-text="View" data-title="Mentor: Katharina Suckale | COO & Producer at Bombay
+                      Berlin Film Productions​
+                      
+                      " data-desc="This workshop introduced students to global production
+                      practices and international workflows. Katharina Suckale
+                      shared insights into cross-border collaboration, production
+                      planning, and global standards in filmmaking.">
+                      <figure class="image-anime">
+                        <img src="images/kethrina/k6.webp" alt="">
+                      </figure>
+                    </a>
+                  </div>
+                  <!-- Image Gallery end -->
+                </div>
+
+
+
+
+
+              </div>
+              <!-- gallery section end -->
+            </div>
+          </div>
         </div>
       </div>
-      <!-- gallery section end -->
+
     </div>
   </div>
-  <!-- Photo Gallery Section End -->
+  <!-- Scrolling Ticker Section Start -->
+  <div class="our-scrolling-ticker footer-scrolling-ticker">
+    <!-- Scrolling Ticker Start -->
+    <div class="scrolling-ticker-box">
+      <div class="scrolling-content">
+        <span><img src="images/asterisk-icon.svg" alt="">Create Boldly</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Imagine Limitlessly</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Design Freely</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Perform Loudly</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Learn Fearlessly</span>
+
+      </div>
+
+      <div class="scrolling-content">
+        <span><img src="images/asterisk-icon.svg" alt="">Create Boldly</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Imagine Limitlessly</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Design Freely</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Perform Loudly</span>
+        <span><img src="images/asterisk-icon.svg" alt="">Learn Fearlessly</span>
+
+      </div>
+    </div>
+  </div>
+  <!-- Scrolling Ticker Section End -->
 
   <!-- Footer Main Start -->
-   <div id="footer-placeholder"></div>
-<script>
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
-    });
-</script>
+  <div id="footer-placeholder"></div>
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
   <!-- Footer Main End -->
 
   <!-- Jquery Library File -->
@@ -597,7 +1360,7 @@
   <script src="js/parallaxie.js"></script>
   <!-- MagicCursor js file -->
   <script src="js/gsap.min.js"></script>
-  <!-- <script src="js/magiccursor.js"></script> -->
+  <script src="js/magiccursor.js"></script>
   <!-- Text Effect js file -->
   <script src="js/SplitText.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
@@ -606,7 +1369,7 @@
   <!-- Wow js file -->
   <script src="js/wow.min.js"></script>
   <!-- Main Custom js file -->
-  <script src="js/function.js"></script>
+  <script src="js/function2.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script>
     const swiperSecond = new Swiper(".mySwiperSecond", {
@@ -644,14 +1407,14 @@
         image: "images/IICS/iics_image/industry-mentors/Padma-Shri-Resul-Pookutty.png",
       },
       {
-        name: "Padma Shri Shankar Mahadevan",
+        name: "Padma Shri Shankar Mahadevann",
         designation:
           "Indian singer and composer",
         image: "images/IICS/iics_image/industry-mentors/Padma-Shri-Shankar-Mahadevan.png",
       },
       {
-        name: "Ms. Dia Mirza",
-        designation: "Actress",
+        name: "Ms.Dia Mirza",
+        designation: "Actor",
         image: "images/IICS/iics_image/industry-mentors/Ms-Dia-Mirza.jpg",
       },
       {
@@ -672,12 +1435,12 @@
         image:
           "images/IICS/iics_image/industry-mentors/Ms-Revathy-Asha-Kelunni.png",
       },
-    //   {
-    //     name: "Mr. Zakir Khan",
-    //     designation: "Comedian",
-    //     image:
-    //       "images/IICS/iics_image/industry-mentors/zakir-khan.png",
-    //   },
+      //   {
+      //     name: "Mr. Zakir Khan",
+      //     designation: "Comedian",
+      //     image:
+      //       "images/IICS/iics_image/industry-mentors/zakir-khan.png",
+      //   },
       {
         name: "Ms.Sushma Gaikwad",
         designation: "Co-founder Ice Global, Wizcraft MIME & Sukhoon",
@@ -756,12 +1519,12 @@
         image:
           "images/IICS/iics_image/industry-mentors/jaya-kumar.png",
       },
-      // {
-      //   name: "Mr. Jan Horn",
-      //   designation: "Managing Director of SAE Dubai University",
-      //   image:
-      //     "images/IICS/iics_image/industry-mentors/Mr-jan-horn.png",
-      // },
+      {
+        name: "Mr. Jan Horn",
+        designation: "Managing Director of SAE Dubai University",
+        image:
+          "images/IICS/iics_image/industry-mentors/Mr-jan-horn.png",
+      },
       {
         name: "Mr. Salim Arif",
         designation: "Indian Theatre & Film Actor",
@@ -852,7 +1615,7 @@
                    <!-- Team Item Start -->
                    <div class="team-item wow fadeInUp">
                        <div class="team-image">
-                           <a href="team-single.html">
+                           <a href="team-single.html" data-cursor-text="View">
                                <figure class="image-anime">
                                    <img src=${course.image} alt="" loading="lazy">
                                </figure>
@@ -873,9 +1636,9 @@
     });
   </script>
   <script>
-       setTimeout(function(){
-    $(".initial").fadeOut(600);
-}, 2000);
+    setTimeout(function () {
+      $(".initial").fadeOut(600);
+    }, 2000);
   </script>
   <script src="./chatbot.js"></script>
   <script>
