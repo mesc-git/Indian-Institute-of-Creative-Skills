@@ -158,6 +158,27 @@
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
       }
     }
+
+    @-webkit-keyframes blinker {
+      from {
+        opacity: 1.0;
+      }
+
+      to {
+        opacity: 0.0;
+      }
+    }
+
+    .blink {
+      font-size: 14px;
+      color: #000;
+      text-decoration: blink;
+      -webkit-animation-name: blinker;
+      -webkit-animation-duration: 0.6s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-direction: alternate;
+    }
   </style>
 </head>
 
@@ -271,7 +292,8 @@
               </th>
               <th><a href="resultdec/Result_Announcement_soundtotal108.pdf" target="_blank">108 </a></th>
               <th><a href="resultdec/Result_Announcement_sound108.pdf" target="_blank">108 </a></th>
-              <th><a href="resultdec/Result_Announcement_sound21.pdf" style="color: #de4141;" target="_blank">21 </a>
+              <th><a href="resultdec/Result_Announcement_soundselected.pdf" style="color: #de4141;" target="_blank">21
+                  <span class="blink"> Click Here</span> </a>
               </th>
 
 
@@ -287,7 +309,8 @@
               <th><a href="resultdec/Result_Announcement_event124.pdf" target="_blank">124 </a>
               </th>
 
-              <th><a href="resultdec/Result_Announcement_event15.pdf" style="color: #de4141;" target="_blank">15 </a>
+              <th><a href="resultdec/Result_Announcement_event selected.pdf" style="color: #de4141;" target="_blank">15
+                  <span class="blink"> Click Here</span></a>
               </th>
 
 
@@ -297,8 +320,9 @@
               <th>3D animation & Game production</th>
               <th><a href="resultdec/Result_Announcement_game116.pdf" target="_blank"> 116 </a> </th>
               <th><a href="resultdec/Result_Announcement_gameselected.pdf" target="_blank">116 </a></th>
-              <th><a href="resultdec/Result_Announcement_soundTOTAL13.pdf" style="color: #de4141;" target="_blank">13
-                </a></th>
+              <th><a href="resultdec/Result_Announcement_selected-animation.pdf" style="color: #de4141;"
+                  target="_blank">13
+                  <span class="blink"> Click Here</span> </a></th>
 
             </tr>
             <tr>
@@ -307,13 +331,15 @@
               <th><a href="resultdec/Result_Announcement_costumetotal.pdf" target="_blank">56</a>
               </th>
               <th><a href="resultdec/Result_Announcement_costume.pdf" target="_blank">56 </a></th>
-              <th><a href="resultdec/Result_Announcement_soundtotal11.pdf" style="color: #de4141;"
-                  target="_blank">11</a>
+              <th><a href="resultdec/Result_Announcement_selected-costume.pdf" style="color: #de4141;"
+                  target="_blank">11
+                  <span class="blink"> Click Here </span></a>
               </th>
 
             </tr>
 
           </tbody>
+
         </table>
       </div>
       <div class="col-12 ">
