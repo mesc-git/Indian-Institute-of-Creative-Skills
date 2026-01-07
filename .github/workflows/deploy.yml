@@ -19,11 +19,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          lfs: false        # ✅ Pull real LFS files (e.g., PDFs) instead of pointer files
+          lfs: true        # ✅ Pull real LFS files (e.g., PDFs) instead of pointer files
           fetch-depth: 0   # Optional but safer for some workflows
 
       # (Extra safety – ensures LFS is fully set up)
-     
+      - name: Ensure Git LFS files are downloaded
+        run: |
+          git lfs install
+          git lfs pull
 
       # 2. Configure AWS credentials
       - name: Configure AWS Credentials
