@@ -4941,8 +4941,8 @@ header.main-header .header-sticky.active{
 }
 
 .page-gallery-box .photo-gallery{
-	height: calc(100% - 30px);
-	margin-bottom: 30px;
+	/* height: calc(100% - 30px); */
+	margin-bottom: 10px;
 }
 
 .page-gallery-box .photo-gallery a{

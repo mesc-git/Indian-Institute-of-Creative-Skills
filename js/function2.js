@@ -229,6 +229,867 @@
 			});
 		}
 	}
+
+	$('.Careerawareness').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.flimmaking').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.digitek').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.aigames').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.delhisubmit').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.Sabbasjoseph').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.Iconicbridal').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.Sushma').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.careeradvisors').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.Katharina').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.SalimArif').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.ashish').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.amitbhel').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.Actingmasterclass').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.TrumpTower').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.footprint').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.Children').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.gujrat-sumit').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.Experiential').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.Creativeartists').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
 	// /* Zoom Gallery screenshot */
 	$('.all-gallery').magnificPopup({
 		delegate: 'a',
