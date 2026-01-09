@@ -8,11 +8,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1"
     />
-    <meta name="description" content="" />
+    <meta name="description" content="Prepare for the NIFT Entrance Exam 2026 with expert guidance at IICS. Get structured coaching, practice tests, and skills to crack NIFT with confidence." />
     <meta name="keywords" content="" />
     <meta name="author" content="Awaiken" />
     <!-- Page Title -->
-    <title>NIFT</title>
+    <title>NIFT Entrance Exam 2026 | NIFT Exam Preparation | IICS</title>
     <!-- Favicon Icon -->
     <link
       rel="shortcut icon"
@@ -48,10 +48,7 @@
     <!-- Main Custom Css -->
     <!-- <link href="css/custom.css" rel="stylesheet" media="screen" /> -->
     <link href="../css/custom2.css" rel="stylesheet" media="screen" />
-    <link
-      rel="canonical"
-      href="https://iicsindia.org/sound-design-&-music-video-production.html"
-    />
+    <link rel="canonical" href="https://www.iicsindia.org/nift" />
 
     <style>
       @media (max-width: 576px) {
@@ -2657,6 +2654,14 @@
     <div id="blogGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <!-- Blogs injected by JS -->
     </div>
+    <button
+  id="loadMoreBtn"
+  class="mx-auto block bg-[#de4141] text-white px-6 py-3 font-medium hover:bg-red-700 transition rounded"
+  style="margin-top: 10px;"
+>
+  Load More Blogs
+</button>
+
 
     <!-- Empty State -->
     <p id="emptyState" class="hidden text-gray-500 mt-10 text-center">
@@ -3094,20 +3099,25 @@
       });
     </script>
      <!-- blogs script -->
-    <script>
+   <script>
   const API_URL = "https://api.iicsindia.org/api/posts?populate=featureImage";
 
   const CACHE_KEY = "iics_blogs_cache";
-  const CACHE_TIME = 1000 * 60 * 15; // 15 minutes
+  const CACHE_TIME = 1000 * 60 * 15;
+
+  const BLOGS_PER_LOAD = 3;
+  let visibleCount = 3;
+  let allNiftBlogs = [];
+
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
 
   const cachedData = localStorage.getItem(CACHE_KEY);
 
   if (cachedData) {
     const parsed = JSON.parse(cachedData);
 
-    // ✅ Use cache if not expired
     if (Date.now() - parsed.timestamp < CACHE_TIME) {
-      renderNiftBlogs(parsed.data);
+      prepareBlogs(parsed.data);
     } else {
       fetchAndCacheBlogs();
     }
@@ -3126,28 +3136,36 @@
             timestamp: Date.now()
           })
         );
-        renderNiftBlogs(response.data);
+        prepareBlogs(response.data);
       })
       .catch(err => console.error("API Error:", err));
   }
 
-  function renderNiftBlogs(blogs) {
-    const blogGrid = document.getElementById("blogGrid");
-    const emptyState = document.getElementById("emptyState");
-
-    // 🧹 Clear grid to prevent duplication
-    blogGrid.innerHTML = "";
-
-    const niftBlogs = blogs.filter(blog =>
+  function prepareBlogs(blogs) {
+    // Filter NIFT blogs once
+    allNiftBlogs = blogs.filter(blog =>
       blog.slug?.toLowerCase().includes("nift")
     );
 
-    if (!niftBlogs.length) {
+    renderNiftBlogs();
+  }
+
+  function renderNiftBlogs() {
+    const blogGrid = document.getElementById("blogGrid");
+    const emptyState = document.getElementById("emptyState");
+
+    blogGrid.innerHTML = "";
+
+    if (!allNiftBlogs.length) {
       emptyState.classList.remove("hidden");
+      loadMoreBtn.classList.add("hidden");
       return;
     }
 
-    niftBlogs.forEach(blog => {
+    // Show only required blogs
+    const blogsToShow = allNiftBlogs.slice(0, visibleCount);
+
+    blogsToShow.forEach(blog => {
       const image =
         blog.featureImage?.formats?.medium?.url ||
         blog.featureImage?.formats?.small?.url ||
@@ -3179,8 +3197,21 @@
 
       blogGrid.appendChild(card);
     });
+
+    // Hide Load More if all blogs are shown
+    if (visibleCount >= allNiftBlogs.length) {
+      loadMoreBtn.classList.add("hidden");
+    } else {
+      loadMoreBtn.classList.remove("hidden");
+    }
   }
+
+  loadMoreBtn.addEventListener("click", () => {
+    visibleCount += BLOGS_PER_LOAD;
+    renderNiftBlogs();
+  });
 </script>
+
 
   </body>
 </html>

@@ -367,6 +367,7 @@
 
   <section class="max-w-8xl mx-auto p-6">
     <div id="blog-container" class="grid md:grid-cols-3 gap-6"></div>
+    <div id="pagination" class="flex justify-center gap-3 mt-10"></div>
 
   </section>
 
@@ -569,69 +570,140 @@
   </footer>
   <!-- Footer Main End -->
 
- <script>
+<script>
   const API_URL = "https://api.iicsindia.org/api/posts?populate=featureImage";
 
-  fetch(API_URL)
-    .then(res => res.json())
-    .then(response => {
+  const CACHE_KEY = "iics_blog_cache";
+  const CACHE_TTL = 1000 * 60 * 15;
+  const BLOGS_PER_PAGE = 6;
 
-      // const blogs = response.data;  
-      const blogs = response.data.sort((a, b) => {
-  return new Date(b.createdAt) - new Date(a.createdAt);
-});
+  let currentPage = 1;
+  let allBlogs = [];
 
-      let container = document.getElementById("blog-container");
+  init();
 
-      blogs.forEach(item => {
-        const blog = item;
+  function init() {
+    const cached = localStorage.getItem(CACHE_KEY);
 
-        const imageUrl =
-          blog.featureImage?.formats?.medium?.url ||
-          blog.featureImage?.url ||
-          "default.jpg";
+    if (cached) {
+      const parsed = JSON.parse(cached);
+      if (Date.now() - parsed.timestamp < CACHE_TTL) {
+        allBlogs = parsed.data;
+        setup();
+        return;
+      }
+    }
+    fetchBlogs();
+  }
 
-        let contentText = "";
-        if (Array.isArray(blog.content)) {
-          blog.content.forEach(block => {
-            if (block.type === "paragraph") {
-              block.children.forEach(child => {
-                if (child.text) contentText += child.text;
-              });
-            }
-          });
-        }
+  function fetchBlogs() {
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(response => {
+        localStorage.setItem(
+          CACHE_KEY,
+          JSON.stringify({
+            data: response.data,
+            timestamp: Date.now()
+          })
+        );
+        allBlogs = response.data;
+        setup();
+      })
+      .catch(err => {
+        console.error("Error fetching blogs:", err);
+        document.getElementById("blog-container").innerHTML =
+          "<p class='text-red-600 text-center text-xl'>Failed to load blogs.</p>";
+      });
+  }
 
-        container.innerHTML += `
-          <div class="bg-white rounded-xl shadow overflow-hidden relative">
-            <img src="https://api.iicsindia.org${imageUrl}" class="w-full h-56 object-cover" />
+  function setup() {
+    allBlogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    renderPage();
+    renderPagination();
+  }
 
-            <div class="p-2">
-              <h2 class="text-2xl font-semibold text-gray-900 leading-[110%]">${blog.title}</h2>
+  function renderPage() {
+    const container = document.getElementById("blog-container");
+    container.innerHTML = "";
 
-              <p class="text-gray-600 mt-3 leading-[110%]">
-                ${blog.excerpt || contentText.substring(0,120)}...
-              </p>
+    const start = (currentPage - 1) * BLOGS_PER_PAGE;
+    const end = start + BLOGS_PER_PAGE;
+    const pageBlogs = allBlogs.slice(start, end);
 
-              <p class="text-sm text-gray-500 mt-2 mb-20">
-                Posted on: ${blog.postDate}
-              </p>
+    pageBlogs.forEach(item => {
+      const blog = item;
 
-              <a href="blogs/blog-detail.html?slug=${encodeURIComponent(blog.slug)}"
-                 class="absolute bottom-0 left-0 inline-block w-full text-center bg-red-600 text-white py-3 rounded-b-xl font-medium hover:bg-red-700 transition">
-                Read More
-              </a>
-            </div>
+      const imageUrl =
+        blog.featureImage?.formats?.medium?.url ||
+        blog.featureImage?.url ||
+        "default.jpg";
+
+      let contentText = "";
+      if (Array.isArray(blog.content)) {
+        blog.content.forEach(block => {
+          if (block.type === "paragraph") {
+            block.children?.forEach(child => {
+              if (child.text) contentText += child.text;
+            });
+          }
+        });
+      }
+
+      container.innerHTML += `
+        <div class="bg-white rounded-xl shadow overflow-hidden relative">
+          <img src="https://api.iicsindia.org${imageUrl}" class="w-full h-56 object-cover" />
+
+          <div class="p-2">
+            <h2 class="text-2xl font-semibold text-gray-900 leading-[110%]">${blog.title}</h2>
+
+            <p class="text-gray-600 mt-3 leading-[110%]">
+              ${blog.excerpt || contentText.substring(0,120)}...
+            </p>
+
+            <p class="text-sm text-gray-500 mt-2 mb-20">
+              Posted on: ${blog.postDate}
+            </p>
+
+            <a href="blogs/blog-detail.html?slug=${encodeURIComponent(blog.slug)}"
+               class="absolute bottom-0 left-0 inline-block w-full text-center bg-red-600 text-white py-3 rounded-b-xl font-medium hover:bg-red-700 transition">
+              Read More
+            </a>
           </div>
-        `;
+        </div>
+      `;
+    });
+  }
+
+  function renderPagination() {
+    const pagination = document.getElementById("pagination");
+    pagination.innerHTML = "";
+
+    const totalPages = Math.ceil(allBlogs.length / BLOGS_PER_PAGE);
+    if (totalPages <= 1) return;
+
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement("button");
+      btn.textContent = i;
+
+      btn.className =
+        "px-4 py-2 border rounded " +
+        (i === currentPage
+          ? "bg-red-600 text-white"
+          : "bg-white text-gray-700 hover:bg-gray-100");
+
+      btn.addEventListener("click", () => {
+        if (currentPage === i) return;
+
+        currentPage = i;
+        renderPage();
+        renderPagination();
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
 
-    })
-    .catch(err => {
-      console.error("Error fetching blogs:", err);
-      document.getElementById("blog-container").innerHTML =
-        "<p class='text-red-600 text-center text-xl'>Failed to load blogs.</p>";
-    });
+      pagination.appendChild(btn);
+    }
+  }
 </script>
 
 
