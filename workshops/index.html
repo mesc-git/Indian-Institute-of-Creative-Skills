@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="../css/mousecursor.css">
     <!-- Main Custom Css -->
     <!-- <link href="../css/custom.css" rel="stylesheet" media="screen"> -->
-    <link href="../css/custom.css" rel="stylesheet" media="screen">
+    <link href="../css/custom2.css" rel="stylesheet" media="screen">
     <link rel="canonical" href="https://iicsindia.org/workshops" />
     
      <style>
@@ -63,8 +63,8 @@
 
     <div class="fixed z-[1001] top-[40%] right-0  py-2 px-2">
     <div class="flex flex-col items-center gap-3">
-      <a href="https://wa.me/9594949959" target="_blank" rel="noopener noreferrer"> <img
-          src="/images/IICS/iics_image/creative-incubator/WhatsApp.svg.webp" class="w-[40px] box-shadow-img" alt=""></a>
+      <!-- <a href="https://wa.me/9594949959" target="_blank" rel="noopener noreferrer"> <img
+          src="/images/IICS/iics_image/creative-incubator/WhatsApp.svg.webp" class="w-[40px] box-shadow-img" alt=""></a> -->
       <a href="https://www.facebook.com/IICSIndiaorg?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"> <img
           src="/images/IICS/iics_image/creative-incubator/facbook.png" class="w-[40px] box-shadow-img" alt=""></a>
       <a href="https://www.instagram.com/iicsindiaorg/" target="_blank" rel="noopener noreferrer">
@@ -74,15 +74,26 @@
       <a href="https://www.youtube.com/@IICSIndiaorg" target="_blank" rel="noopener noreferrer">
         <img src="/images/IICS/iics_image/creative-incubator/youtube.png" class="w-[40px] box-shadow-img" alt="">
       </a>
+              <a
+        href="https://wa.me/9594949959"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fixed bottom-15 right-2"
+      >
+        <img
+          src="../images/IICS/iics_image/robot-img.png"
+          class="w-[50px] !mt-[60px]"
+          alt="chatbot-icon" />
+        <div
+          id="chatbot-popup"
+          class="absolute top-[90%] right-[55px] -translate-y-1/2 bg-white text-gray-800 text-md px-3 py-3 rounded-xl shadow-lg whitespace-nowrap transition-opacity duration-500 opacity-100 font-bold"
+        >
+          Hi, How may I help you?
+          <div
+            class="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-white border-y-[6px] border-y-transparent"
+          ></div></div
+      ></a>
 
-
-      <!-- Chatbot Toggle Button -->
-      <img id="chatbot-toggle" src="/images/IICS/iics_image/robot-img.png" class="w-[50px] !mt-[60px]" alt="">
-      <div id="chatbot-popup"
-      class="absolute top-[90%] right-[55px] -translate-y-1/2 bg-white text-gray-800 text-md px-3 py-3 rounded-xl shadow-lg whitespace-nowrap transition-opacity duration-500 opacity-100 font-bold">
-      Hi, How may I help you?
-      <div class="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0 border-l-[6px] border-l-white border-y-[6px] border-y-transparent"></div>
-    </div>
       <!-- <button  class="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center text-black font-bold">💬</button> -->
     </div>
   </div>
@@ -112,42 +123,60 @@
 
 
       <!-- Topbar Section Start -->
-  <div class="topbar">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 col-md-6">
-          <!-- Topbar Contact Information Start -->
-          <div class="topbar-contact-info !w-fit pr-[5px] bg-[#fff]">
-            <ul>
-              <li>
-                <img src="/images/IICS/iics_image/skill-logo-small.webp" alt="" class="h-[50px] img-bg-remove">
-              </li>
-              <li>
-                <img src="/images/IICS/iics_image/nsdc-small.webp" alt="" class="h-[50px] ">
-
-              </li>
-              <li>
-                <img src="/images/IICS/iics_image/mesc-logo-small.webp" alt="" class="h-[50px] ">
-
-              </li>
-            </ul>
+    <div class="topbar">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-6">
+            <!-- Topbar Contact Information Start -->
+            <div class="topbar-contact-info !w-fit pr-[5px] bg-[#fff]">
+              <ul>
+                <li>
+                  <img
+                    src="../images/IICS/iics_image/skill-logo-small.webp"
+                    alt="skill-india"
+                    class="h-[50px] img-bg-remove"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="../images/IICS/iics_image/nsdc-small.webp"
+                    alt="nsdc"
+                    class="h-[50px]"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="../images/IICS/iics_image/mesc-logo-small.webp"
+                    alt="mesc"
+                    class="h-[50px]"
+                  />
+                </li>
+              </ul>
+            </div>
+            <!-- Topbar Contact Information End -->
           </div>
-          <!-- Topbar Contact Information End -->
-        </div>
 
-        <div class="col-lg-6 col-md-6">
-          <!-- Topbar Social Links Start -->
-          <div class="topbar-social-links">
-            <ul class="flex gap-2 items-center justify-end">
+          <div class="col-lg-6 col-md-6">
+            <!-- Topbar Social Links Start -->
+            <div class="topbar-social-links">
+              <ul class="flex gap-2 items-center justify-end">
                 <!-- <li>
                 <a href="" target="_blank" style="color: #e1306c"></a>
               </li> -->
-              
-              <div class="topbar-contact-details">
-                <li class="text-[#000]"><a href="mailto:info@iicsindia.org" style="text-transform: lowercase !important;">info@iicsindia.org</a></li>
-                <li class="text-[#000]"><a href="tel:9594949959">+91 959-4949-959</a></li>
-              </div>
-              <li class="topbar-social-icons">
+
+                <div class="topbar-contact-details">
+                  <li class="text-[#000]">
+                    <a
+                      href="mailto:info@iicsindia.org"
+                      style="text-transform: lowercase !important"
+                      >info@iicsindia.org</a
+                    >
+                  </li>
+                  <li class="text-[#000]">
+                    <a href="tel:9594949959">+91 959-4949-959</a>
+                  </li>
+                </div>
+                <!-- <li class="topbar-social-icons">
                 <a href="https://wa.me/9594949959" target="_blank" style="color: #25D366"><i
                     class="fa-brands fa-whatsapp"></i></a>
               </li>
@@ -162,243 +191,359 @@
               <li class="topbar-social-icons">
                 <a href="https://www.youtube.com/@IICSIndiaorg" target="_blank" style="color: #ff0000"><i
                     class="fa-brands fa-youtube"></i></a>
-              </li>
-            </ul>
+              </li> -->
+                
+              </ul>
+            </div>
+            <!-- Topbar Social Links End -->
           </div>
-          <!-- Topbar Social Links End -->
         </div>
       </div>
     </div>
-  </div>
-  <!-- Topbar Section End -->
+    <!-- Topbar Section End -->
 
-      <!-- Header Start -->
+     <!-- Header Start -->
     <header class="main-header !bg-[#fff] !sticky top-0">
-        <div class="header-sticky">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <!-- Logo Start -->
-                    <a class="navbar-brand w-[20%]" href="/">
-                        <img src="../images/IICS/iics_image/iics_logo_main.webp" alt="Logo" />
-                    </a>
-                    <!-- Logo End -->
+      <div class="header-sticky">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <!-- Logo Start -->
+            <a class="navbar-brand w-[20%]" href="/">
+              <img
+                src="../images/IICS/iics_image/iics_logo_main.webp"
+                alt="Logo"
+              />
+            </a>
+            <!-- Logo End -->
 
-                    <!-- Main Menu Start -->
-                    <div class="collapse navbar-collapse main-menu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <!-- <li class="nav-item submenu">
-                  <a class="nav-link" href="./">Home</a>
-                  <ul>
-                    <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home - Main</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="index-image.html"
-                        >Home - Image</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="index-video.html"
-                        >Home - Video</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="index-slider.html"
-                        >Home - Slider</a
-                      >
-                    </li>
-                  </ul>
+            <!-- Main Menu Start -->
+            <div class="collapse navbar-collapse main-menu">
+              <div class="nav-menu-wrapper">
+                <ul class="navbar-nav mr-auto" id="menu">
+                  <!-- <li class="nav-item submenu">
+                    <a class="nav-link" href="./">Home</a>
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home - Main</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index-image.html"
+                          >Home - Image</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index-video.html"
+                          >Home - Video</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index-slider.html"
+                          >Home - Slider</a
+                        >
+                      </li>
+                    </ul>
+                  </li> -->
+                  <li class="nav-item submenu">
+                    <a
+                      class="nav-link disabled"
+                      tabindex="-1"
+                      aria-disabled="true"
+                      >About Us</a
+                    >
+                    <ul class="!w-[300px]">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/about.html"
+                          >Indian Institute Of Creative Skills</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/industry-mentor.html"
+                          >Industry Mentors</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/leadership-team.html"
+                          >Leadership Team</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/stakeholder-&-partners.html"
+                          >Stakeholders</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item submenu">
+                    <a
+                      class="nav-link disabled"
+                      tabindex="-1"
+                      aria-disabled="true"
+                      >Programs</a
+                    >
+                    <ul>
+                      <li class="nav-item">
+                        <a
+                          href="#certificate-courses"
+                          class="nav-link !flex w-full items-center justify-between"
+                        >
+                          <span class="flex items-center gap-[5px]">
+                            Diploma & Degree Courses</span
+                          >
+                          <i
+                            class="fas fa-chevron-right text-[10px] ml-2 mt-[2px] dropIcon"
+                          ></i>
+                        </a>
+                        <ul class="!w-[400px] !left-[103%] mobileUL">
+                          <li class="nav-item">
+                            <a
+                              href="/sound-design-&-music-video-production.html"
+                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
+                            >
+                              Sound Design & Music Production
+                            </a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a
+                              href="/animation-&-gaming.html"
+                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
+                            >
+                              Animation and Game Production
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="/event-&-experimental-management.html"
+                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
+                            >
+                              Events & Experiential Management
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="/costume-design.html"
+                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
+                            >
+                              Costume Design
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="/digital-content-creation-and-media-managment.html"
+                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
+                            >
+                              Digital Content Creation & Media Management
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          href="#certificate-courses"
+                          class="nav-link !flex w-full items-center justify-between"
+                          onclick="showTab('certificate')"
+                        >
+                          <span class="flex items-center gap-[5px]">
+                            Certification Courses</span
+                          >
+                          <i
+                            class="fas fa-chevron-right text-[10px] ml-2 mt-[2px] dropIcon"
+                          ></i>
+                        </a>
+                        <ul class="!w-[400px] !left-[103%] mobileUL">
+                          <li class="nav-item">
+                            <a
+                              href="/hair-make-up-&-prosthetics.html"
+                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
+                            >
+                              Makeup & Prosthetics
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a
+                              href="/3d-animation"
+                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
+                            >
+                              3D Animation for Media & Entertainment
+                            </a>
+                          </li>
+                          <!--<li class="nav-item">-->
+                          <!--  <a href="costume-design.html" class="nav-link !text-[14px] !flex items-start gap-[5px]">-->
+
+                          <!--    Costume Designing-->
+
+                          <!--  </a>-->
+                          <!--</li>-->
+                          <!--<li class="nav-item">-->
+                          <!--  <a href="pr-&-journalism.html" class="nav-link !text-[14px] !flex items-start gap-[5px]">-->
+
+                          <!--    Digital PR & Journalism-->
+
+                          <!--  </a>-->
+                          <!--</li>-->
+                          <!--<li class="nav-item">-->
+                          <!--  <a href="VisualandCommunicationDesign.html"-->
+                          <!--    class="nav-link !text-[14px] !flex items-start gap-[5px]">-->
+
+                          <!--    Visual and Communication Design-->
+
+                          <!--  </a>-->
+                          <!--</li>-->
+                          <!-- <li class="nav-item">
+                          <a href=""
+                            class="nav-link !text-[14px] !flex items-start gap-[5px]">
+
+                            Dance
+
+                          </a>
+                        </li> -->
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <!--<li class="nav-item ">-->
+                  <!--  <a class="nav-link" href="admission-process.html">Admission Process</a>-->
+
+                  <!--</li>-->
+                  <li class="nav-item submenu">
+                    <a
+                      class="nav-link disabled"
+                      tabindex="-1"
+                      aria-disabled="true"
+                      >Admission</a
+                    >
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/admission-process.html"
+                          >Admission Process</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/sample-paper.html"
+                          >Sample Paper</a
+                        >
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/result.html">Result</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- <li class="nav-item">
+                  <a class="nav-link" href="faqs.html">FAQs</a>
                 </li> -->
-                                <li class="nav-item submenu">
-                                    <a class="nav-link" href="#">About Us</a>
-                                    <ul class="!w-[300px]">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="/about.html">Indian Institute Of Creative
-                                                Skills</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="/industry-mentor.html">Industry Mentors</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="/leadership-team.html">Leadership Team</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="/stakeholder-&-partners.html">Stakeholders</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item submenu">
-                                    <a class="nav-link" href="">Programs</a>
-                                    <ul>
-                                        <li class="nav-item">
-                                            <a href="" class="nav-link !flex w-full items-center justify-between ">
-                                                <span class="flex items-center gap-[5px]">
+                  <!--<li class="nav-item submenu hidden">-->
+                  <!--  <a class="nav-link" href="#">Pages</a>-->
+                  <!--  <ul>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="service-single.html">Service Details</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="blog-single.html">Blog Details</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="projects.html">Projects</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="project-single.html">Project Details</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="team.html">Team</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="team-single.html">Team Details</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="pricing.html">Pricing Plan</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="testimonials.html">Testimonials</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="image-gallery.html">Image Gallery</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="video-gallery.html">Video Gallery</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="faqs.html">FAQs</a>-->
+                  <!--    </li>-->
+                  <!--    <li class="nav-item">-->
+                  <!--      <a class="nav-link" href="404.html">404</a>-->
+                  <!--    </li>-->
+                  <!--  </ul>-->
+                  <!--</li>-->
+                  <li class="nav-item submenu">
+                    <a
+                      class="nav-link disabled"
+                      tabindex="-1"
+                      aria-disabled="true"
+                      >Life @ IICS</a
+                    >
+                    <ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/student-life.html"
+                          >Student Life</a
+                        >
+                      </li>
+                      <!-- <li class="nav-item">
+                      <a class="nav-link" href="image-gallery.html">Gallery</a>
+                    </li> -->
 
-                                                    Diploma & Degree Courses</span>
-                                                <i class="fas fa-chevron-right text-[10px] ml-2 mt-[2px] dropIcon"></i>
-                                            </a>
-                                            <ul class=" !w-[400px] !left-[103%] mobileUL">
-                                                <li class="nav-item">
-                                                    <a href="/sound-design-&-music-video-production.html"
-                                                        class="nav-link !text-[14px] !flex items-start gap-[5px]">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/made-for-media.html"
+                          >Made For Media</a
+                        >
+                      </li>
+                      <!-- <li class="nav-item">
+                      <a class="nav-link" href="/workshops">Workshops</a>
+                    </li> -->
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/blogs">Blogs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
 
-                                                        Sound Design & Music Production
-
-                                                    </a>
-                                                </li>
-
-                                                <li class="nav-item">
-                                                    <a href="/animation-&-gaming.html"
-                                                        class="nav-link !text-[14px] !flex items-center gap-[5px]">
-
-
-                                                       Animation & Game Production
-
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="/event-&-experimental-management.html"
-                                                        class="nav-link !text-[14px] !flex items-start gap-[5px]">
-
-                                                        Events & Experiential Management
-
-
-                                                    </a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a href="/costume-design.html"
-                                                        class="nav-link !text-[14px] !flex items-start gap-[5px]">
-
-
-                                                        Costume Designing
-
-                                                    </a>
-                                                </li>
-                                                <!--<li class="nav-item">-->
-                                                <!--    <a href="/digital-content-creation-and-media-managment.html"-->
-                                                <!--        class="nav-link !text-[14px] !flex items-start gap-[5px]">Digital Content Creation & Performing Arts-->
-
-
-                                                <!--    </a>-->
-                                                <!--</li>-->
-
-
-
-
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="" class="nav-link !flex w-full items-center justify-between ">
-                                                <span class="flex items-center gap-[5px]">
-
-                                                    Certification Courses</span>
-                                                <i class="fas fa-chevron-right text-[10px] ml-2 mt-[2px] dropIcon"></i>
-                                            </a>
-                                            <ul class=" !w-[400px] !left-[103%] mobileUL">
-                                                <li class="nav-item">
-                                                    <a href="/hair-make-up-&-prosthetics.html"
-                                                        class="nav-link !text-[14px] !flex items-center gap-[5px]">
-
-
-                                                        Makeup & Prosthetics
-                                                    </a>
-                                                </li>
-                                                <!-- <li class="nav-item">
-                                                    <a href=""
-                                                        class="nav-link !text-[14px] !flex items-center gap-[5px]">
-                                                        Dance
-                                                    </a>
-                                                </li> -->
-                                                <!--<li class="nav-item">-->
-                                                <!--    <a href="/costume-design.html"-->
-                                                <!--        class="nav-link !text-[14px] !flex items-start gap-[5px]">-->
-
-
-                                                <!--        Costume Designing-->
-
-                                                <!--    </a>-->
-                                                <!--</li>-->
-                                                <!--<li class="nav-item">-->
-                                                <!--    <a href="/pr-&-journalism.html"-->
-                                                <!--        class="nav-link !text-[14px] !flex items-start gap-[5px]">-->
-
-                                                <!--        Digital PR & Journalism-->
-
-                                                <!--    </a>-->
-                                                <!--</li>-->
-                                                <!--<li class="nav-item">-->
-                                                <!--    <a href="/VisualandCommunicationDesign.html"-->
-                                                <!--        class="nav-link !text-[14px] !flex items-start gap-[5px]">-->
-
-                                                <!--        Visual and Communication Design-->
-
-                                                <!--    </a>-->
-                                                <!--</li>-->
-
-
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item submenu ">
-                  <a class="nav-link" href="#">Admission</a>
-                  <ul>
-                    <li class="nav-item ">
-                      <a class="nav-link" href="/admission-process.html">Admission Process</a>
-
-                    </li>
-                    <li class="nav-item ">
-                      <a class="nav-link" href="/result.html">Result</a>
-
-                    </li>
-                  </ul>
-                </li>
-                                <!--<li class="nav-item ">-->
-                                <!--    <a class="nav-link" href="admission-process.html">Admission Process</a>-->
-
-                                <!--</li>-->
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="/faqs.html">FAQs</a>
-                                </li> -->
-                                <li class="nav-item submenu">
-                                    <a class="nav-link" href="#">Life @ IICS</a>
-                                    <ul>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="/student-life.html">Student Life</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="/image-gallery.html">Gallery</a>
-                                        </li>
-
-
-
-
-
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/contact.html">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Header Btn Start -->
-                        <div class="header-btn">
-              <a href="admission.html" class="bg-[#DE4141] p-[15px] rounded-[2px] text-white" style="margin-left: 5px; ">Apply Now</a>
+              <!-- Header Btn Start -->
+              <!--<div class="header-btn">-->
+              <!--  <a href="images/brochure/IICS_Prospectus.zip" download target="_blank" class="btn-default btn-highlighted link-size">Download Brochure</a>-->
+              <!--</div>-->
+              <div class="header-btn">
+                <a
+                  href="/admission.html"
+                  class="bg-[#de4141] p-3 text-white"
+                  style="margin-left: 5px"
+                  >Apply Now</a
+                >
+              </div>
+              <!-- <div class="header-btn">
+                <a
+                  href="https://admissions.iicsindia.org/"
+                  class="bg-[#de4141] p-3 text-white"
+                  style="margin-left: 5px"
+                  >Log In</a
+                >
+              </div> -->
+              <!-- Header Btn End -->
             </div>
-                        <!-- Header Btn End -->
-                        <div class="header-btn">
-              <a href="https://admissions.iicsindia.org/" class="bg-[#DE4141] p-[15px] rounded-[2px] text-white"
-                style="margin-left: 5px;">Log In</a>
+            <!-- Main Menu End -->
+            <div></div>
+            <div class="flex items-center gap-2">
+              <a
+                href="/admission.html"
+                class="bg-[#de4141] p-2 text-white block md:hidden"
+                >Apply Now</a
+              >
+              <div class="navbar-toggle"></div>
             </div>
-                    </div>
-                    <!-- Main Menu End -->
-                    <div class="navbar-toggle"></div>
-                </div>
-            </nav>
-            <div class="responsive-menu"></div>
-        </div>
+          </div>
+        </nav>
+        <div class="responsive-menu"></div>
+      </div>
     </header>
     <!-- Header End -->
      <!-- Page Header Start -->
@@ -408,7 +553,7 @@
                 <div class="col-lg-12">
                     <!-- Page Header Box Start -->
                     <div class="page-header-box">
-                        <h1 class="text-anime-style-2" data-cursor="-opaque">Our Workshops</h1>
+                        <h1 class="text-anime-style-2" data-cursor="-opaque">Our Upcoming Workshops</h1>
                     </div>
                     <!-- Page Header Box End -->
                 </div>
@@ -417,9 +562,7 @@
     </div>
     <!-- Page Header End -->
     <section class="bg-gray-100" id="upcomingWorkshops">
-        <p class="text-3xl lg:text-5xl font-bold pl-5 text-anime-style-2 text-black">
-    <span>Upcoming</span> <span class="">Workshops</span>
-  </p>
+       
   <div id="event-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 mt-[-30px]"></div>
     </section>
 
@@ -598,10 +741,7 @@
                 <ul>
                   <li class="text-[#fff]"><a href="mailto:info@iicsindia.org" style="text-transform: lowercase !important; color: #fff !important">info@iicsindia.org</a></li>
                   <li class="text-[#fff]"><a href="tel:9594949959" style="color: #fff !important;">+91 959-4949-959</a></li>
-                  <li>
-                <a href="https://wa.me/9594949959" target="_blank" style="color: #fff"><i
-                    class="fa-brands fa-whatsapp"></i></a>
-              </li>
+                  
                   <li>
                     <a href="https://www.instagram.com/iicsindiaorg/" target="_blank" style="color: #fff"><i
                         class="fa-brands fa-instagram"></i></a>
@@ -613,7 +753,7 @@
                   <li>
                     <a href="https://www.youtube.com/@IICSIndiaorg" target="_blank" style="color: #fff"><i
                         class="fa-brands fa-youtube"></i></a>
-                  </li>
+                      </li>
                 </ul>
               </div>
             </div>
@@ -783,6 +923,14 @@
 
     <script>
   const events = [
+        {
+      image: "images/Confi-dance-workshop.jpeg",
+      // dateLabel: "13th Feb 2026",
+      // title: "Confi Dance",
+      // desc: "A Dance Workshop focused on Confidence, Movement & Expression",
+      // date: "Feb 13th, 2026",
+      registerLink: "https://docs.google.com/forms/d/e/1FAIpQLSc8XMlEvVG4S2JCft__5B_NrB7bOhB7vBuphlic80-iEPIPdA/viewform",
+    },
     //     {
     //   image: "https://iicsindia.org/images/film_making_workshop.webp",
     //   dateLabel: "11th Oct",
@@ -869,35 +1017,35 @@
   const container = document.getElementById("event-container");
 
   container.innerHTML = events.map(event => `
-    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-      <div class="relative w-full">
-        <img src="${event.image}" loading="lazy" alt="Event" class="object-cover w-full h-full">
-        <div class="hidden lg:block  absolute top-2 right-2 bg-[#ffd700] text-black text-center p-1 rounded-xl">
-          <p class="text-md font-semibold leading-none">${event.dateLabel}<br>2025</p>
-        </div>
-      </div>
-      <div class="p-2 flex flex-col justify-between w-full">
-        <div>
-          <p class="text-[18px] lg:text-[25px] font-semibold text-gray-800 line-clamp-2">${event.title}</p>
-          <div class="text-sm text-gray-500 flex flex-wrap items-center gap-2">
-            <span>📅 ${event.date}</span>
-            <span class="flex items-center gap-1">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              ${event.time}
-            </span>
-            Fees: <span class="text-green-500 text-lg">${event.fees}</span>
-          </div>
-        </div>
-        <div class="flex justify-between items-center mt-4">
-        <div>
-                            <a href=${event.registerLink} target='_blank' class="btn-default btn-highlighted">Register Now</a>
-                        </div>
-      </div>
-      </div>
+  <div class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col border border-gray-100 w-[300px] md:w-[400px]">
+    
+    <!-- Image -->
+    <div class="relative w-full  overflow-hidden">
+      <img 
+        src="${event.image}" 
+        loading="lazy" 
+        alt="Event"
+        class="w-full h-full object-fit group-hover:scale-105 transition-transform duration-500"
+      >
     </div>
-  `).join('');
+
+    <!-- Content -->
+
+      <!-- CTA -->
+      <div class="mt-auto">
+        <a 
+          href="${event.registerLink}" 
+          target="_blank"
+          class="inline-flex items-center justify-center w-full bg-[#de4141] px-4 py-[10px] text-lg font-medium text-white hover:bg-indigo-700 transition-colors duration-200"
+        >
+          Register Now
+        </a>
+      </div>
+
+    </div>
+  </div>
+`).join('');
+
 </script>
 
 <script>
