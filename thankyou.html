@@ -16,8 +16,12 @@
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"> -->
+        <link
+      href="https://fonts.googleapis.com/css2?family=Alice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap Css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <!-- SlickNav Css -->
@@ -33,10 +37,10 @@
     <!-- Mouse Cursor Css File -->
     <!-- <link rel="stylesheet" href="css/mousecursor.css"> -->
     <!-- Main Custom Css -->
-    <link href="css/custom.css" rel="stylesheet" media="screen">
+    <link href="css/custom.css2" rel="stylesheet" media="screen">
     <style>
         .thank-you-img {
-            height: 90px;
+            height: 70px;
         }
 
         .thank-you>h2 {
@@ -96,7 +100,7 @@
 
     <style>
         .thank-you-img {
-            height: 90px;
+            height: 70px;
         }
 
         .thank-you>h2 {
@@ -227,105 +231,160 @@
 
 
 
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-2">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 thank-you">
+                <div class="col-lg-12 thank-you flex flex-col items-center">
                     <div class="justify-content-center d-flex thank-you-img">
                         <img src="images/right.png" alt="">
                     </div>
                     <h2 class="text-center mt-3">
-                        Thank You for Your Enquiry
+                        Thank You for Reaching Out!
                     </h2>
-                    <h5 class="text-center mt-3">Our team will get in touch with you shortly.</h5>
-
-
-
+                    <h5 class="text-center mt-3 max-w-4xl">We've received your inquiry and our admissions counselors will contact you shortly.
+                        <br>
+In the meantime, explore what's happening at Indian Institute of Creative Skills..</h5>
                 </div>
-                <div class="col-lg-6" style="display: flex; justify-content: center;">
-                    <video loop="true" autoplay="autoplay" controls muted class="generic-v">
-                        <source src="images/all-mentor.mp4" class="object-fit-cover" type="video/mp4">
-                    </video>
-                </div>
-                <!-- <div class="col-lg-6"></div> -->
 
-                <div class="col-lg-6 thank-you">
-                    <p class="text-center mt-3">Ready to begin your Creative Journey</p>
-                    <h3 class="text-center">Start Your Application</h3>
-                    <div class="container">
-                        <div class="row">
-                            <!-- <div class="col-md-3 col-6 campusItem">
-                                Company Success Item Start
+         <div class=" h-auto flex items-center justify-center p-6">
 
-                                Company Success Item End
-                            </div> -->
-                            <div class="col-md-6 col-6 campusItem">
-                                <!-- Company Success Item Start -->
-                                <div class="company-success-item">
-                                    <!-- <div class="company-success-header">
-                    <div class="icon-box">
-                      <img src="images/IICS/iics_image/delhi.png" class="filter brightness-0 invert" alt="" />
-                    </div>
-                    <div class="company-success-title">
-                      <h3> +91 959-4949-959</h3><br>
-                      <span>info@iicsindia.org</span>
-                    </div>
-                  </div> -->
-                                    <div class="company-success-content text-center">
-                                        <h3><span>Delhi</span></h3>
-                                        <p class="mb-4">
-                                            Indian Institute of Creative Skills <br> 3rd Floor, Plot No. 13A, Ring Rd,
-                                            Lajpat Nagar 4, New Delhi, Delhi 110024
-                                        </p>
+  <div class="bg-white max-w-4xl w-full rounded-2xl shadow-xl p-6">
+
+    <!-- Tabs -->
+<div class="flex flex-wrap gap-3 mb-6 justify-center">
+  <button onclick="openTab(event,'tab1')"
+    class="tab-btn bg-[#de1414] text-white px-5 py-2 rounded-full font-medium">
+    Follow Us
+  </button>
+  <button onclick="openTab(event,'tab2')"
+    class="tab-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full font-medium">
+    Download Brochure
+  </button>
+  <button onclick="openTab(event,'tab3')"
+    class="tab-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full font-medium">
+    Upcoming Events
+  </button>
+</div>
 
 
-                                        <a href="https://admissions.iicsindia.org/">Apply now</a>
-                                    </div>
-                                </div>
-                                <!-- Company Success Item End -->
-                            </div>
+    <!-- TAB 1 -->
+    <div id="tab1" class="tab-content">
+      <h2 class="text-3xl font-bold text-gray-800 mb-3">Connect With IICS</h2>
+      <p class="text-gray-600 mb-4">
+        Follow us on social media for campus updates, student success stories, workshop announcements,
+        and a glimpse into life at <span class="font-semibold">India's First Creative Incubator</span>.
+      </p>
 
-                            <div class="col-md-6 col-6 campusItem">
-                                <!-- Company Success Item Start -->
-                                <div class="company-success-item">
-                                    <!-- <div class="company-success-header">
-                    <div class="icon-box">
-                      <img src="images/IICS/iics_image/bhopal.png" class="filter brightness-0 invert" alt="" />
-                    </div>
-                    <div class="company-success-title">
-                      <h3>+91 74285 99748</h3><br>
-                      <span>admissionsbhopal@iicsindia.org</span>
-                    </div>
-                  </div> -->
-                                    <div class="company-success-content  text-center">
-                                        <h3><span>Bhopal</span></h2>
-                                            <p class="mb-4">
-                                                Jagran Lakecity University <br>Near Kaliasoth Barrage, Chandanpura,
-                                                Bhopal- 462007
-                                            </p>
-                                            <a href="https://apply.jlu.edu.in/ ">Apply now</a>
-                                    </div>
-                                </div>
-                                <!-- Company Success Item End -->
-                            </div>
+      <!-- Social Icons -->
+      <div class="flex gap-4 mb-4">
+       <a
+          href="https://www.facebook.com/IICSIndiaorg?mibextid=ZbWKwL"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="images/IICS/iics_image/creative-incubator/facbook.png"
+            class="w-[40px] box-shadow-img"
+            alt="facebook"
+            loading="lazy"
+        /></a>
+        <a
+          href="https://www.instagram.com/iicsindiaorg/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="images/IICS/iics_image/creative-incubator/instagram.png"
+            class="w-[40px] box-shadow-img"
+            alt="instagram"
+            loading="lazy"
+          />
+        </a>
+        <a
+          href="https://www.youtube.com/@IICSIndiaorg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="images/IICS/iics_image/creative-incubator/youtube.png"
+            class="w-[40px] box-shadow-img"
+            alt="youtube"
+            loading="lazy"
+          />
+        </a>
+        <a
+          href="https://wa.me/9594949959"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="images/IICS/iics_image/creative-incubator/WhatsApp.svg.webp"
+            class="w-[40px] box-shadow-img"
+            alt="whatsapp-icon"
+            loading="lazy" />
+          </a>
+      </div>
 
-                            <!-- <div class="col-md-3 col-6 campusItem">
-                                Co/pany Success Item Start
+      <p class="text-gray-500 italic">
+        Join our creative community and stay updated.
+      </p>
+    </div>
 
-                                Company Success Item End
-                            </div> -->
+    <!-- TAB 2 -->
+    <div id="tab2" class="tab-content hidden">
+      <h2 class="text-3xl font-bold text-gray-800 mb-3">Explore Our Courses</h2>
+      <p class="text-gray-600 mb-6">
+        Download our comprehensive brochure to learn about our programs.
+      </p>
 
+      <a href="images/IICS_Prospectus_26.pdf"
+        class="inline-block bg-[#de1414] text-white px-6 py-3 font-semibold hover:scale-105 transition text-decoration-none">
+        Download Brochure
+      </a>
 
-                        </div>
-                    </div>
+      <p class="text-gray-500 mt-4">
+        Everything you need to know about building your creative career at IICS.
+      </p>
+    </div>
 
-                    <h6 class="text-center mt-3">For any Quries, call us at <span> <a href="tel:+ 91-959-4949-959"> +
-                                91-959-4949-959</a></span>
-                    </h6>
-                </div>
+    <!-- TAB 3 -->
+    <div id="tab3" class="tab-content hidden">
+      <h2 class="text-3xl font-bold text-gray-800 mb-3">Join Our Upcoming Events</h2>
+      <p class="text-gray-600 mb-6">
+        Be part of our workshops, masterclasses, and creative sessions led by industry experts.
+        Experience IICS before you enroll!
+      </p>
+
+     <a href="workshops/"
+        class="inline-block bg-[#de1414] text-white px-6 py-3 font-semibold hover:scale-105 transition text-decoration-none">
+        Learn More
+      </a>
+    </div>
+  </div>
+</div>
             </div>
         </div>
     </div>
+
+    <!-- JS for Tabs -->
+  <script>
+  function openTab(evt, tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.add('hidden');
+    });
+
+    document.getElementById(tabId).classList.remove('hidden');
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('bg-[#de1414]', 'text-white');
+      btn.classList.add('bg-gray-200', 'text-gray-700');
+    });
+
+    evt.currentTarget.classList.remove('bg-gray-200', 'text-gray-700');
+    evt.currentTarget.classList.add('bg-[#de1414]', 'text-white');
+  }
+</script>
+
 
 
     <!-- Jquery Library File -->
