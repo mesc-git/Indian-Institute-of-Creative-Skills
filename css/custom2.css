@@ -64,8 +64,17 @@
 /*** 	   02. General css		  ***/
 /************************************/
 
+@font-face {
+  font-family: "MyFont";
+  src: url("../fonts/MyFont/MyFont-Regular.woff2") format("woff2"),
+       url("../fonts/MyFont/MyFont-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body{
-	font-family: var(--default-font);
+	font-family: "MyFont", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1em;
