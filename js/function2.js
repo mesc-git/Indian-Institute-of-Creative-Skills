@@ -316,6 +316,221 @@
 			}
 		}
 	});
+	$('.personality').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.rishabKhanna').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.radhikaVerma').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.sarikaMehta').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
+	$('.radhikaVerma').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeBtnInside: true,
+		closeOnContentClick: false,
+		mainClass: 'mfp-with-zoom',
+
+		image: {
+			markup: `
+      <div class="mfp-figure mfp-two-col">
+        <div class="mfp-img-wrap">
+          <img class="mfp-img" />
+        </div>
+        <div class="mfp-text-wrap">
+          <h3 class="mfp-title"></h3>
+          <p class="mfp-desc"></p>
+        </div>
+      </div>
+    `,
+			titleSrc: function (item) {
+				return item.el.attr('data-title');
+			}
+		},
+
+		callbacks: {
+			markupParse: function (template, values, item) {
+				values.title = item.el.attr('data-title');
+				template.find('.mfp-desc').html(item.el.attr('data-desc'));
+			}
+		},
+
+		gallery: {
+			enabled: true
+		},
+
+		zoom: {
+			enabled: true,
+			duration: 300,
+			opener: function (element) {
+				return element.find('img');
+			}
+		}
+	});
 	$('.digitek').magnificPopup({
 		delegate: 'a',
 		type: 'image',
