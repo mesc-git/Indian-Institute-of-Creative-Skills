@@ -107,14 +107,14 @@ Disallow: /15.jpg
 Disallow: /16.jpg
 Disallow: /22.jpg
 Disallow: /12.JPG
-Disallow  /27.JPG
+Disallow:  /27.JPG
 Disallow: /7-steps-to-perfecting-your-sound-design-skills/
 Disallow: /your-guide-to-choosing-the-best-event-management-courses/
 Disallow: /tag/
 Disallow: /category/
 Disallow: /your-guide-to-choosing-the-best-event-management-courses/
 Disallow: /event-management-diploma/
-Disallow  /author/
+Disallow:  /author/
 Disallow: /workshops/student-life.html
 Disallow: /workshops/contact.html
 Disallow: /workshops/privacy-policy.html
