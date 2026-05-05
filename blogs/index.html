@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,30 +8,35 @@
   <!-- Favicon Icon -->
   <link rel="shortcut icon" type="image/x-icon" href="../images/IICS/iics_image/logoonWeb.png" />
   <script src="https://cdn.tailwindcss.com"></script>
-      <!-- Main Custom Css -->
-    <!-- <link href="../css/custom.css" rel="stylesheet" media="screen" /> -->
-    <link href="../css/custom2.css" rel="stylesheet" media="screen" />
-    <link rel="preload" href="../css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-     <!-- <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+  <!-- Main Custom Css -->
+  <!-- <link href="../css/custom.css" rel="stylesheet" media="screen" /> -->
+  <link href="../css/custom2.css" rel="stylesheet" media="screen" />
+  <link rel="preload" href="../css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" /> -->
-    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alice&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <!-- Bootstrap Css -->
   <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen" />
   <link rel="canonical" href="https://www.iicsindia.org/blogs" />
-<noscript><link rel="stylesheet" href="../css/all.min.css"></noscript>
+  <noscript>
+    <link rel="stylesheet" href="../css/all.min.css">
+  </noscript>
 </head>
+
 <body>
   <script type="text/javascript">
-                    var npf_d='https://admissions.iicsindia.org';
-                    var npf_c='6707';
-                    var npf_m='1';
-                    var s=document.createElement("script");
-                    s.type="text/javascript";
-                    s.async=true;
-                    s.src="https://track.nopaperforms.com/js/track.js";
-                    document.body.appendChild(s);
-                </script>
-<!-- Topbar Section Start -->
+    var npf_d = 'https://admissions.iicsindia.org';
+    var npf_c = '6707';
+    var npf_m = '1';
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://track.nopaperforms.com/js/track.js";
+    document.body.appendChild(s);
+  </script>
+  <!-- Topbar Section Start -->
   <div class="topbar bg-white">
     <div class="container">
       <div class="row align-items-center">
@@ -39,7 +45,8 @@
           <div class="topbar-contact-info !w-fit pr-[5px] bg-[#fff]">
             <ul>
               <li>
-                <img src="../images/IICS/iics_image/skill-logo-small.webp" alt="skill-india" class="h-[50px] img-bg-remove">
+                <img src="../images/IICS/iics_image/skill-logo-small.webp" alt="skill-india"
+                  class="h-[50px] img-bg-remove">
               </li>
               <li>
                 <img src="../images/IICS/iics_image/nsdc-small.webp" alt="nsdc" class="h-[50px] ">
@@ -58,12 +65,13 @@
           <!-- Topbar Social Links Start -->
           <div class="topbar-social-links">
             <ul class="flex gap-2 items-center justify-end">
-                <!-- <li>
+              <!-- <li>
                 <a href="" target="_blank" style="color: #e1306c"></a>
               </li> -->
-              
+
               <div class="topbar-contact-details">
-                <li class="text-[#000]"><a href="mailto:info@iicsindia.org" style="text-transform: lowercase !important;">info@iicsindia.org</a></li>
+                <li class="text-[#000]"><a href="mailto:info@iicsindia.org"
+                    style="text-transform: lowercase !important;">info@iicsindia.org</a></li>
                 <li class="text-[#000]"><a href="tel:9594949959">+91 959-4949-959</a></li>
               </div>
               <li class="topbar-social-icons">
@@ -90,439 +98,18 @@
     </div>
   </div>
   <!-- Topbar Section End -->
+  <header class="main-header !bg-[#fff] !sticky top-0">
+    <div id="header-placeholder"></div>
+    <script>
+      fetch("../header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
+  </header>
+  <!-- Header End -->
 
- <!-- Header Start -->
-    <header class="main-header !bg-[#fff] !sticky top-0">
-      <div class="header-sticky">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <!-- Logo Start -->
-            <a class="navbar-brand w-[20%]" href="/">
-              <img
-                src="../images/IICS/iics_image/iics_logo_main.webp"
-                alt="Logo"
-              />
-            </a>
-            <!-- Logo End -->
-
-            <!-- Main Menu Start -->
-            <div class="collapse navbar-collapse main-menu">
-              <div class="nav-menu-wrapper">
-                <ul class="navbar-nav mr-auto" id="menu">
-                  <!-- <li class="nav-item submenu">
-                    <a class="nav-link" href="./">Home</a>
-                    <ul>
-                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home - Main</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="index-image.html"
-                          >Home - Image</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="index-video.html"
-                          >Home - Video</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="index-slider.html"
-                          >Home - Slider</a
-                        >
-                      </li>
-                    </ul>
-                  </li> -->
-                  <li class="nav-item submenu">
-                    <a
-                      class="nav-link disabled"
-                      tabindex="-1"
-                      aria-disabled="true"
-                      >About Us</a
-                    >
-                    <ul class="!w-[300px]">
-                      <li class="nav-item">
-                        <a class="nav-link" href="/about.html"
-                          >Indian Institute Of Creative Skills</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/industry-mentor.html"
-                          >Industry Mentors</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/leadership-team.html"
-                          >Leadership Team</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/stakeholder-&-partners.html"
-                          >Stakeholders</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item submenu">
-                    <a
-                      class="nav-link disabled"
-                      tabindex="-1"
-                      aria-disabled="true"
-                      >Programs</a
-                    >
-                    <ul>
-                      <li class="nav-item">
-                        <a
-                          href="#certificate-courses"
-                          class="nav-link !flex w-full items-center justify-between"
-                        >
-                          <span class="flex items-center gap-[5px]">
-                            Degree Courses</span
-                          >
-                          <i
-                            class="fas fa-chevron-right text-[10px] ml-2 mt-[2px] dropIcon"
-                          ></i>
-                        </a>
-                        <ul class="!w-[400px] !left-[103%] mobileUL">
-                          <!-- <li class="nav-item">
-                            <a
-                              href="sound-design-&-music-video-production.html"
-                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
-                            >
-                              Sound Design & Music Production
-                            </a>
-                          </li> -->
-                          <li class="nav-item">
-                            <a
-                              href="/immersive-media-and-digital-design/"
-                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
-                            >
-                             B.Sc in Immersive Media & Digital Experience Design
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a
-                              href="/acting-and-performing-arts/"
-                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
-                            >
-                             BA in Acting & Performing Arts
-                            </a>
-                          </li>
-
-                          <!-- <li class="nav-item">
-                            <a
-                              href="animation-&-gaming.html"
-                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
-                            >
-                              Animation and Game Production
-                            </a>
-                          </li> -->
-
-                          <li class="nav-item">
-                            <a
-                              href="/event-and-experiential-management/"
-                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
-                            >
-                              BBA in Events & Experiential Management
-                            </a>
-                          </li>
-                          <!-- <li class="nav-item">
-                            <a
-                              href="costume-design.html"
-                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
-                            >
-                              Costume Design
-                            </a>
-                          </li> -->
-                          <li class="nav-item">
-                            <a
-                              href="/digital-content-design/"
-                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
-                            >
-                              BA in Digital Content Design, Creation & Monetisation
-                            </a>
-                          </li>
-                          <!-- <li class="nav-item">
-                            <a
-                              href="digital-content-creation-and-media-managment.html"
-                              class="nav-link !text-[14px] !flex items-start gap-[5px]"
-                            >
-                              Digital Content Creation & Media Management
-                            </a>
-                          </li> -->
-                        </ul>
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          href="#certificate-courses"
-                          class="nav-link !flex w-full items-center justify-between"
-                          onclick="showTab('certificate')"
-                        >
-                          <span class="flex items-center gap-[5px]">
-                            Certification Courses</span
-                          >
-                          <i
-                            class="fas fa-chevron-right text-[10px] ml-2 mt-[2px] dropIcon"
-                          ></i>
-                        </a>
-                        <ul class="!w-[400px] !left-[103%] mobileUL">
-                          <li class="nav-item">
-                            <a
-                              href="/makeup-and-prosthetics/"
-                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
-                            >
-                              Makeup & Prosthetics
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a
-                              href="/dj-vj-certification-program/"
-                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
-                            >
-                              DJ & VJ
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a
-                              href="/acting-certification-program/"
-                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
-                            >
-                              Acting
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a
-                              href="/photography-and-reels/"
-                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
-                            >
-                              AI Photography & Digital Reels
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a
-                              href="/video-editing-and-virtual-production/"
-                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
-                            >
-                              Video Editing & Virtual Production
-                            </a>
-                          </li>
-                          <!-- <li class="nav-item">
-                            <a
-                              href="3d-animation"
-                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
-                            >
-                              3D Animation for Media & Entertainment
-                            </a>
-                          </li> -->
-                          <!--<li class="nav-item">-->
-                          <!--  <a href="costume-design.html" class="nav-link !text-[14px] !flex items-start gap-[5px]">-->
-
-                          <!--    Costume Designing-->
-
-                          <!--  </a>-->
-                          <!--</li>-->
-                          <!--<li class="nav-item">-->
-                          <!--  <a href="pr-&-journalism.html" class="nav-link !text-[14px] !flex items-start gap-[5px]">-->
-
-                          <!--    Digital PR & Journalism-->
-
-                          <!--  </a>-->
-                          <!--</li>-->
-                          <!--<li class="nav-item">-->
-                          <!--  <a href="VisualandCommunicationDesign.html"-->
-                          <!--    class="nav-link !text-[14px] !flex items-start gap-[5px]">-->
-
-                          <!--    Visual and Communication Design-->
-
-                          <!--  </a>-->
-                          <!--</li>-->
-                          <!-- <li class="nav-item">
-                          <a href=""
-                            class="nav-link !text-[14px] !flex items-start gap-[5px]">
-
-                            Dance
-
-                          </a>
-                        </li> -->
-                        </ul>
-                      </li>
-                      <li class="nav-item">
-                        <a
-                          href="#"
-                          class="nav-link !flex w-full items-center justify-between"
-                        >
-                          <span class="flex items-center gap-[5px]">
-                            Short Term Courses</span
-                          >
-                          <i
-                            class="fas fa-chevron-right text-[10px] ml-2 mt-[2px] dropIcon"
-                          ></i>
-                        </a>
-                        <ul class="!w-[400px] !left-[103%] mobileUL">
-                          <li class="nav-item">
-                            <a
-                              href="/ai-xr-creative-technologies/"
-                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
-                            >
-                              IMPACT - Integrated Multi-Sector Program in AI, XR & Creative Real-Time Technologies
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a
-                              href="/interactive-graphic-design/"
-                              class="nav-link !text-[14px] !flex items-center gap-[5px]"
-                            >
-                              IGNITE - Interactive Graphic Design for New-Age Immersive Experiences
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <!--<li class="nav-item ">-->
-                  <!--  <a class="nav-link" href="admission-process.html">Admission Process</a>-->
-
-                  <!--</li>-->
-                  <li class="nav-item submenu">
-                    <a
-                      class="nav-link disabled"
-                      tabindex="-1"
-                      aria-disabled="true"
-                      >Admission</a
-                    >
-                    <ul>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/admission-process.html"
-                          >Admission Process</a
-                        >
-                      </li>
-                      <!-- <li class="nav-item">
-                        <a class="nav-link" href="sample-paper.html"
-                          >Sample Paper</a
-                        >
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="result.html">Result</a>
-                      </li> -->
-                    </ul>
-                  </li>
-                  <!-- <li class="nav-item">
-                  <a class="nav-link" href="faqs.html">FAQs</a>
-                </li> -->
-                  <!--<li class="nav-item submenu hidden">-->
-                  <!--  <a class="nav-link" href="#">Pages</a>-->
-                  <!--  <ul>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="service-single.html">Service Details</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="blog-single.html">Blog Details</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="projects.html">Projects</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="project-single.html">Project Details</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="team.html">Team</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="team-single.html">Team Details</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="pricing.html">Pricing Plan</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="testimonials.html">Testimonials</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="image-gallery.html">Image Gallery</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="video-gallery.html">Video Gallery</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="faqs.html">FAQs</a>-->
-                  <!--    </li>-->
-                  <!--    <li class="nav-item">-->
-                  <!--      <a class="nav-link" href="404.html">404</a>-->
-                  <!--    </li>-->
-                  <!--  </ul>-->
-                  <!--</li>-->
-                  <li class="nav-item submenu">
-                    <a
-                      class="nav-link disabled"
-                      tabindex="-1"
-                      aria-disabled="true"
-                      >Life @ IICS</a
-                    >
-                    <ul>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/student-life.html"
-                          >Student Life</a
-                        >
-                      </li>
-                      <!-- <li class="nav-item">
-                      <a class="nav-link" href="image-gallery.html">Gallery</a>
-                    </li> -->
-
-                      <li class="nav-item">
-                        <a class="nav-link" href="/made-for-media.html"
-                          >Made For Media</a
-                        >
-                      </li>
-                      <!-- <li class="nav-item">
-                      <a class="nav-link" href="/workshops">Workshops</a>
-                    </li> -->
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/blogs">Blogs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/contact.html">Contact Us</a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Header Btn Start -->
-              <!--<div class="header-btn">-->
-              <!--  <a href="images/brochure/IICS_Prospectus.zip" download target="_blank" class="btn-default btn-highlighted link-size">Download Brochure</a>-->
-              <!--</div>-->
-              <div class="header-btn">
-                <a
-                  href="/admission.html"
-                  class="bg-[#de4141] p-3 text-white"
-                  style="margin-left: 5px"
-                  >Apply Now</a
-                >
-              </div>
-              <div class="header-btn">
-                <a
-                  href="https://admissions.iicsindia.org/"
-                  class="bg-[#de4141] p-3 text-white"
-                  style="margin-left: 5px"
-                  >Log In</a
-                >
-              </div>
-              <!-- Header Btn End -->
-            </div>
-            <!-- Main Menu End -->
-            <div></div>
-            <div class="flex items-center gap-2">
-              <a
-                href="/admission.html"
-                class="bg-[#de4141] p-2 text-white block md:hidden"
-                >Apply Now</a
-              >
-              <div class="navbar-toggle"></div>
-            </div>
-          </div>
-        </nav>
-        <div class="responsive-menu"></div>
-      </div>
-    </header>
-    <!-- Header End -->
 
 
   <header class="bg-[#de4141] p-6">
@@ -541,32 +128,30 @@
       <div class="row">
         <div class="col-md-12">
           <!-- About Footer start -->
-          <div class="footer-header ">
-
+          <div class="footer-header">
             <div>
               <!-- <div class="topbar-contact-info">
-                  <ul>
-                    <li>
-                      <p class="mb-0 w-[60px] h-[60px] flex justify-center items-center bg-white"><img src="images/IICS/iics_image/skill-logo-small.webp" alt="" class="h-[40px] img-bg-remove"></p>
-                     
-                    </li>
-                    <li>
-                      <p class="mb-0 w-[60px] h-[60px] flex justify-center items-center bg-white"> <img src="images/IICS/iics_image/nsdc-small.webp" alt="" class="h-[40px] "></p>
-                     
-    
-                    </li>
-                    <li>
-                      <p class="mb-0 w-[60px] h-[60px] flex justify-center items-center bg-white"><img src="images/IICS/iics_image/mesc-logo-small.webp" alt="" class="h-[40px] "></p>
-                      
-    
-                    </li>
-                  </ul>
-                </div> -->
+                    <ul>
+                      <li>
+                        <p class="mb-0 w-[60px] h-[60px] flex justify-center items-center bg-white"><img src="images/IICS/iics_image/skill-logo-small.webp" alt="" class="h-[40px] img-bg-remove"></p>
+                       
+                      </li>
+                      <li>
+                        <p class="mb-0 w-[60px] h-[60px] flex justify-center items-center bg-white"> <img src="images/IICS/iics_image/nsdc-small.webp" alt="" class="h-[40px] "></p>
+                       
+      
+                      </li>
+                      <li>
+                        <p class="mb-0 w-[60px] h-[60px] flex justify-center items-center bg-white"><img src="images/IICS/iics_image/mesc-logo-small.webp" alt="" class="h-[40px] "></p>
+                        
+      
+                      </li>
+                    </ul>
+                  </div> -->
               <div class="footer-logo mt-[10px]">
-                <div class=" bg-white">
+                <div class="bg-white">
                   <img src="../images/IICS/iics_image/main-logo-iics.png" alt="logo" />
                 </div>
-
               </div>
             </div>
 
@@ -576,12 +161,19 @@
             <div>
               <div class="topbar-social-links">
                 <ul>
-                  <li class="text-[#fff] footer-contact-email"><a href="mailto:info@iicsindia.org" style="text-transform: lowercase !important; color: #fff !important">info@iicsindia.org</a></li>
-                  <li class="text-[#fff]"><a href="tel:9594949959" style="color: #fff !important;">+91 959-4949-959</a></li>
+                  <li class="text-[#fff] footer-contact-email">
+                    <a href="mailto:info@iicsindia.org" style="
+                            text-transform: lowercase !important;
+                            color: #fff !important;
+                          ">info@iicsindia.org</a>
+                  </li>
+                  <li class="text-[#fff]">
+                    <a href="tel:9594949959" style="color: #fff !important">+91 959-4949-959</a>
+                  </li>
                   <li class="topbar-social-icons">
-                <a href="https://wa.me/9594949959" target="_blank" style="color: #fff"><i
-                    class="fa-brands fa-whatsapp"></i></a>
-              </li>
+                    <a href="https://wa.me/9594949959" target="_blank" style="color: #fff"><i
+                        class="fa-brands fa-whatsapp"></i></a>
+                  </li>
                   <li class="topbar-social-icons">
                     <a href="https://www.instagram.com/iicsindiaorg/" target="_blank" style="color: #fff"><i
                         class="fa-brands fa-instagram"></i></a>
@@ -607,7 +199,6 @@
 
           <!-- Footer Contact Item End -->
 
-
           <!-- Footer Contact Item End -->
 
           <!-- Footer Contact Item Start -->
@@ -617,54 +208,55 @@
           <div class="footer-links flex md:block flex-col">
             <h3>quick links</h3>
             <ul class="mobile-footer-links">
-             <div>
-                <li><a href="/contact.html">Enquire Now</a></li>
-                <!-- <li><a href="/">Programs</a></li> -->
-                <li><a href="/admission-process.html">Admission</a></li>
-                <!-- <li><a href="/blog">Blogs</a></li> -->
+              <div>
+                <li><a href="contact.html">Enquire Now</a></li>
+                <li><a href="/#programs">Programs</a></li>
+                <li><a href="admission-process.html">Admission</a></li>
+                <li><a href="/blogs">Blogs</a></li>
               </div>
               <div>
                 <li><a href="student-life.html">Life @ IICS</a></li>
-                <!-- <li><a href="/#creativeContainer">Creative Incubator</a></li> -->
+                <li><a href="/#creativeContainer">Creative Incubator</a></li>
                 <li><a href="/press-release">Press Release</a></li>
-                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="/refund-policy.html">Refund Policy</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="refund-policy.html">Refund Policy</a></li>
               </div>
             </ul>
           </div>
           <!-- Footer Links End -->
         </div>
 
-
-
         <div class="col-lg-3 col-md-4 col-11">
           <!-- Footer Links Start -->
           <div class="footer-links">
             <h3>Campus</h3>
             <ul class="flex mobile-footer-campus flex-col gap-2">
-              <li class="w-fit h-25 font-bold text-white p-1 flex flex-col justify-start"><a href="/#campus" class="hover:!text-[#fff]">Delhi Campus
-                  <br>
-                  <span class="font-normal">13-A, 3rd Floor, Above Tata Motors Showroom, Main Ring Road, Lajpat Nagar-4,
-                    New Delhi- 110024</span>
-                </a></li>
-                <div class="w-full border hidden lg:flex"></div>
-                <li class="w-fit h-25 font-bold text-white p-1 flex lg:hidden flex-col justify-start">
-    <a class="hover:!text-[#fff]" href="/#campus">
-      Bhopal Campus<br>
-      <span class="font-normal">
-        Jagran Lakecity University,<br>
-        Mugaliyachap,<br>
-        Near Ratibad Bhopal – 462044
-      </span>
-    </a>
-  </li>
-                 <li class="w-fit h-25 font-bold text-white p-1 hidden lg:flex flex-col justify-start"><a href="/#campus" class="hover:!text-[#fff]">Chandigarh Campus
-                  <br>
-                  <span class="font-normal">CH Devi Lal Centre of Learning
-                    Plot No 5, Sec 28 B, <br>
-                    Madhya Marg,
-                    Chandigarh, India</span>
-                </a></li>
+              <li class="w-fit h-25 font-bold text-white p-1 flex flex-col justify-start">
+                <a href="/#campus" class="hover:!text-[#fff]">Delhi Campus
+                  <br />
+                  <span class="font-normal">13-A, 3rd Floor, Above Tata Motors Showroom, Main Ring
+                    Road, Lajpat Nagar-4, New Delhi- 110024</span>
+                </a>
+              </li>
+              <div class="w-full border hidden lg:flex"></div>
+              <li class="w-fit h-25 font-bold text-white p-1 flex lg:hidden flex-col justify-start">
+                <a class="hover:!text-[#fff]" href="/#campus">
+                  Bhopal Campus<br />
+                  <span class="font-normal">
+                    Jagran Lakecity University,<br />
+                    Mugaliyachap,<br />
+                    Near Ratibad Bhopal – 462044
+                  </span>
+                </a>
+              </li>
+              <!-- <li class="w-fit h-25 font-bold text-white p-1 hidden lg:flex flex-col justify-start">
+                  <a href="/#campus" class="hover:!text-[#fff]">Chandigarh Campus
+                    <br />
+                    <span class="font-normal">CH Devi Lal Centre of Learning Plot No 5, Sec 28 B,
+                      <br />
+                      Madhya Marg, Chandigarh, India</span>
+                  </a>
+                </li> -->
             </ul>
           </div>
           <!-- Footer Links End -->
@@ -674,40 +266,39 @@
           <!-- Footer Links Start -->
           <div class="footer-links">
             <h3 class="invisible">Services</h3>
-           <ul class="flex mobile-footer-campus flex-col gap-2">
-            <li class="w-[210px] h-25 font-bold text-white p-1 flex lg:hidden flex-col justify-start"><a href="/#campus" class="hover:!text-[#fff]">Chandigarh Campus
-                  <br>
-                  <span class="font-normal">CH Devi Lal Centre of Learning
-                    Plot No 5, Sec-<br> 28 B
-                    Madhya Marg,
-                    Chandigarh, India</span>
-                </a></li>
-  <li class="w-fit h-25 font-bold text-white p-1 hidden lg:flex flex-col justify-start">
-    <a class="hover:!text-[#fff]" href="/#campus">
-      Bhopal Campus<br>
-      <span class="font-normal">
-        Jagran Lakecity University,<br>
-        Mugaliyachap,<br>
-        Near Ratibad Bhopal – 462044
-      </span>
-    </a>
-  </li>
-  <div class="w-full border hidden lg:flex"></div>
-  <li class="w-fit h-25 font-bold text-white p-1 flex flex-col justify-start">
-    <a class="hover:!text-[#fff]" href="/#campus">
-      Kolkata Campus<br>
-      <span class="font-normal">Coming Soon</span>
-    </a>
-  </li>
-</ul>
-
+            <ul class="flex mobile-footer-campus flex-col gap-2">
+              <!-- <li class="w-[210px] h-25 font-bold text-white p-1 flex lg:hidden flex-col justify-start">
+                  <a href="/#campus" class="hover:!text-[#fff]">Chandigarh Campus
+                    <br />
+                    <span class="font-normal">CH Devi Lal Centre of Learning Plot No 5, Sec-<br />
+                      28 B Madhya Marg, Chandigarh, India</span>
+                  </a>
+                </li> -->
+              <li class="w-fit h-25 font-bold text-white p-1 hidden lg:flex flex-col justify-start">
+                <a class="hover:!text-[#fff]" href="/#campus">
+                  Bhopal Campus<br />
+                  <span class="font-normal">
+                    Jagran Lakecity University,<br />
+                    Mugaliyachap,<br />
+                    Near Ratibad Bhopal – 462044
+                  </span>
+                </a>
+              </li>
+              <div class="w-full border hidden lg:flex"></div>
+              <!-- <li class="w-fit h-25 font-bold text-white p-1 flex flex-col justify-start">
+                  <a class="hover:!text-[#fff]" href="/#campus">
+                    Kolkata Campus<br />
+                    <span class="font-normal">Coming Soon</span>
+                  </a>
+                </li> -->
+            </ul>
           </div>
           <!-- Footer Links End -->
         </div>
         <div class="col-lg-3 col-md-4 col-6 footer-map">
           <!-- Footer Links Start -->
           <div class="footer-links">
-            <div class="google-map wow fadeInUp ">
+            <div class="google-map wow fadeInUp">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.18304303228!2d77.15432659999999!3d28.5648622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3f04e64e845%3A0x6887befefe82c0f3!2s2nd%20and%203rd%20Floor%2C%20Plot%20No%2013A%2C%20Ring%20Rd%2C%20Vikram%20Vihar%2C%20Lajpat%20Nagar%204%2C%20Lajpat%20Nagar%2C%20New%20Delhi%2C%20Delhi%20110024!5e0!3m2!1sen!2sin!4v1716366895051!5m2!1sen!2sin"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -716,11 +307,6 @@
           </div>
           <!-- Footer Links End -->
         </div>
-
-
-
-
-
 
         <div class="col-lg-12">
           <!-- Footer Copyright Text Start -->
@@ -734,87 +320,87 @@
   </footer>
   <!-- Footer Main End -->
 
-<script>
-  const API_URL = "https://api.iicsindia.org/api/posts?populate=featureImage";
+  <script>
+    const API_URL = "https://api.iicsindia.org/api/posts?populate=featureImage";
 
-  const CACHE_KEY = "iics_blog_cache";
-  const CACHE_TTL = 1000 * 60 * 15;
-  const BLOGS_PER_PAGE = 6;
+    const CACHE_KEY = "iics_blog_cache";
+    const CACHE_TTL = 1000 * 60 * 15;
+    const BLOGS_PER_PAGE = 6;
 
-  let currentPage = 1;
-  let allBlogs = [];
+    let currentPage = 1;
+    let allBlogs = [];
 
-  init();
+    init();
 
-  function init() {
-    const cached = localStorage.getItem(CACHE_KEY);
+    function init() {
+      const cached = localStorage.getItem(CACHE_KEY);
 
-    if (cached) {
-      const parsed = JSON.parse(cached);
-      if (Date.now() - parsed.timestamp < CACHE_TTL) {
-        allBlogs = parsed.data;
-        setup();
-        return;
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Date.now() - parsed.timestamp < CACHE_TTL) {
+          allBlogs = parsed.data;
+          setup();
+          return;
+        }
       }
+      fetchBlogs();
     }
-    fetchBlogs();
-  }
 
-  function fetchBlogs() {
-    fetch(API_URL)
-      .then(res => res.json())
-      .then(response => {
-        localStorage.setItem(
-          CACHE_KEY,
-          JSON.stringify({
-            data: response.data,
-            timestamp: Date.now()
-          })
-        );
-        allBlogs = response.data;
-        setup();
-      })
-      .catch(err => {
-        console.error("Error fetching blogs:", err);
-        document.getElementById("blog-container").innerHTML =
-          "<p class='text-red-600 text-center text-xl'>Failed to load blogs.</p>";
-      });
-  }
-
-  function setup() {
-    allBlogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-    renderPage();
-    renderPagination();
-  }
-
-  function renderPage() {
-    const container = document.getElementById("blog-container");
-    container.innerHTML = "";
-
-    const start = (currentPage - 1) * BLOGS_PER_PAGE;
-    const end = start + BLOGS_PER_PAGE;
-    const pageBlogs = allBlogs.slice(start, end);
-
-    pageBlogs.forEach(item => {
-      const blog = item;
-
-      const imageUrl =
-        blog.featureImage?.formats?.medium?.url ||
-        blog.featureImage?.url ||
-        "default.jpg";
-
-      let contentText = "";
-      if (Array.isArray(blog.content)) {
-        blog.content.forEach(block => {
-          if (block.type === "paragraph") {
-            block.children?.forEach(child => {
-              if (child.text) contentText += child.text;
-            });
-          }
+    function fetchBlogs() {
+      fetch(API_URL)
+        .then(res => res.json())
+        .then(response => {
+          localStorage.setItem(
+            CACHE_KEY,
+            JSON.stringify({
+              data: response.data,
+              timestamp: Date.now()
+            })
+          );
+          allBlogs = response.data;
+          setup();
+        })
+        .catch(err => {
+          console.error("Error fetching blogs:", err);
+          document.getElementById("blog-container").innerHTML =
+            "<p class='text-red-600 text-center text-xl'>Failed to load blogs.</p>";
         });
-      }
+    }
 
-      container.innerHTML += `
+    function setup() {
+      allBlogs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      renderPage();
+      renderPagination();
+    }
+
+    function renderPage() {
+      const container = document.getElementById("blog-container");
+      container.innerHTML = "";
+
+      const start = (currentPage - 1) * BLOGS_PER_PAGE;
+      const end = start + BLOGS_PER_PAGE;
+      const pageBlogs = allBlogs.slice(start, end);
+
+      pageBlogs.forEach(item => {
+        const blog = item;
+
+        const imageUrl =
+          blog.featureImage?.formats?.medium?.url ||
+          blog.featureImage?.url ||
+          "default.jpg";
+
+        let contentText = "";
+        if (Array.isArray(blog.content)) {
+          blog.content.forEach(block => {
+            if (block.type === "paragraph") {
+              block.children?.forEach(child => {
+                if (child.text) contentText += child.text;
+              });
+            }
+          });
+        }
+
+        container.innerHTML += `
         <div class="bg-white rounded-xl shadow overflow-hidden relative">
           <img src="https://api.iicsindia.org${imageUrl}" class="w-full h-56 object-cover" />
 
@@ -822,7 +408,7 @@
             <h2 class="text-2xl font-semibold text-gray-900 leading-[110%]">${blog.title}</h2>
 
             <p class="text-gray-600 mt-3 leading-[110%]">
-              ${blog.excerpt || contentText.substring(0,120)}...
+              ${blog.excerpt || contentText.substring(0, 120)}...
             </p>
 
             <p class="text-sm text-gray-500 mt-2 mb-20">
@@ -836,41 +422,42 @@
           </div>
         </div>
       `;
-    });
-  }
-
-  function renderPagination() {
-    const pagination = document.getElementById("pagination");
-    pagination.innerHTML = "";
-
-    const totalPages = Math.ceil(allBlogs.length / BLOGS_PER_PAGE);
-    if (totalPages <= 1) return;
-
-    for (let i = 1; i <= totalPages; i++) {
-      const btn = document.createElement("button");
-      btn.textContent = i;
-
-      btn.className =
-        "px-4 py-2 border rounded " +
-        (i === currentPage
-          ? "bg-red-600 text-white"
-          : "bg-white text-gray-700 hover:bg-gray-100");
-
-      btn.addEventListener("click", () => {
-        if (currentPage === i) return;
-
-        currentPage = i;
-        renderPage();
-        renderPagination();
-        window.scrollTo({ top: 0, behavior: "smooth" });
       });
-
-      pagination.appendChild(btn);
     }
-  }
-</script>
+
+    function renderPagination() {
+      const pagination = document.getElementById("pagination");
+      pagination.innerHTML = "";
+
+      const totalPages = Math.ceil(allBlogs.length / BLOGS_PER_PAGE);
+      if (totalPages <= 1) return;
+
+      for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+
+        btn.className =
+          "px-4 py-2 border rounded " +
+          (i === currentPage
+            ? "bg-red-600 text-white"
+            : "bg-white text-gray-700 hover:bg-gray-100");
+
+        btn.addEventListener("click", () => {
+          if (currentPage === i) return;
+
+          currentPage = i;
+          renderPage();
+          renderPagination();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        pagination.appendChild(btn);
+      }
+    }
+  </script>
 
 
 
 </body>
+
 </html>
