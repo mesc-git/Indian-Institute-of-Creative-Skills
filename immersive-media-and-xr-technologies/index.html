@@ -618,6 +618,38 @@
     .gov-btn-primary:hover {
       opacity: 0.9;
     }
+
+    .c-card {
+      border: 1px solid #eee;
+      /* padding: 30px; */
+      border-radius: 16px;
+      text-align: center;
+      transition: 0.3s ease;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .c-card:hover {
+      background: #de1414;
+      color: #fff;
+    }
+
+    .c-card img {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    .c-card:hover img,
+    .c-card:hover h3 {
+      /* content: url(https://img.icons8.com/ios-filled/100/de1414/calendar.png); */
+      /* width: 500px;
+      height: 800px; */
+      filter: saturate(0);
+      color: #fff !important;
+    }
   </style>
 
   <!-- Preloader Start -->
@@ -966,13 +998,13 @@
       <!-- Program Highlights -->
       <!-- <h2 class="section-title">Program Highlights</h2> -->
       <div class="highlights-grid">
-        <div class="highlight-card">
+        <div class="highlight-card c-card">
           <img src="https://img.icons8.com/ios-filled/100/de1414/graduation-cap.png" />
           <h3> Program</h3>
           <p>Advanced Diploma in Immersive Media and XR Technologies</p>
         </div>
 
-        <div class="highlight-card">
+        <div class="highlight-card c-card">
           <img src="https://img.icons8.com/ios-filled/100/de1414/calendar.png" />
           <h3>Duration</h3>
           <p>24 Months (12 Months Learning + 6 Months Specialization + 3 months Production + 3 Months Internship)</p>
@@ -984,13 +1016,13 @@
         <p>4 Hours / Day<br>5 Days / Week</p>
       </div> -->
 
-        <div class="highlight-card">
+        <div class="highlight-card c-card">
           <img src="https://img.icons8.com/ios-filled/100/de1414/money.png" />
           <h3>Fee</h3>
           <p>₹3,00,000 </p>
         </div>
 
-        <div class="highlight-card">
+        <div class="highlight-card c-card">
           <img src="https://img.icons8.com/ios-filled/100/de1414/workstation.png" />
           <h3>Learning Mode</h3>
           <p>Practical & Studio-Based</p>
