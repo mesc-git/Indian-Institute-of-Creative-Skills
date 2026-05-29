@@ -343,6 +343,97 @@
       filter: saturate(0);
       color: #fff !important;
     }
+
+    .dj-card {
+      border: 1px solid #eee;
+      padding: 30px;
+      height: 350px;
+      border-radius: 16px;
+      margin-top: 10px;
+      transition: 0.3s ease;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+
+    }
+
+    @media (max-width: 576px) {
+      .dj-card {
+        border: 1px solid #eee;
+        padding: 30px;
+        height: 350px;
+        border-radius: 16px;
+        margin-top: 30px;
+        transition: 0.3s ease;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+
+      }
+    }
+
+    .dj-card:hover {
+      border: 1px solid #eee;
+      padding: 30px;
+      background-color: #de1414;
+      color: #fff;
+      height: 350px;
+      border-radius: 16px;
+      /* transition: 0.3s ease; */
+      /* background: rgba(255, 255, 255, 0.25); */
+      backdrop-filter: blur(15px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+
+    }
+
+    .dj-card>h4 {
+      color: #de1414;
+      font-weight: 600;
+      margin-top: 10px;
+      /* transition: 0.9s ease; */
+    }
+
+    .dj-card>p {
+      margin-top: 10px;
+      color: #000;
+      /* color: #de1414;
+      font-weight: 600; */
+      /* transition: 0.9s ease; */
+    }
+
+    .dj-card>p>span {
+      font-weight: 600;
+      color: #de1414;
+      /* color: #de1414;
+      font-weight: 600; */
+      /* transition: 0.9s ease; */
+    }
+
+    .dj-card:hover p>span {
+      font-weight: 600;
+      color: #000000;
+      /* color: #de1414;
+      font-weight: 600; */
+      /* transition: 0.9s ease; */
+    }
+
+    .dj-card:hover h4 {
+      color: #ffffff;
+      font-weight: 600;
+      transition: 0.6s ease;
+    }
+
+    .dj-card>ul>li {
+      color: #000;
+      margin-top: 10px;
+      line-height: 1.2;
+    }
+
+    .dj-card:hover>ul>li {
+      color: #ffffff;
+      margin-top: 10px;
+      line-height: 1.2;
+    }
   </style>
 
   <!-- Preloader Start -->
@@ -494,6 +585,62 @@
       </div>
     </div>
   </div>
+
+  <section>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-10 mt-5">
+            <h2 class="text-4xl font-extrabold text-gray-900" style="font-size: 40px; font-weight: 600;">
+              Certification <span class="text-[#de1414]">Courses</span>
+            </h2>
+          </div>
+          <div class="col-lg-4">
+            <div class="dj-card text-center">
+              <img src="dj-music.png" alt="DJ Course" class="w-full h-40 object-cover rounded-t-lg"
+                style="height: 80px; width: auto; margin: 0 auto;" />
+              <h4 class="mt-3">
+                Digital Pro DJ (Advanced)
+              </h4>
+              <p> <span>Fees: </span> ₹1,50,000
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="dj-card text-center">
+              <img src="video-dj.png" alt="DJ Course" class="w-full h-40 object-cover rounded-t-lg"
+                style="height: 80px; width: auto; margin: 0 auto;" />
+              <h4>
+                Video DJ Course
+              </h4>
+              <p> <span>Fees: </span> ₹1,50,000
+              </p>
+              <ul>
+                <li> Advanced DJ – Pioneer DJ, Denon DJ + Native Instruments
+                  Software’s: Rekordbox, Serato, Engine DJ + Traktor DJ</li>
+                <li>Video Editing: Photoshop, After Effects & Adobe Premiere Pro</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="dj-card text-center">
+              <img src="dj-work.webp" alt="DJ Course" class="w-full h-40 object-cover rounded-t-lg"
+                style="height: 80px; width: auto; margin: 0 auto;" />
+              <h4>
+                Professional DJ Course
+              </h4>
+              <p> <span>Fees: </span> ₹1,50,000
+              </p>
+              <ul>
+                <li>Advanced Digital Pro DJ</li>
+                <li>Music Production with FL Studio / Ableton</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Page Service Single Start -->
   <div class="pt-[20px] px-[10px] md:px-[50px]" id="courseContainer">
