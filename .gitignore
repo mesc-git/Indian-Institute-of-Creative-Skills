@@ -1,1 +1,11 @@
 .vercel
+
+IICS_All_Problems_Report.pdf
+IICS_Link_Inventory_Report.pdf
+IICS_Website_Audit_Report.pdf
+capture_screenshots.py
+extract_links.py
+generate_audit_pdf.py
+generate_link_pdf.py
+generate_problems_pdf.py
+screenshots/
