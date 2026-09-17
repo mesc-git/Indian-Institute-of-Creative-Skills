@@ -148,124 +148,7 @@
             </div>
             <!-- Section Title End -->
 
-            <!-- Contact Form Start -->
-            <div class="contact-form wow fadeInUp" data-wow-delay="0.4s">
-              <form id="walkinForm" action="#" method="POST" data-toggle="validator">
-                <div class="row">
-                  <div class="form-group col-md-6 mb-4">
-                    <label for="full_name">Full Name</label>
-                    <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Full name" required>
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group col-md-6 mb-4">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="Email address" required>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group col-md-6 mb-4">
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" class="form-control" id="dob" name="dob" required>
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group col-md-6 mb-4">
-                    <label for="mobile_number">Mobile Number</label>
-                    <input type="tel" name="mobile_number" class="form-control" id="mobile_number" placeholder="Mobile number" required>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group col-md-6 mb-4">
-                    <label for="phone_alternate">Alternate Phone</label>
-                    <input type="tel" name="phone_alternate" class="form-control" id="phone_alternate" placeholder="Alternate phone number">
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group col-md-6 mb-4">
-                    <label for="visit_date">Preferred Visit Date</label>
-                    <input type="date" class="form-control" id="visit_date" name="visit_date" required>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group col-12 mb-4">
-                    <label for="program_interest">Program Interest</label>
-                    <div class="wrapper">
-                      <div class="dropdown">
-                        <input type="text" name="program_interest" placeholder="Select Program" readonly required />
-                        <ul class="options">
-                          <li class="option">Design In Animation & Gaming</li>
-                          <li class="option">Digital Content Creation & Media Management</li>
-                          <li class="option">Sound Design & Music Video Production</li>
-                          <li class="option">Event Planning & Management</li>
-                          <li class="option">Hair, Makeup & Prosthetic</li>
-                          <li class="option">Costume Design</li>
-                          <li class="option">PR & Journalism</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group col-md-6 mb-4">
-                    <label for="city">City</label>
-                    <input type="text" name="city" class="form-control" id="city" placeholder="City">
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group col-md-6 mb-4">
-                    <label for="state">State</label>
-                    <input type="text" name="state" class="form-control" id="state" placeholder="State">
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group col-md-6 mb-4">
-                    <label for="pincode">Pincode</label>
-                    <input type="text" name="pincode" class="form-control" id="pincode" placeholder="Pincode">
-                    <div class="help-block with-errors"></div>
-                  </div>
-
-                  <div class="form-group col-md-6 mb-4">
-                    <label for="how_heard">How did you hear about IICS?</label>
-                    <select class="form-control" id="how_heard" name="how_heard" required>
-                      <option value="">Select option</option>
-                      <option value="Website">Website</option>
-                      <option value="Social Media">Social Media</option>
-                      <option value="Friend">Friend</option>
-                      <option value="Referral">Referral</option>
-                      <option value="Advertisement">Advertisement</option>
-                    </select>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="form-group col-12 mb-4">
-                    <label for="message">Your Message</label>
-                    <textarea name="message" class="form-control" id="message" rows="4" placeholder="Write your query or message" required></textarea>
-                    <div class="help-block with-errors"></div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md-12">
-                    <button type="submit" class="btn-default">Submit Walk-in Enquiry</button>
-                    <div id="walkinResponse" class="mt-3"></div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <!-- Contact Form End -->
+            <div class="npf_wgts" data-height="400px" data-w="b687a374d21a3e42cf6e56f4860d0f1f"></div>
           </div>
           <!-- Contact Us Form End -->
         </div>
@@ -287,82 +170,6 @@
 
   <!-- Jquery Library File -->
   <script src="js/jquery-3.7.1.min.js"></script>
-  <script>
-    const form = document.getElementById('walkinForm');
-    const responseDiv = document.getElementById('walkinResponse');
-    const submitButton = form.querySelector('button[type="submit"]');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // Disable button and change text
-      submitButton.disabled = true;
-      submitButton.innerText = 'Sending...';
-      responseDiv.innerHTML = ''; // Clear previous messages
-
-      const formData = {
-        full_name: form.full_name.value,
-        email: form.email.value,
-        dob: form.dob.value,
-        mobile_number: form.mobile_number.value,
-        visit_date: form.visit_date.value,
-        phone_alternate: form.phone_alternate.value,
-        program_interest: form.program_interest.value,
-        city: form.city.value,
-        state: form.state.value,
-        pincode: form.pincode.value,
-        how_heard: form.how_heard.value,
-        message: form.message.value,
-      };
-
-      try {
-        const res = await fetch('https://merrito-lead-production.up.railway.app/submit-form', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
-        });
-
-        const result = await res.json();
-
-        if (res.ok && result.status) {
-          form.reset();
-          responseDiv.innerHTML = '<p class="text-success fw-bold">Thank you! Your walk-in enquiry has been submitted successfully.</p>';
-        } else {
-          throw new Error(result.message || 'Something went wrong. Please try again.');
-        }
-      } catch (error) {
-        responseDiv.innerHTML = '<p class="text-danger mb-3">' + error.message + '</p>';
-        submitButton.disabled = false;
-        submitButton.innerText = 'Submit Walk-in Enquiry';
-      }
-    });
-  </script>
-  <script>
-    const dropdown = document.querySelector('.dropdown');
-    const input = dropdown ? dropdown.querySelector('input') : null;
-    const listOfOptions = dropdown ? dropdown.querySelectorAll('.option') : [];
-    const body = document.body;
-
-    const toggleDropdown = (event) => {
-      event.stopPropagation();
-      dropdown.classList.toggle('opened');
-    };
-
-    const selectOption = (event) => {
-      input.value = event.currentTarget.textContent;
-      closeDropdownFromOutside();
-    };
-
-    const closeDropdownFromOutside = () => {
-      dropdown.classList.remove('opened');
-    };
-
-    body.addEventListener('click', closeDropdownFromOutside);
-    if (input) input.addEventListener('click', toggleDropdown);
-    listOfOptions.forEach((option) => {
-      option.addEventListener('click', selectOption);
-    });
-  </script>
   <script src="js/jquery.slicknav.js"></script>
   <!-- Swiper js file -->
   <script src="js/swiper-bundle.min.js"></script>
@@ -420,9 +227,14 @@
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script
-    type="text/javascript">var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = "https://widgets.in6.nopaperforms.com/emwgts.js"; document.body.appendChild(s); </script>
 
+  <script type="text/javascript">
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://yq9y2j256k.in6.widgets.nopaperforms.com/vemwgts.js";
+    document.body.appendChild(s);
+  </script>
 
 </body>
 
