@@ -3112,6 +3112,16 @@ header.main-header .header-sticky.active{
     color: var(--white-color);
 }
 
+.school-openhouse-banner {
+  width: 100%;
+}
+
+.school-openhouse-banner__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .our-mission-vision{
 	background: var(--secondary-color) url('../images/mission-vision-bg.svg') no-repeat;
 	background-position: center center;
