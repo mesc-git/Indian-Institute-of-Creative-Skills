@@ -3116,10 +3116,39 @@ header.main-header .header-sticky.active{
   width: 100%;
 }
 
+.school-openhouse-banner .swiper {
+  width: 100%;
+}
+
+.school-openhouse-banner .swiper-slide {
+  width: 100%;
+}
+
 .school-openhouse-banner__img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.school-openhouse-banner .swiper-pagination {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.school-openhouse-banner .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.school-openhouse-banner .swiper-pagination-bullet-active {
+  background: #ffffff;
 }
 
 .our-mission-vision{

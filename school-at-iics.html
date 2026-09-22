@@ -110,7 +110,17 @@
 
   <!-- Open House Banner Start -->
   <div class="school-openhouse-banner">
-    <img src="images/Openhousebanner/Openhousebanner 1.png" alt="Open House Banner" class="school-openhouse-banner__img" />
+    <div class="swiper schoolOpenHouseSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/Openhousebanner/Openhousebanner 1.png" alt="Open House Banner 1" class="school-openhouse-banner__img" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/Openhousebanner/openhouse2.png" alt="Open House Banner 2" class="school-openhouse-banner__img" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
   <!-- Open House Banner End -->
 
@@ -236,6 +246,20 @@
     s.async = true;
     s.src = "https://yq9y2j256k.in6.widgets.nopaperforms.com/vemwgts.js";
     document.body.appendChild(s);
+  </script>
+
+  <script>
+    const schoolOpenHouseSwiper = new Swiper(".schoolOpenHouseSwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".school-openhouse-banner .swiper-pagination",
+        clickable: true,
+      },
+    });
   </script>
 
 </body>
